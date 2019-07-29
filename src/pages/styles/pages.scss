@@ -1,0 +1,262 @@
+.page {
+  width: 100%;
+  height: auto;
+}
+
+.page__wrapper {
+  height: 100%;
+}
+
+.page__intro {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page__link {
+  a {
+    color: black;
+  }
+}
+
+.page__intro--text-content {
+  height: 90%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .page__intro--title {
+    text-transform: uppercase;
+  }
+
+  .page__intro--text {
+    color: #5e6575;
+  }
+}
+
+.page__intro--image-gallery {
+  height: 100%;
+}
+
+// -- Default -- Mobile portrait
+@media (max-width: 479px) {
+  .page {
+    width: 100%;
+    height: auto;
+  }
+
+  .page__wrapper {
+    margin-top: 10%;
+    width: 96%;
+    margin-left: 2%;
+    padding-bottom: 2%;
+  }
+
+  .page__intro {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .page__intro--text-content {
+    order: 2;
+    width: 100%;
+    background-color: white;
+    .page__intro--title {
+      margin-top: 5%;
+      font-size: 1.25em;
+    }
+
+    .page__intro--text {
+      width: 96%;
+      line-height: 1.4em;
+      font-size: 1em;
+    }
+
+    .page__link {
+      font-size: 1.2em;
+      margin-bottom: 8em;
+    }
+  }
+
+  .page__intro--image-gallery {
+    margin-top: 17.5%;
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+// Tablet portrait
+@media (min-width: 768px) and (max-width: 991px) {
+  .page {
+    width: 100%;
+    height: auto;
+  }
+
+  .page__wrapper {
+    margin-top: 2%;
+    width: 82%;
+    margin-left: 10%;
+  }
+
+  .page__intro {
+    height: 80vh;
+    flex-direction: column;
+  }
+
+  .page__intro--text-content {
+    order: 2;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 5em;
+
+    .page__intro--title {
+      margin-top: 5%;
+      font-size: 2.5em;
+    }
+
+    .page__intro--text {
+      width: 100%;
+      line-height: 1.5em;
+      background-color: white;
+    }
+
+    .page__link {
+      margin-bottom: 2em;
+    }
+  }
+
+  .page__intro--image-gallery {
+    margin-top: 17.5%;
+    width: 100%;
+    height: 80%;
+  }
+}
+
+// Tablets landscape
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page {
+    width: 100%;
+    height: auto;
+  }
+
+  .page__wrapper {
+    margin-top: 5%;
+    width: 92.5%;
+    margin-left: 7.5%;
+  }
+
+  .page__intro {
+    height: auto;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .page__intro--text-content {
+    width: 100%;
+
+    .page__intro--title {
+      margin-top: 5%;
+      font-size: 2em;
+    }
+
+    .page__intro--text {
+      width: 96%;
+      line-height: 1.5em;
+    }
+
+    .page__link {
+      margin-top: 1em;
+      font-size: 1.2em;
+    }
+  }
+
+  .page__intro--image-gallery {
+    margin-top: 5%;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+// Laptops
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .page {
+    width: 100%;
+    height: auto;
+  }
+
+  .page__wrapper {
+    margin-top: 10%;
+    width: 85%;
+    margin-left: 10%;
+  }
+
+  .page__intro {
+    height: 80vh;
+  }
+
+  .page__intro--text-content {
+    margin-top: 15%;
+    height: 70%;
+    width: 55%;
+    .page__intro--title {
+      font-size: 2.5em;
+    }
+
+    .page__intro--text {
+      width: 90%;
+      line-height: 1.4em;
+    }
+
+    .page__link {
+      font-size: 1.1em;
+    }
+  }
+
+  .page__intro--image-gallery {
+    margin-top: 10%;
+    width: 45%;
+    height: 80%;
+  }
+}
+
+// desktops
+@media (min-width: 1680px) {
+  .page {
+    width: 100%;
+    height: auto;
+  }
+
+  .page__wrapper {
+    margin-top: 12%;
+    width: 76%;
+    margin-left: 13%;
+  }
+
+  .page__intro {
+    height: 75vh;
+  }
+
+  .page__intro--text-content {
+    width: 50%;
+    .page__intro--title {
+      margin-top: 5%;
+      font-size: 3em;
+    }
+
+    .page__intro--text {
+      width: 75%;
+      line-height: 1.5em;
+    }
+
+    .page__link {
+      font-size: 1.2em;
+    }
+  }
+
+  .page__intro--image-gallery {
+    width: 50%;
+  }
+}

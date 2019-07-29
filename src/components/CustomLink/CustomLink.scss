@@ -1,0 +1,433 @@
+.custom-link {
+  position: relative;
+  width: auto;
+  height: auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 100;
+  display: flex;
+
+  .custom-link__lines {
+    width: auto;
+    height: 100%;
+
+    .one {
+      position: absolute;
+      animation: one-line-out 0.25s both;
+    }
+
+    .two {
+      position: absolute;
+      animation: two-line-out 0.6s both;
+    }
+  }
+
+  a {
+    width: auto;
+    display: inline-block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    transition: margin 0.35s ease-in-out;
+  }
+
+  &:hover {
+    .custom-link__lines {
+      cursor: pointer;
+      .one {
+        animation: one-line-in 0.5s both;
+      }
+
+      .two {
+        animation: two-line-in 0.25s both;
+      }
+    }
+  }
+}
+
+@keyframes one-line-in {
+  0% {
+    top: 0.1em;
+  }
+
+  50% {
+    top: 0.5em;
+  }
+
+  100% {
+    top: 0.5em;
+    width: 3.5em;
+  }
+}
+
+@keyframes two-line-in {
+  0% {
+    bottom: 0.1em;
+  }
+
+  100% {
+    bottom: 0.55em;
+  }
+}
+
+@keyframes one-line-out {
+  0% {
+    top: 0.5em;
+    width: 3.5em;
+  }
+
+  50% {
+    top: 0.5em;
+  }
+
+  100% {
+    top: 0.1em;
+  }
+}
+
+@keyframes two-line-out {
+  0% {
+    bottom: 0.55em;
+  }
+
+  100% {
+    bottom: 0.1em;
+  }
+}
+
+// -- Default -- Mobile portrait
+@media (max-width: 479px) {
+}
+
+// Tablet portrait
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+  }
+}
+
+// Tablets landscape
+@media (min-width: 992px) and (max-width: 1199px) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+  }
+}
+
+/*iPad Pro 9.7"*/
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+  }
+}
+/*iPad Pro 10.5"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+  }
+}
+/*ipad PRo 12.9"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+
+    &:hover {
+      a {
+        margin-left: 5em;
+      }
+    }
+  }
+}
+
+// Laptops
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+
+    &:hover {
+      a {
+        margin-left: 5em;
+      }
+    }
+  }
+}
+
+// desktops
+@media (min-width: 1680px) {
+  .custom-link {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    .custom-link__lines {
+      .one {
+        top: 0.1em;
+        left: 1em;
+        width: 1em;
+        height: 1px;
+      }
+
+      .two {
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 1em;
+        height: 1px;
+      }
+    }
+
+    a {
+      width: auto;
+      margin-left: 4em;
+    }
+
+    &:hover {
+      a {
+        margin-left: 5em;
+      }
+    }
+  }
+}

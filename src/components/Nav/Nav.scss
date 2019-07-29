@@ -1,0 +1,438 @@
+@import "../../shared-styles/colors.scss";
+
+//MAIN
+.nav {
+  .nav__logo {
+    z-index: 1000;
+    position: fixed;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Playfair Display SC", serif;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  .nav__button {
+    position: fixed;
+    text-transform: uppercase;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &:hover {
+      cursor: pointer;
+      .button__text {
+      }
+
+      .button__lines {
+        .one {
+          margin-right: 1em;
+        }
+        .three {
+          margin-left: 1em;
+        }
+      }
+    }
+
+    .button__text {
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      position: relative;
+
+      .one,
+      .two,
+      .three {
+        height: 1px;
+        position: absolute;
+        background: black;
+        transition: all 0.3s ease-in-out;
+      }
+      .one {
+        width: 1em;
+        top: 0;
+        right: 0;
+      }
+
+      .two {
+        width: 2em;
+        top: 50%;
+        left: 0%;
+      }
+
+      .three {
+        width: 1em;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+// -- Default -- Mobile portrait
+@media (max-width: 479px) {
+  .nav__logo {
+    top: 0.5%;
+    left: 3.5%;
+    font-size: 1.75em;
+  }
+
+  .nav__button {
+    top: 1%;
+    right: 2.5%;
+    width: auto;
+    height: 2em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      display: none;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+// Tablet portrait
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav__logo {
+    top: 0.5%;
+    left: 2%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.95em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+// Tablets landscape
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav__logo {
+    top: 1%;
+    left: 1.5%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.9em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+/*iPad Pro 9.7"*/
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav__logo {
+    top: 0.5%;
+    left: 2%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.95em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav__logo {
+    top: 1%;
+    left: 1.5%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.9em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+/*iPad Pro 10.5"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav__logo {
+    top: 0.5%;
+    left: 2%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.95em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav__logo {
+    top: 1%;
+    left: 1.5%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.9em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+/*ipad PRo 12.9"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav__logo {
+    top: 0.5%;
+    left: 2%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 7em;
+    height: 3em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      font-size: 0.95em;
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav__logo {
+    top: 1%;
+    left: 1.5%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 8em;
+    height: 4em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+// Laptops
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .nav__logo {
+    top: 1%;
+    left: 1.5%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 8em;
+    height: 4em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}
+
+// desktops
+@media (min-width: 1680px) {
+  .nav__logo {
+    top: 2.5%;
+    left: 1.5%;
+    font-size: 2em;
+  }
+
+  .nav__button {
+    top: 0.5%;
+    right: 0.5%;
+    width: 8em;
+    height: 4em;
+    &:hover {
+      .button__text {
+        margin-right: 2em;
+      }
+    }
+
+    .button__text {
+      width: 50%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button__lines {
+      width: 32px;
+      height: 24px;
+    }
+  }
+}

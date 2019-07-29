@@ -1,0 +1,95 @@
+.page-name {
+  position: fixed;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: rotate(180deg);
+  font-size: 0.9em;
+}
+
+// -- Default -- Mobile portrait
+@media (max-width: 479px) {
+  .page-name {
+    display: none;
+  }
+}
+
+// Tablet portrait
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-name {
+    display: none;
+  }
+}
+
+// Tablets landscape
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-name {
+    bottom: 7%;
+    left: 2%;
+    font-size: 0.8em;
+  }
+}
+
+/*iPad Pro 9.7"*/
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .page-name {
+    display: none;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .page-name {
+    bottom: 7%;
+    left: 2%;
+  }
+}
+/*iPad Pro 10.5"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  display: none;
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .page-name {
+    bottom: 7%;
+    left: 2%;
+  }
+}
+/*ipad PRo 12.9"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .page-name {
+    display: none;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .page-name {
+    bottom: 7%;
+    left: 2%;
+  }
+}
+
+// Laptops
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .page-name {
+    bottom: 7%;
+    left: 2%;
+  }
+}
+
+// desktops
+@media (min-width: 1680px) {
+  .page-name {
+    bottom: 45%;
+    left: 2%;
+  }
+}

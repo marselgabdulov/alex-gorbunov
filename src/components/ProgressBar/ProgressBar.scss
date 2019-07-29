@@ -1,0 +1,22 @@
+@import "../../shared-styles/colors.scss";
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: increase 7s infinite ease-in-out;
+  // background-color: $color-blue;
+  background-color: $color-pink;
+}
+
+@keyframes increase {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

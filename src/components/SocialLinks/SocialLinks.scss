@@ -1,0 +1,86 @@
+@import "../../shared-styles/colors.scss";
+
+.social-links {
+  position: fixed;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+
+  .social-link {
+    writing-mode: vertical-rl;
+    width: 1.2em;
+    height: 1.2em;
+    svg {
+      fill: #414140;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        fill: $color-pink;
+      }
+    }
+  }
+}
+
+@mixin social-links--mobile-portrait {
+  .social-links {
+    display: none !important;
+  }
+}
+
+@mixin social-links--tablet-portrait {
+  .social-links {
+    visibility: hidden;
+  }
+}
+
+@mixin social-links--tablet-landscape {
+  .social-links {
+    bottom: 12%;
+    right: 1.5%;
+    width: 2em;
+    height: 20%;
+    flex-direction: column;
+
+    .social-link {
+      svg {
+        width: 0.9em;
+        height: 0.9em;
+      }
+    }
+  }
+}
+
+@mixin social-links--laptop {
+  .social-links {
+    bottom: 13%;
+    right: 2%;
+    width: 2em;
+    height: 30%;
+    flex-direction: column;
+  }
+}
+
+@mixin social-links--desktop {
+  .social-links {
+    top: 40%;
+    right: 1.5%;
+    width: 1.75em;
+    height: 25%;
+    flex-direction: column;
+    .social-link {
+      svg {
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+}

@@ -1,11 +1,39 @@
 module.exports = {
+  pathPrefix: "/alex-gorbunov",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    siteUrl: `https://marselgabdulov.github.io/alex-gorbunov`,
+    title: `Алексей Горбунов. Ведущий мероприятий любой сложности в Москве и Москвоской области.`,
+    description: `Ведущий. Москва. Свадьба. Корпоратив. Детский праздник. Торжества.`,
+    author: `@marselgabdulov`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://marselgabdulov.github.io/alex-gorbunov",
+        sitemap: "https://marselgabdulov.github.io/alex-gorbunov/sitemap.xml",
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,13 +46,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `alexey-gorbunov-website`,
+        short_name: `alex-gorbunov`,
         start_url: `/`,
         background_color: `#663399`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/android-chrome-512x512.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Ubuntu`,
+            subsets: [`cyrillic`],
+            variants: [`300`, `400`, `500`, `700`],
+          },
+          {
+            family: `Playfair Display SC`,
+            subsets: [`cyrillic`],
+            variants: [`400`, `700`],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

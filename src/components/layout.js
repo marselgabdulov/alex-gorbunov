@@ -1,52 +1,36 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, { useState, useEffect } from "react"
+import AOS from "aos"
+import Nav from "./Nav/Nav"
+import NavPannel from "./NavPannel/NavPannel"
+import Footer from "./Footer/Footer"
+import Grid from "./Grid/Grid"
+import "./layout.scss"
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+function Layout({ children }) {
+  const [navPannelState, setNavPannelState] = useState(false)
 
-import Header from "./header"
-import "./layout.css"
+  useEffect(() => {
+    AOS.init()
+  })
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  function handleNavPannel() {
+    setNavPannelState(navPannelState ? false : true)
+  }
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <div className="turn">
+        <span>Пожалуйста переверните</span>
+      </div>
+      <Nav handleClick={handleNavPannel} />
+      <NavPannel show={navPannelState} handleClick={handleNavPannel} />
+
+      <main>{children}</main>
+      <div className="footer">
+        <Footer />
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
