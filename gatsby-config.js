@@ -65,7 +65,7 @@ module.exports = {
             variants: [`300`, `400`, `500`, `700`],
           },
           {
-            family: `Playfair Display SC`,
+            family: `Playfair Display`,
             subsets: [`cyrillic`],
             variants: [`400`, `700`],
           },
