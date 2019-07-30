@@ -59,19 +59,18 @@
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
   .logo {
-    top: 0.75em;
+    top: 1.8em;
     left: 4%;
     width: auto;
     height: auto;
     padding: 10px;
     border: 1px;
-    font-size: 1em;
+    font-size: 0.8em;
     border: none;
   }
 
   .logo__link {
     text-decoration: none;
-    color: black;
 
     &:before,
     &:after {
@@ -80,7 +79,7 @@
 
     a {
       font-weight: 700;
-      color: white;
+      color: black !important;
     }
   }
 }

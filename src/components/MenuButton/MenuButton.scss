@@ -40,7 +40,6 @@
     .three {
       height: 2px;
       position: absolute;
-
       transition: all 0.3s ease-in-out;
     }
     .one {
@@ -66,7 +65,7 @@
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
   .menu-button {
-    top: 1em;
+    top: 1.5em;
     right: 4%;
     width: auto;
     height: 2em;
