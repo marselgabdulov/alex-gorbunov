@@ -1,0 +1,1158 @@
+@import "../../shared-styles/colors.scss";
+@import "../transitions.scss";
+
+.index-intro {
+  position: relative;
+  width: 100%;
+}
+
+.index-intro__title {
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.index-intro__current-image {
+  position: absolute;
+  filter: brightness(0.65);
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    filter: brightness(1);
+  }
+}
+
+.index-intro__gallery-control {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+
+  .next,
+  .prev {
+    &:hover {
+      cursor: pointer;
+      fill: $color-pink;
+    }
+  }
+
+  .next {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .prev {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.index-intro__link {
+  position: absolute;
+}
+
+.index-intro__gallery {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-intro__see-all {
+  background-color: $color-pink;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.index-intro__gallery-item--active {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .image {
+    filter: grayscale(100%);
+  }
+}
+
+.index-intro__gallery-item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.item__image {
+  position: absolute;
+  filter: brightness(75%);
+}
+
+.item__title {
+  text-transform: uppercase;
+  color: white;
+}
+
+// -- Default -- Mobile portrait
+@media (max-width: 479px) {
+  .index-intro {
+    height: calc(100vh - 80px);
+  }
+
+  .index-intro__title {
+    left: 5%;
+    top: 24%;
+    font-size: 1.25em;
+    line-height: 2em;
+    width: 80%;
+    z-index: 10;
+    h2 {
+      color: white;
+    }
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 87.5%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    display: none;
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 4%;
+    width: 10%;
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    display: none;
+  }
+
+  .index-intro__gallery-item--active {
+    width: 25%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 1.5em;
+      margin-top: -1.5em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 25%;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 0.5em;
+  }
+}
+
+// Tablet portrait
+@media (min-width: 768px) and (max-width: 991px) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 25%;
+    top: 24%;
+    font-size: 1.85em;
+    width: 45%;
+    z-index: 10;
+    h2 {
+      color: white;
+    }
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 4%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 4%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+
+// Tablets landscape
+@media (min-width: 992px) and (max-width: 1199px) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 7%;
+    top: 24%;
+    font-size: 1.55em;
+    width: 29%;
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 9%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 9%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+
+/*iPad Pro 9.7"*/
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 37%;
+    top: 24%;
+    font-size: 2.5em;
+    width: 45%;
+    z-index: 10;
+    line-height: 2.5em;
+    h2 {
+      color: white;
+    }
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 68%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 4%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 4%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 7%;
+    top: 24%;
+    font-size: 1.55em;
+    width: 29%;
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 9%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 9%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+/*iPad Pro 10.5"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-intro {
+    height: 80vh;
+  }
+
+  .index-intro__title {
+    left: 40%;
+    top: 24%;
+    font-size: 3em;
+    width: 45%;
+    z-index: 10;
+    line-height: 2.5em;
+    h2 {
+      color: white;
+    }
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 4%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 4%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 7%;
+    top: 24%;
+    font-size: 1.55em;
+    width: 29%;
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 9%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 9%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+/*ipad PRo 12.9"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-intro {
+    height: 80vh;
+  }
+
+  .index-intro__title {
+    left: 40%;
+    top: 24%;
+    font-size: 3em;
+    width: 45%;
+    z-index: 10;
+    line-height: 2.5em;
+    h2 {
+      color: white;
+    }
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 4%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 4%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-intro {
+    height: 80vh;
+  }
+
+  .index-intro__title {
+    left: 4%;
+    top: 24%;
+    font-size: 1.55em;
+    width: 25%;
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 9%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 9%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+// Laptops
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 7%;
+    top: 24%;
+    font-size: 1.85em;
+    width: 29%;
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 85%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 9%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.25em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 9%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.25em;
+  }
+}
+
+// desktops
+@media (min-width: 1680px) {
+  .index-intro {
+    height: 100vh;
+  }
+
+  .index-intro__title {
+    left: 9%;
+    top: 24%;
+    font-size: 2em;
+    width: 20%;
+  }
+
+  .index-intro__current-image {
+    top: 0;
+    right: 0;
+    height: 83.5%;
+    width: 63%;
+    z-index: 1;
+  }
+
+  .index-intro__gallery-control {
+    top: 70%;
+    left: 9%;
+    width: 6em;
+    height: 2em;
+    z-index: 2;
+
+    .next,
+    .prev {
+      width: 1.5em;
+      height: 1em;
+    }
+  }
+
+  .index-intro__link {
+    top: 54%;
+    left: 9%;
+    width: 10%;
+  }
+
+  .index-intro__gallery {
+    width: 100%;
+    height: 20%;
+    bottom: -2em;
+    left: 0;
+    z-index: 2;
+  }
+
+  .index-intro__see-all {
+    width: 8%;
+    height: 100%;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+
+  .index-intro__gallery-item--active {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+
+    .image {
+      padding-top: 2em;
+      margin-top: -2em;
+    }
+  }
+
+  .index-intro__gallery-item {
+    width: 23%;
+    height: 100%;
+    padding-top: 0;
+    &:hover {
+      .image {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    }
+  }
+
+  .item__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .item__title {
+    font-size: 1.5em;
+  }
+}
