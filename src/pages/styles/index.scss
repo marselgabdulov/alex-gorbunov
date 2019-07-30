@@ -1,175 +1,57 @@
 @import "./pages.scss";
 
-.index-page {
-  width: 100%;
-  height: 100%;
-}
-
-.index-intro {
-  width: 100%;
-  height: 100vh;
-}
-
-.index-gallery {
-  position: absolute;
-}
-
 .test1 {
+  margin-top: 100vh;
   width: 100%;
   height: 100vh;
-  background: yellow;
-}
-
-.test2 {
-  width: 100%;
-  height: 100vh;
-  background: blue;
+  background-color: rgb(187, 179, 240);
 }
 
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
-  .index-page {
-    margin-top: 5em;
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    width: 100%;
-    height: 90%;
-  }
 }
 
 // Tablet portrait
 @media (min-width: 768px) and (max-width: 991px) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-  }
 }
 
 // Tablets landscape
 @media (min-width: 992px) and (max-width: 1199px) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
 }
 
 /*iPad Pro 9.7"*/
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-  }
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
 }
 /*iPad Pro 10.5"*/
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-  }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
 }
 /*ipad PRo 12.9"*/
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-  }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
 }
 
 // Laptops
 @media (min-width: 1200px) and (max-width: 1679px) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
 }
 
 // desktops
 @media (min-width: 1680px) {
-  .index-page {
-    margin-bottom: 7em;
-  }
-  .index-gallery {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
 }

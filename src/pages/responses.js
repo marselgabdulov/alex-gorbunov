@@ -124,16 +124,16 @@ export const responsesImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    image1: file(relativePath: { eq: "alex.jpg" }) {
+    image1: file(relativePath: { eq: "index/party.jpg" }) {
       ...responsesImage
     }
-    image2: file(relativePath: { eq: "wedding.jpg" }) {
+    image2: file(relativePath: { eq: "index/pull.jpg" }) {
       ...responsesImage
     }
-    image3: file(relativePath: { eq: "corporate.jpg" }) {
+    image3: file(relativePath: { eq: "index/footer.jpg" }) {
       ...responsesImage
     }
-    image4: file(relativePath: { eq: "children.jpg" }) {
+    image4: file(relativePath: { eq: "index/smile.jpg" }) {
       ...responsesImage
     }
   }

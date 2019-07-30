@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Gallery from "../components/Gallery/Gallery"
 import SocialLinks from "../components/SocialLinks/SocialLinks"
 import "./styles/children.scss"
-import PageName from "../components/PageName/PageName"
 
 function ChildrenPage(props) {
   const images = [

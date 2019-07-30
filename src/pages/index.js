@@ -3,8 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SocialLinks from "../components/SocialLinks/SocialLinks"
-import PageName from "../components/PageName/PageName"
-import IntroGallery from "../components/IntroGallery/IntroGallery"
+import IndexIntro from "../components/IndexIntro/IndexIntro"
 
 import "./styles/index.scss"
 
@@ -23,7 +22,7 @@ function IndexPage(props) {
       },
     },
     {
-      image: props.data.image5.childImageSharp.fluid,
+      image: props.data.image2.childImageSharp.fluid,
       title: "свадьбы",
       subtitle: "ведущий на свадьбу",
       text:
@@ -35,7 +34,7 @@ function IndexPage(props) {
       },
     },
     {
-      image: props.data.image6.childImageSharp.fluid,
+      image: props.data.image3.childImageSharp.fluid,
       title: "Корпоративы",
       subtitle: "ведущий на корпоратив",
       text:
@@ -47,7 +46,7 @@ function IndexPage(props) {
       },
     },
     {
-      image: props.data.image7.childImageSharp.fluid,
+      image: props.data.image4.childImageSharp.fluid,
       title: "детские праздники",
       subtitle: "ведущий на радость детям",
       text:
@@ -62,14 +61,9 @@ function IndexPage(props) {
   return (
     <Layout>
       <SEO title="Главная" />
-      <PageName page={"главная"} />
+      <SocialLinks />
       <div className="page">
-        <SocialLinks />
-        <section className="index-intro">
-          <div className="index-gallery">
-            <IntroGallery data={indexData} />
-          </div>
-        </section>
+        <IndexIntro data={indexData} />
         <section className="test1"></section>
         <section className="test2"></section>
       </div>
@@ -89,16 +83,16 @@ export const indexPageImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    image1: file(relativePath: { eq: "alex.jpg" }) {
+    image1: file(relativePath: { eq: "index/alex.jpg" }) {
       ...indexPageImage
     }
-    image5: file(relativePath: { eq: "index/portfolio-party1.jpg" }) {
+    image2: file(relativePath: { eq: "index/footer.jpg" }) {
       ...indexPageImage
     }
-    image6: file(relativePath: { eq: "index/portfolio-party2.jpg" }) {
+    image3: file(relativePath: { eq: "index/pull.jpg" }) {
       ...indexPageImage
     }
-    image7: file(relativePath: { eq: "index/portfolio-children.jpg" }) {
+    image4: file(relativePath: { eq: "index/party.jpg" }) {
       ...indexPageImage
     }
   }
