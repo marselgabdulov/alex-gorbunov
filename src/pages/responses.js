@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SocialLinks from "../components/SocialLinks/SocialLinks"
 import "./styles/responses.scss"
-import PageName from "../components/PageName/PageName"
 
 function ResponsesPage(props) {
   const [visible, setVisible] = useState(false)

@@ -1,32 +1,26 @@
-@import "./SocialLinks/SocialLinks.scss";
 @import "./Gallery/Gallery.scss";
 
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
-  @include social-links--mobile-portrait();
   @include gallery--mobile-portrait();
 }
 
 // Tablet portraits
 @media (min-width: 768px) and (max-width: 991px) {
-  @include social-links--tablet-portrait();
   @include gallery--tablet-portrait();
 }
 
 // Tablets landscape
 @media (min-width: 992px) and (max-width: 1199px) {
-  @include social-links--tablet-landscape();
   @include gallery--tablet-landscape();
 }
 
 // Laptops
 @media (min-width: 1200px) and (max-width: 1679px) {
-  @include social-links--laptop();
   @include gallery--laptop();
 }
 
 // desktops
 @media (min-width: 1680px) {
-  @include social-links--desktop();
   @include gallery--desktop();
 }

@@ -7,12 +7,13 @@ import classnames from "classnames"
 
 class Nav extends React.Component {
   state = {
-    prevScrollPosition: window.pagesYOffset,
+    prevScrollPosition: null,
     visible: true,
     top: false,
   }
 
   componentDidMount() {
+    this.setState({ prevScrollPosition: window.pagesYOffset })
     window.addEventListener("scroll", this.handleScroll)
   }
 

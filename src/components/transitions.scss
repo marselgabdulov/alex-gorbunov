@@ -69,7 +69,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(50%);
   opacity: 1;
 }
 .slide-enter.slide-enter-active {
@@ -90,22 +90,24 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 .slide-exit.slide-exit-active {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 0;
   opacity: 1;
   transition: top;
   transition-duration: 0.4s;
   transition-delay: 0s;
   transition-timing-function: ease-in-out;
+  z-index: -1;
 }
 .slide-exit-done {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 0;
   opacity: 0;
   height: 0;
-  z-index: -10000;
+  z-index: -10;
 }
