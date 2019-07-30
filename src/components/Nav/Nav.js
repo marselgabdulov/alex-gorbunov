@@ -1,25 +1,80 @@
 import React from "react"
 import "./Nav.scss"
 import { Link } from "gatsby"
+import Logo from "../Logo/Logo"
+import MenuButton from "../MenuButton/MenuButton"
+import classnames from "classnames"
 
-const Nav = props => (
-  <nav className="nav">
-    <h1 className="nav__logo">
-      <Link to="/" title="на главную">
-        А.
-      </Link>
-    </h1>
+class Nav extends React.Component {
+  state = {
+    prevScrollPosition: window.pagesYOffset,
+    visible: true,
+    top: false,
+  }
 
-    <div className="nav__button" onClick={props.handleClick}>
-      <span className="button__text">меню</span>
-      <div className="button__lines">
-        <div className="one"></div>
-        <div className="two"></div>
-        <div className="three"></div>
-      </div>
-    </div>
-  </nav>
-)
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const { prevScrollPosition } = this.state
+
+    const currentScrollPosition = window.pageYOffset
+    const visible = prevScrollPosition > currentScrollPosition
+    const isTop = currentScrollPosition > 0
+
+    this.setState({
+      prevScrollPosition: currentScrollPosition,
+      visible,
+      top: isTop,
+    })
+  }
+
+  render() {
+    return (
+      <nav
+        className={classnames("navbar", {
+          "navbar--hidden": !this.state.visible,
+        })}
+        style={
+          this.state.top
+            ? { background: "white" }
+            : { background: "transparent" }
+        }
+      >
+        <Logo />
+        <div className="navbar__main">
+          <Link
+            style={this.state.top ? { color: "black" } : { color: "white" }}
+            to="/"
+          >
+            услуги
+          </Link>
+          <Link
+            to="/"
+            style={this.state.top ? { color: "black" } : { color: "white" }}
+          >
+            отзывы
+          </Link>
+          <Link
+            to="/"
+            style={this.state.top ? { color: "black" } : { color: "white" }}
+          >
+            контакты
+          </Link>
+        </div>
+        <MenuButton
+          handleClick={this.props.handleClick}
+          color={this.state.top ? "black" : "white"}
+        />
+      </nav>
+    )
+  }
+}
 
 export default Nav
 
