@@ -1,6 +1,101 @@
 @import "../../shared-styles/colors.scss";
 @import "../transitions.scss";
 
+.index-modal--hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.index-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  visibility: visible;
+  z-index: 1000;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+
+  .index-modal__sider {
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    z-index: -1;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .index-modal__main {
+    position: absolute;
+    transition: opacity 0.4s ease-in-out;
+    background-color: #f5f5f5;
+
+    .index-modal__links {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+
+      .index-modal__link {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          .modal-link__bg {
+            transform: scale(1.1);
+            filter: brightness(0.75);
+          }
+        }
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: white;
+          position: absolute;
+        }
+
+        .modal-link__bg--wrapper {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        .modal-link__bg {
+          width: 100%;
+          height: 100%;
+          filter: brightness(0.5);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+
+    .index-modal__close {
+      position: absolute;
+      z-index: 1000;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 .index-intro {
   position: relative;
   width: 100%;
@@ -37,13 +132,13 @@
 
   .next {
     svg {
-      transform: rotate(-90deg);
+      transform: rotate(0deg);
     }
   }
 
   .prev {
     svg {
-      transform: rotate(90deg);
+      transform: rotate(180deg);
     }
   }
 }
@@ -67,11 +162,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
 
-  a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -105,12 +204,20 @@
 }
 
 .item__title {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
   text-transform: uppercase;
   color: white;
 }
 
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
+  .index-modal--hidden {
+    display: none;
+  }
+  .index-modal {
+    display: none;
+  }
   .index-intro {
     height: calc(100vh - 80px);
   }
@@ -193,6 +300,31 @@
 
 // Tablet portrait
 @media (min-width: 768px) and (max-width: 991px) {
+  .index-modal {
+    .index-modal__main {
+      top: 5%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 55%;
+        margin-top: 7.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 50%;
+          height: 40%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 100vh;
   }
@@ -225,7 +357,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -249,7 +381,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -285,12 +417,39 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 // Tablets landscape
 @media (min-width: 992px) and (max-width: 1199px) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 75%;
+        margin-top: 10%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 25%;
+          height: 50%;
+
+          font-size: 0.75em;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 100vh;
   }
@@ -319,7 +478,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -343,7 +502,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -379,13 +538,38 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 /*iPad Pro 9.7"*/
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-modal {
+    .index-modal__main {
+      top: 5%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 55%;
+        margin-top: 7.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 50%;
+          height: 40%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 100vh;
   }
@@ -419,7 +603,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -443,7 +627,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -479,12 +663,39 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 75%;
+        margin-top: 10%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 25%;
+          height: 50%;
+
+          font-size: 0.75em;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 100vh;
   }
@@ -513,7 +724,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -537,7 +748,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -573,13 +784,38 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 /*iPad Pro 10.5"*/
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 50%;
+        margin-top: 12.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 50%;
+          height: 40%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 80vh;
   }
@@ -613,7 +849,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -637,7 +873,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -673,13 +909,38 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 70%;
+        margin-top: 7.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 25%;
+          height: 50%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 100vh;
   }
@@ -708,7 +969,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -732,7 +993,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -768,13 +1029,38 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 /*ipad PRo 12.9"*/
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 50%;
+        margin-top: 12.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 50%;
+          height: 40%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 80vh;
   }
@@ -808,7 +1094,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -832,7 +1118,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -868,13 +1154,38 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 70%;
+        margin-top: 7.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 25%;
+          height: 50%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 80vh;
   }
@@ -903,7 +1214,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -927,7 +1238,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -963,14 +1274,37 @@
   }
 
   .item__title {
-    h3 {
-      font-size: 1.5em;
-    }
+    font-size: 1em;
   }
 }
 
 // Laptops
 @media (min-width: 1200px) and (max-width: 1679px) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 70%;
+        margin-top: 7.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 25%;
+          height: 50%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
   .index-intro {
     height: 100vh;
   }
@@ -999,7 +1333,7 @@
 
     .next,
     .prev {
-      width: 1.25em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -1023,7 +1357,7 @@
     height: 100%;
 
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -1059,12 +1393,38 @@
   }
 
   .item__title {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 // desktops
 @media (min-width: 1680px) {
+  .index-modal {
+    .index-modal__main {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80vh;
+
+      .index-modal__links {
+        width: 100%;
+        height: 70%;
+        margin-top: 7.5%;
+        flex-wrap: wrap;
+
+        .index-modal__link {
+          width: 25%;
+          height: 50%;
+        }
+      }
+
+      .index-modal__close {
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
+
   .index-intro {
     height: 100vh;
   }
@@ -1093,7 +1453,7 @@
 
     .next,
     .prev {
-      width: 1.5em;
+      width: 1em;
       height: 1em;
     }
   }
@@ -1117,7 +1477,7 @@
     height: 100%;
 
     a {
-      font-size: 1.5em;
+      font-size: 1em;
     }
   }
 
@@ -1153,6 +1513,6 @@
   }
 
   .item__title {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }

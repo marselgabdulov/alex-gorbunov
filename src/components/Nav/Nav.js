@@ -78,39 +78,3 @@ class Nav extends React.Component {
 }
 
 export default Nav
-
-// <div className="nav__links">
-//   <div className="nav__link">
-//     <Link to="/weddings" title="свадьбы" activeStyle={{ color: "#e82a6e" }}>
-//       Свадьбы
-//     </Link>
-//   </div>
-//   <div className="nav__link">
-//     <Link
-//       to="/corporates"
-//       title="корпоративы"
-//       activeStyle={{ color: "#e82a6e" }}
-//     >
-//       Корпоративы
-//     </Link>
-//   </div>
-//   <div className="nav__link">
-//     <Link
-//       to="/children"
-//       title="детские праздники"
-//       activeStyle={{ color: "#e82a6e" }}
-//     >
-//       Детские праздники
-//     </Link>
-//   </div>
-//   <div className="nav__link">
-//     <Link to="/responses" title="отзывы" activeStyle={{ color: "#e82a6e" }}>
-//       Отзывы
-//     </Link>
-//   </div>
-//   <div className="nav__link">
-//     <Link to="/contacts" title="контакты">
-//       Контакты
-//     </Link>
-//   </div>
-// </div>
