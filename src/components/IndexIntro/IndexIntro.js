@@ -56,7 +56,7 @@ class IndexIntro extends React.Component {
                     <Image image={data[0].image} />
                   </div>
                 </div>
-                <Link to="/">Свадьбы</Link>
+                <Link to="/services#weddings">Свадьбы</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -64,7 +64,7 @@ class IndexIntro extends React.Component {
                     <Image image={data[1].image} />
                   </div>
                 </div>
-                <Link to="/">Корпоративы</Link>
+                <Link to="/services#corporate">Корпоративы</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -72,7 +72,7 @@ class IndexIntro extends React.Component {
                     <Image image={data[2].image} />
                   </div>
                 </div>
-                <Link to="/">Детские праздники</Link>
+                <Link to="/services#kids">Детские праздники</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -80,7 +80,7 @@ class IndexIntro extends React.Component {
                     <Image image={data[3].image} />
                   </div>
                 </div>
-                <Link to="/">Частные праздники</Link>
+                <Link to="/services#private">Частные праздники</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -88,7 +88,7 @@ class IndexIntro extends React.Component {
                     <Image image={otherImages[0]} />
                   </div>
                 </div>
-                <Link to="/">Дни рождения</Link>
+                <Link to="/services#birthday">Дни рождения</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -96,7 +96,7 @@ class IndexIntro extends React.Component {
                     <Image image={otherImages[1]} />
                   </div>
                 </div>
-                <Link to="/">Городские праздники</Link>
+                <Link to="/services#city">Городские праздники</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -104,7 +104,7 @@ class IndexIntro extends React.Component {
                     <Image image={otherImages[2]} />
                   </div>
                 </div>
-                <Link to="/">Промоакции</Link>
+                <Link to="/services#promo">Промоакции</Link>
               </div>
               <div className="index-modal__link">
                 <div className="modal-link__bg--wrapper">
@@ -112,7 +112,7 @@ class IndexIntro extends React.Component {
                     <Image image={otherImages[3]} />
                   </div>
                 </div>
-                <Link to="/">Другое</Link>
+                <Link to="/reviews">Отзывы</Link>
               </div>
             </div>
           </div>
@@ -121,13 +121,19 @@ class IndexIntro extends React.Component {
             onClick={() => this.setState({ modalIsVisible: false })}
           ></div>
         </div>
-        <div className="index-intro__title">
+        <div
+          className="index-intro__title"
+          data-aos="fade"
+          data-aos-delay="100"
+          data-aos-duration="500"
+          data-aos-once="true"
+        >
           <h2>{data[currentIndex].subtitle}</h2>
         </div>
 
         <div className="index-intro__link">
           <CustomLink
-            color={"#e82a6e"}
+            color={"black"}
             to={data[currentIndex].link.to}
             text="Подробнее"
           />
@@ -136,7 +142,13 @@ class IndexIntro extends React.Component {
           <Image image={data[currentIndex].image} />
         </div>
 
-        <div className="index-intro__gallery-control">
+        <div
+          className="index-intro__gallery-control"
+          data-aos="fade"
+          data-aos-delay="100"
+          data-aos-duration="500"
+          data-aos-once="true"
+        >
           <div className="prev" onClick={this.handlePrev}>
             <Arrow />
           </div>

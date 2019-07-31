@@ -60,12 +60,14 @@ class Nav extends React.Component {
           <Link
             style={this.state.top ? { color: "black" } : { color: "white" }}
             to="/services"
+            activeStyle={{ color: "#e82a6e" }}
           >
             услуги
           </Link>
           <Link
-            to="/"
+            to="/reviews"
             style={this.state.top ? { color: "black" } : { color: "white" }}
+            activeStyle={{ color: "#e82a6e" }}
           >
             отзывы
           </Link>
