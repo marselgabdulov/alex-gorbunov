@@ -3,6 +3,7 @@ import "./styles/services.scss"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/Image/Image"
+import SEO from "../components/seo"
 
 function Services(props) {
   const images = [
@@ -23,6 +24,7 @@ function Services(props) {
 
   return (
     <Layout>
+      <SEO title="Услуги" />
       <div className="page">
         <section className="services-intro">
           <div className="services__menu">
@@ -37,23 +39,25 @@ function Services(props) {
             <div
               className="corner-st"
               data-aos="fade"
-              data-aos-delay="0"
+              data-aos-delay="50"
               data-aos-duration="500"
               data-aos-once="true"
               data-aos-anchor-placement="bottom"
             ></div>
             <div
               className="corner-big"
-              data-aos="custom-slide-left"
+              data-aos="fade"
+              data-aos-delay="100"
+              data-aos-duration="500"
               data-aos-once="true"
               data-aos-anchor-placement="bottom"
-              data-aos-duration="750"
             ></div>
             <div
               className="promo"
-              data-aos="custom-slide-left"
+              data-aos="fade"
+              data-aos-delay="150"
+              data-aos-duration="500"
               data-aos-once="true"
-              data-aos-duration="1000"
               data-aos-anchor-placement="bottom"
             >
               <span onClick={() => scrollTo(document.getElementById("promo"))}>
@@ -62,8 +66,9 @@ function Services(props) {
             </div>
             <div
               className="city"
-              data-aos="custom-slide-left"
-              data-aos-duration="5000"
+              data-aos="fade"
+              data-aos-delay="200"
+              data-aos-duration="500"
               data-aos-once="true"
             >
               <div className="image__wrapper">
@@ -77,8 +82,9 @@ function Services(props) {
             </div>
             <div
               className="birthday"
-              data-aos="custom-slide-left"
-              data-aos-duration="1500"
+              data-aos="fade"
+              data-aos-delay="250"
+              data-aos-duration="500"
               data-aos-once="true"
             >
               <div className="image__wrapper">
@@ -92,8 +98,9 @@ function Services(props) {
             </div>
             <div
               className="private"
-              data-aos="custom-slide-up"
-              data-aos-duration="2000"
+              data-aos="fade"
+              data-aos-delay="300"
+              data-aos-duration="500"
               data-aos-once="true"
             >
               <div className="image__wrapper">
@@ -107,8 +114,9 @@ function Services(props) {
             </div>
             <div
               className="kids"
-              data-aos="custom-slide-left"
-              data-aos-duration="1000"
+              data-aos="fade"
+              data-aos-delay="350"
+              data-aos-duration="500"
               data-aos-once="true"
             >
               <div className="image__wrapper">
@@ -120,8 +128,9 @@ function Services(props) {
             </div>
             <div
               className="corporate"
-              data-aos="custom-slide-left"
-              data-aos-duration="3000"
+              data-aos="fade"
+              data-aos-delay="400"
+              data-aos-duration="500"
               data-aos-once="true"
             >
               <div className="image__wrapper">
@@ -135,8 +144,9 @@ function Services(props) {
             </div>
             <div
               className="wedding"
-              data-aos="custom-slide-up"
-              data-aos-duration="1500"
+              data-aos="fade"
+              data-aos-delay="500"
+              data-aos-duration="500"
               data-aos-once="true"
             >
               <div className="image__wrapper">

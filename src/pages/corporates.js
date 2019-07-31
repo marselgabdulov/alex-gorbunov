@@ -51,7 +51,7 @@ function CorporatesPage(props) {
                 </p>
               </div>
               <div className="page__link">
-                <Link to="/responses" title="Отзывы">
+                <Link to="/reviews" title="Отзывы">
                   Отзывы
                 </Link>
               </div>

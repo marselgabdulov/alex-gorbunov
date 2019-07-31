@@ -21,7 +21,7 @@ function IndexPage(props) {
       subtitle: "ведущий на свадьбу",
 
       link: {
-        to: "/responses",
+        to: "/reviews",
         text: "подробнее",
         title: "подробнее",
       },
