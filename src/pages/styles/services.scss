@@ -1,0 +1,429 @@
+@import "./pages.scss";
+
+[data-aos="custom-slide-up"] {
+  width: 100%;
+  max-height: 0;
+  transition: max-height;
+  transition-delay: inherit;
+  transition-duration: inherit;
+  overflow: hidden;
+
+  &.aos-animate {
+    max-height: 100%;
+    transition: max-height;
+  }
+}
+
+[data-aos="custom-slide-left"] {
+  max-width: 0;
+  height: inherit;
+  transition: max-width;
+  transition-delay: inherit;
+  transition-duration: inherit;
+  overflow: hidden;
+
+  &.aos-animate {
+    max-width: 100%;
+    transition: max-width;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.services__menu {
+  width: 100%;
+  height: 100%;
+}
+
+.corner-so,
+.corner-st,
+.corner-big,
+.promo,
+.city,
+.birthday,
+.private,
+.kids,
+.corporate,
+.wedding {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    .image {
+      transform: scale(1.04);
+      filter: brightness(0.95);
+    }
+  }
+
+  .image__wrapper {
+    overflow: hidden;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(0.75);
+  }
+
+  span {
+    position: absolute;
+    font-family: "Playfair Display", serif;
+    // font-family: "Ubuntu", monospace;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.corner-so {
+  width: 3%;
+  height: 6%;
+  bottom: 0;
+  left: 0;
+  background-color: #db769b;
+}
+
+.corner-st {
+  width: 3%;
+  height: 6%;
+  bottom: 0;
+  left: 3%;
+  background-color: #d44377;
+}
+
+.corner-big {
+  width: 6%;
+  height: 12.5%;
+  left: 6%;
+  bottom: 0;
+  background-color: #a82655;
+}
+
+.promo {
+  bottom: 6%;
+  left: 0;
+  width: 6%;
+  height: 6.5%;
+  background-color: white;
+
+  span {
+    color: black;
+    font-size: 1.8em;
+  }
+}
+
+.city {
+  bottom: 12.5%;
+  left: 0;
+  width: 12%;
+  height: 12.5%;
+  background-color: #262626;
+
+  span {
+    color: white;
+    font-size: 1.5em;
+  }
+}
+
+.birthday {
+  bottom: 0;
+  left: 12%;
+  width: 14%;
+  height: 25%;
+  background-color: #db769b;
+
+  span {
+    color: white;
+    font-size: 1.8em;
+  }
+}
+
+.private {
+  bottom: 25%;
+  left: 0;
+  width: 26%;
+  height: 25%;
+  background-color: #f68686;
+
+  span {
+    color: white;
+    font-size: 2.8em;
+  }
+}
+
+.kids {
+  bottom: 0%;
+  left: 26%;
+  width: 26%;
+  height: 50%;
+  background-color: #f2c091;
+
+  span {
+    color: white;
+    font-size: 2.8em;
+  }
+}
+
+.corporate {
+  bottom: 50%;
+  left: 0%;
+  width: 52%;
+  height: 50%;
+  background-color: #db769b;
+
+  span {
+    color: white;
+    font-size: 4em;
+  }
+}
+
+.wedding {
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+
+  // background-color: #f68686;
+
+  span {
+    color: white;
+    font-size: 4em;
+  }
+}
+
+////////////////////////////////
+
+.services__mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item {
+  width: 100%;
+  height: 12.5%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-link {
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  display: inline-block;
+
+  &:before {
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: translateX(-100%);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &:before {
+      transform: translateX(0);
+    }
+  }
+}
+
+// -- Default -- Mobile portrait
+@media (max-width: 479px) {
+  .services__menu {
+    display: none;
+  }
+}
+
+// Tablet portrait
+@media (min-width: 768px) and (max-width: 991px) {
+  .services__menu {
+    display: none;
+  }
+}
+
+// Tablets landscape
+@media (min-width: 992px) and (max-width: 1199px) {
+  .services__mobile-menu {
+    display: none;
+  }
+
+  .services__menu {
+    .promo {
+      span {
+        color: black;
+        font-size: 1em;
+      }
+    }
+
+    .city {
+      span {
+        font-size: 1em;
+      }
+    }
+
+    .birthday {
+      span {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+/*iPad Pro 9.7"*/
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .services__menu {
+    display: none;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .services__mobile-menu {
+    display: none;
+  }
+
+  .services__menu {
+    .promo {
+      span {
+        color: black;
+        font-size: 1em;
+      }
+    }
+
+    .city {
+      span {
+        font-size: 1em;
+      }
+    }
+
+    .birthday {
+      span {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+/*iPad Pro 10.5"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .services__menu {
+    display: none;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .services__mobile-menu {
+    display: none;
+  }
+
+  .services__menu {
+    .promo {
+      span {
+        color: black;
+        font-size: 1em;
+      }
+    }
+
+    .city {
+      span {
+        font-size: 1em;
+      }
+    }
+
+    .birthday {
+      span {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+/*ipad PRo 12.9"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .services__menu {
+    display: none;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .services__mobile-menu {
+    display: none;
+  }
+
+  .services__menu {
+    .promo {
+      background-color: white;
+
+      span {
+        color: black;
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+// Laptops
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .services__mobile-menu {
+    display: none;
+  }
+
+  .services__menu {
+    .promo {
+      background-color: white;
+
+      span {
+        color: black;
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+// desktops
+@media (min-width: 1680px) {
+  .services__mobile-menu {
+    display: none;
+  }
+}
