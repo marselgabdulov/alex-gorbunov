@@ -124,7 +124,7 @@ const NavPannel = props => {
                   Главная
                 </Link>
                 <Link
-                  to="/responses"
+                  to="/reviews"
                   title="Отзывы"
                   activeStyle={{ color: "#e82a6e" }}
                 >

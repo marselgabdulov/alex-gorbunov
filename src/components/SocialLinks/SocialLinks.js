@@ -7,7 +7,13 @@ import Vimeo from "../../images/icons/social/vimeo.svg"
 import Vk from "../../images/icons/social/vk.svg"
 
 const SocialLinks = () => (
-  <div className="social-links">
+  <div
+    className="social-links"
+    data-aos="fade"
+    data-aos-delay="100"
+    data-aos-duration="1200"
+    data-aos-once="true"
+  >
     <div className="social-link">
       <a
         href="vk.com"
