@@ -129,10 +129,10 @@ export const pageQuery = graphql`
     image2: file(relativePath: { eq: "index/pull.jpg" }) {
       ...responsesImage
     }
-    image3: file(relativePath: { eq: "index/footer.jpg" }) {
+    image3: file(relativePath: { eq: "index/smoke.jpg" }) {
       ...responsesImage
     }
-    image4: file(relativePath: { eq: "index/smile.jpg" }) {
+    image4: file(relativePath: { eq: "index/microphone.jpg" }) {
       ...responsesImage
     }
   }
