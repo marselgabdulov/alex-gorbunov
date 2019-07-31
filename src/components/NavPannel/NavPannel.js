@@ -131,32 +131,32 @@ const NavPannel = props => {
                   Отзывы
                 </Link>
                 <Link
-                  to="/weddings"
+                  to="/services#wedding"
                   title="Свадьбы"
                   activeStyle={{ color: "#e82a6e" }}
                 >
                   Свадьбы
                 </Link>
                 <Link
-                  to="/corporates"
+                  to="/services#corporate"
                   title="Корпоративы"
                   activeStyle={{ color: "#e82a6e" }}
                 >
                   Корпоративы
                 </Link>
                 <Link
-                  to="/children"
+                  to="/services#kids"
                   title="Детские праздники"
                   activeStyle={{ color: "#e82a6e" }}
                 >
                   Детские праздники
                 </Link>
                 <Link
-                  to="/contacts"
+                  to="/services#"
                   title="Контакты"
                   activeStyle={{ color: "#e82a6e" }}
                 >
-                  Контакты
+                  все услуги
                 </Link>
               </div>
             </div>

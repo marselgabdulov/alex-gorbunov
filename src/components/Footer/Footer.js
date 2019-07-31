@@ -1,13 +1,14 @@
 import React from "react"
 import "./Footer.scss"
 import { Link } from "gatsby"
-import Logo from "../Logo/Logo"
 
 function Footer(props) {
   return (
     <footer className="footer" id="contacts">
       <div className="footer-logo">
-        <Logo />
+        <Link to="/" title="вернуться на главную">
+          Алексей Горбунов
+        </Link>
       </div>
       <div className="footer-contacts">
         <div className="footer__phone">

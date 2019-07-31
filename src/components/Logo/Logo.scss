@@ -4,11 +4,11 @@
   position: absolute;
   text-align: center;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .logo-wrapper {
   position: absolute;
-  z-index: -1;
 }
 
 .logo__link {

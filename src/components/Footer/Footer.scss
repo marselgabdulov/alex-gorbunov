@@ -58,18 +58,17 @@
 
 .footer-logo {
   position: absolute;
-  .logo {
-    a {
-      color: white;
-    }
-    .logo__link {
-      color: white;
+  border: 2px solid white;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      &:before,
-      &:after {
-        background-color: #1a1a1a;
-      }
-    }
+  a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -145,11 +144,10 @@
   }
 
   .footer-logo {
-    top: 12%;
+    top: 12.5%;
     left: 5%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -189,11 +187,10 @@
   }
 
   .footer-logo {
-    top: 17%;
+    top: 20%;
     left: 10%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -234,11 +231,10 @@
   }
 
   .footer-logo {
-    top: 12%;
+    top: 12.5%;
     left: 5%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -278,11 +274,10 @@
   }
 
   .footer-logo {
-    top: 17%;
+    top: 20%;
     left: 10%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 /*iPad Pro 10.5"*/
@@ -323,11 +318,10 @@
   }
 
   .footer-logo {
-    top: 12%;
+    top: 12.5%;
     left: 5%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -368,11 +362,10 @@
   }
 
   .footer-logo {
-    top: 17%;
+    top: 20%;
     left: 10%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 /*ipad PRo 12.9"*/
@@ -413,11 +406,10 @@
   }
 
   .footer-logo {
-    top: 12%;
+    top: 12.5%;
     left: 5%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -458,11 +450,10 @@
   }
 
   .footer-logo {
-    top: 17%;
+    top: 20%;
     left: 10%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -502,11 +493,10 @@
   }
 
   .footer-logo {
-    top: 17%;
+    top: 20%;
     left: 10%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }
 
@@ -546,10 +536,9 @@
   }
 
   .footer-logo {
-    top: 17%;
+    top: 20%;
     left: 10%;
-    .logo {
-      border: 3px solid white;
-    }
+    width: 12em;
+    height: 4em;
   }
 }

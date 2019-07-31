@@ -4,7 +4,6 @@ import Nav from "./Nav/Nav"
 import NavMobile from "./NavMobile/NavMobile"
 import NavPannel from "./NavPannel/NavPannel"
 import Footer from "./Footer/Footer"
-import Grid from "./Grid/Grid"
 import "./layout.scss"
 
 function Layout({ children }) {
