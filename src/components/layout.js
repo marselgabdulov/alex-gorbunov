@@ -28,9 +28,7 @@ function Layout({ children }) {
       <NavPannel show={navPannelState} handleClick={handleNavPannel} />
 
       <main>{children}</main>
-      <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
     </>
   )
 }
