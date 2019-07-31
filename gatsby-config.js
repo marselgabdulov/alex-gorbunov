@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/alex-gorbunov",
   siteMetadata: {
     siteUrl: `https://marselgabdulov.github.io/alex-gorbunov`,
-    title: `Алексей Горбунов. Ведущий мероприятий любой сложности в Москве и Москвоской области.`,
+    title: `Алексей Горбунов. Ведущий мероприятий любой сложности в Москве и Москоской области.`,
     description: `Ведущий. Москва. Свадьба. Корпоратив. Детский праздник. Торжества.`,
     author: `@marselgabdulov`,
   },

@@ -21,7 +21,7 @@ function IndexPage(props) {
       subtitle: "ведущий на свадьбу",
 
       link: {
-        to: "/reviews",
+        to: "/reviews#wedding",
         text: "подробнее",
         title: "подробнее",
       },
@@ -32,7 +32,7 @@ function IndexPage(props) {
       subtitle: "ведущий на корпоратив",
 
       link: {
-        to: "/weddings",
+        to: "/reviews#corporate",
         text: "Подробнее",
         title: "свадьбы",
       },
@@ -42,7 +42,7 @@ function IndexPage(props) {
       title: "детские праздники",
       subtitle: "ведущий на радость детям",
       link: {
-        to: "/corporates",
+        to: "/reviews#kids",
         text: "Подробнее",
         title: "корпоративы",
       },
@@ -50,9 +50,9 @@ function IndexPage(props) {
     {
       image: props.data.image4.childImageSharp.fluid,
       title: "частные праздники",
-      subtitle: "ведущий на день рождения",
+      subtitle: "юбилеи и не только",
       link: {
-        to: "/children",
+        to: "/reviews#private",
         text: "Подробнее",
         title: "детские праздники",
       },
@@ -64,8 +64,9 @@ function IndexPage(props) {
       <SocialLinks />
       <div className="page">
         <IndexIntro data={indexData} otherImages={otherImages} />
-        <section className="test1"></section>
-        <section className="test2"></section>
+        <section className="about">
+          <h1>В разработке</h1>
+        </section>
       </div>
     </Layout>
   )

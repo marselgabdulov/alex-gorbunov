@@ -8,7 +8,7 @@ import Hand from "../images/icons/hand.svg"
 import Image from "../components/Image/Image"
 
 function reviewsPage(props) {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
 
   function handleFullReview(index) {
