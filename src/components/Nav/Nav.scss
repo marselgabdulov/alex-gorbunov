@@ -1,7 +1,6 @@
 @import "../../shared-styles/colors.scss";
 
 //MAIN
-
 .navbar--hidden {
 }
 
@@ -21,13 +20,14 @@
   align-items: center;
   justify-content: space-between;
 
-  a {
+  * {
     position: relative;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
 
     &:hover {
+      cursor: pointer;
       text-decoration: underline;
     }
   }

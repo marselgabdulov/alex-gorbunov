@@ -67,25 +67,25 @@ function Footer(props) {
       <div className="footer-menu">
         <span className="footer__title">Меню:</span>
         <div className="footer-menu__link">
-          <Link to="/">свадьбы</Link>
+          <Link to="/services#wedding">свадьбы</Link>
         </div>
         <div className="footer-menu__link">
-          <Link to="/">корпоративы</Link>
+          <Link to="/services#corporate">корпоративы</Link>
         </div>
         <div className="footer-menu__link">
-          <Link to="/">детские</Link>
+          <Link to="/services#kids">детские</Link>
         </div>
         <div className="footer-menu__link">
-          <Link to="/">частные</Link>
+          <Link to="/services#private">частные</Link>
         </div>
         <div className="footer-menu__link">
-          <Link to="/">дни рождения</Link>
+          <Link to="/services#birthday">дни рождения</Link>
         </div>
         <div className="footer-menu__link">
-          <Link to="/">городские</Link>
+          <Link to="/services#city">городские</Link>
         </div>
         <div className="footer-menu__link">
-          <Link to="/">промоакции</Link>
+          <Link to="/services#promo">промоакции</Link>
         </div>
       </div>
 

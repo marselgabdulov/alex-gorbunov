@@ -12,6 +12,14 @@ class Nav extends React.Component {
     top: false,
   }
 
+  scrollToBottom = () => {
+    window.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: document.body.scrollHeight,
+    })
+  }
+
   componentDidMount() {
     this.setState({ prevScrollPosition: window.pagesYOffset })
     window.addEventListener("scroll", this.handleScroll)
@@ -51,7 +59,7 @@ class Nav extends React.Component {
         <div className="navbar__main">
           <Link
             style={this.state.top ? { color: "black" } : { color: "white" }}
-            to="/"
+            to="/services"
           >
             услуги
           </Link>
@@ -61,12 +69,12 @@ class Nav extends React.Component {
           >
             отзывы
           </Link>
-          <Link
-            to="/"
+          <div
             style={this.state.top ? { color: "black" } : { color: "white" }}
+            onClick={this.scrollToBottom}
           >
             контакты
-          </Link>
+          </div>
         </div>
         <MenuButton
           handleClick={this.props.handleClick}
