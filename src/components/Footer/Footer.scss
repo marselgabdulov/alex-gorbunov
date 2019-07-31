@@ -1,177 +1,555 @@
-.footer__copy,
-.footer__developer {
-  position: fixed;
-  bottom: 1em;
-  text-transform: uppercase;
-  font-size: 0.85em;
-  display: none;
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #1a1a1a;
 }
 
-.footer__developer {
+.footer-contacts,
+.footer-social,
+.footer-menu {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   a {
-    text-transform: uppercase;
-    color: black;
+    color: #e3e3e3;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.footer__title {
+  color: #e3e3e3;
+  text-decoration: underline;
+}
+
+.footer-contacts {
+  .footer__phone,
+  .footer__email {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+  }
+}
+
+.footer-subfooter {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  a {
+    color: #e3e3e3;
+    text-decoration: underline;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.footer-logo {
+  position: absolute;
+  .logo {
+    a {
+      color: white;
+    }
+    .logo__link {
+      color: white;
+
+      &:before,
+      &:after {
+        background-color: #1a1a1a;
+      }
+    }
   }
 }
 
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
   .footer {
+    height: 85vh;
+  }
+
+  .footer-contacts {
+    bottom: 10%;
+    left: 2.5%;
+    height: 25%;
+
+    .footer__phone,
+    .footer__email {
+      height: 40%;
+    }
+  }
+
+  .footer-social {
+    top: 10%;
+    left: 2.5%;
+    height: 47.5%;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .footer-subfooter {
+    display: none;
+  }
+
+  .footer-logo {
     display: none;
   }
 }
 
 // Tablet portrait
 @media (min-width: 768px) and (max-width: 991px) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 85vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 30%;
+    left: 5%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 12.5%;
+    right: 35%;
+    height: 47.5%;
+  }
+
+  .footer-menu {
+    top: 12.5%;
+    right: 5%;
+    height: 47.5%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 5%;
+    width: 90%;
+  }
+
+  .footer-logo {
+    top: 12%;
+    left: 5%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 // Tablets landscape
 @media (min-width: 992px) and (max-width: 1199px) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 75vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 40%;
+    left: 10%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 20%;
+    right: 30%;
+    height: 50%;
+  }
+
+  .footer-menu {
+    top: 20%;
+    right: 10%;
+    height: 50%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 10%;
+    width: 40%;
+  }
+
+  .footer-logo {
+    top: 17%;
+    left: 10%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 /*iPad Pro 9.7"*/
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 85vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 30%;
+    left: 5%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 12.5%;
+    right: 35%;
+    height: 47.5%;
+  }
+
+  .footer-menu {
+    top: 12.5%;
+    right: 5%;
+    height: 47.5%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 5%;
+    width: 90%;
+  }
+
+  .footer-logo {
+    top: 12%;
+    left: 5%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 75vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 40%;
+    left: 10%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 20%;
+    right: 30%;
+    height: 50%;
+  }
+
+  .footer-menu {
+    top: 20%;
+    right: 10%;
+    height: 50%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 10%;
+    width: 40%;
+  }
+
+  .footer-logo {
+    top: 17%;
+    left: 10%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 /*iPad Pro 10.5"*/
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 85vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 30%;
+    left: 5%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 12.5%;
+    right: 35%;
+    height: 47.5%;
+  }
+
+  .footer-menu {
+    top: 12.5%;
+    right: 5%;
+    height: 47.5%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 5%;
+    width: 90%;
+  }
+
+  .footer-logo {
+    top: 12%;
+    left: 5%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 75vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 40%;
+    left: 10%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 20%;
+    right: 30%;
+    height: 50%;
+  }
+
+  .footer-menu {
+    top: 20%;
+    right: 10%;
+    height: 50%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 10%;
+    width: 40%;
+  }
+
+  .footer-logo {
+    top: 17%;
+    left: 10%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 /*ipad PRo 12.9"*/
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 45vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 30%;
+    left: 5%;
+    height: 30%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 12.5%;
+    right: 35%;
+    height: 47.5%;
+  }
+
+  .footer-menu {
+    top: 12.5%;
+    right: 5%;
+    height: 47.5%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 5%;
+    width: 90%;
+  }
+
+  .footer-logo {
+    top: 12%;
+    left: 5%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 75vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 40%;
+    left: 10%;
+    height: 20%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 20%;
+    left: 30%;
+    height: 40%;
+  }
+
+  .footer-menu {
+    top: 20%;
+    left: 50%;
+    height: 40%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 10%;
+    width: 30%;
+  }
+
+  .footer-logo {
+    top: 17%;
+    left: 10%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 // Laptops
 @media (min-width: 1200px) and (max-width: 1679px) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 75vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 40%;
+    left: 10%;
+    height: 20%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 20%;
+    left: 30%;
+    height: 40%;
+  }
+
+  .footer-menu {
+    top: 20%;
+    left: 50%;
+    height: 40%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 10%;
+    width: 30%;
+  }
+
+  .footer-logo {
+    top: 17%;
+    left: 10%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
 
 // desktops
 @media (min-width: 1680px) {
-  .footer__copy {
-    position: fixed;
-    left: 2%;
-    bottom: 1em;
+  .footer {
+    height: 75vh;
   }
 
-  .footer__developer {
-    position: fixed;
-    bottom: 1em;
-    right: 2%;
+  .footer-contacts {
+    top: 40%;
+    left: 10%;
+    height: 20%;
+
+    .footer__phone,
+    .footer__email {
+      height: 30%;
+    }
+  }
+
+  .footer-social {
+    top: 20%;
+    left: 30%;
+    height: 40%;
+  }
+
+  .footer-menu {
+    top: 20%;
+    left: 50%;
+    height: 40%;
+  }
+
+  .footer-subfooter {
+    bottom: 4em;
+    left: 10%;
+    width: 20%;
+  }
+
+  .footer-logo {
+    top: 17%;
+    left: 10%;
+    .logo {
+      border: 3px solid white;
+    }
   }
 }
