@@ -64,9 +64,7 @@ function IndexPage(props) {
       <SocialLinks />
       <div className="page">
         <IndexIntro data={indexData} otherImages={otherImages} />
-        <section className="about">
-          <h1>В разработке</h1>
-        </section>
+        <section className="about"></section>
       </div>
     </Layout>
   )
