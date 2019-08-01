@@ -1,11 +1,56 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import "./Nav.scss"
 import { Link } from "gatsby"
 import Logo from "../Logo/Logo"
-import TransitionLink from "gatsby-plugin-transition-link"
 import MenuButton from "../MenuButton/MenuButton"
-import Arrow from "../../images/icons/play-button.svg"
+import ArrowIcon from "../../images/icons/play-button.svg"
 import classnames from "classnames"
+import SubmenuItem from "./SubmenuItem/SubmenuItem"
+
+export const navImage = graphql`
+  fragment navImage on File {
+    childImageSharp {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        image1: file(relativePath: { eq: "index/wedding.jpg" }) {
+          ...navImage
+        }
+        image2: file(relativePath: { eq: "index/party.jpg" }) {
+          ...navImage
+        }
+        image3: file(relativePath: { eq: "index/children.jpg" }) {
+          ...navImage
+        }
+        image4: file(relativePath: { eq: "index/pull.jpg" }) {
+          ...navImage
+        }
+        image5: file(relativePath: { eq: "index/hb.jpg" }) {
+          ...navImage
+        }
+        image6: file(relativePath: { eq: "index/salut.jpg" }) {
+          ...navImage
+        }
+        image7: file(relativePath: { eq: "index/microphone.jpg" }) {
+          ...navImage
+        }
+        image8: file(relativePath: { eq: "index/smoke.jpg" }) {
+          ...navImage
+        }
+      }
+    `}
+    render={data => <Nav data={data} {...props} />}
+  />
+)
 
 class Nav extends React.Component {
   state = {
@@ -50,6 +95,56 @@ class Nav extends React.Component {
   }
 
   render() {
+    const navData = [
+      {
+        link: "/services#wedding",
+        image: this.props.data.image1.childImageSharp.fluid,
+        name: "свадьбы",
+        color: "#627367",
+      },
+      {
+        link: "/services#corporate",
+        image: this.props.data.image2.childImageSharp.fluid,
+        name: "корпоративы",
+        color: "#832A46",
+      },
+      {
+        link: "/services#kids",
+        image: this.props.data.image3.childImageSharp.fluid,
+        name: "детские праздники",
+        color: "#24222F",
+      },
+      {
+        link: "/services#birthday",
+        image: this.props.data.image4.childImageSharp.fluid,
+        name: "дни рождения",
+        color: "#4C4C4C",
+      },
+      {
+        link: "/services#private",
+        image: this.props.data.image5.childImageSharp.fluid,
+        name: "частные праздники",
+        color: "#a83849",
+      },
+      {
+        link: "/services#city",
+        image: this.props.data.image8.childImageSharp.fluid,
+        name: "городские праздники",
+        color: "#f09e84",
+      },
+      {
+        link: "/services#promo",
+        image: this.props.data.image7.childImageSharp.fluid,
+        name: "промоакции",
+        color: "#3c3d57",
+      },
+      {
+        link: "/reviews",
+        image: this.props.data.image8.childImageSharp.fluid,
+        name: "отзывы",
+        color: "#515e55",
+      },
+    ]
     return (
       <nav
         className={classnames("navbar", {
@@ -72,7 +167,7 @@ class Nav extends React.Component {
           >
             <div className="text">Я веду</div>
             <div className="icon">
-              <Arrow
+              <ArrowIcon
                 style={this.state.top ? { fill: "black" } : { fill: "white" }}
               />
             </div>
@@ -104,142 +199,16 @@ class Nav extends React.Component {
               закрыть
             </div>
             <div className="submenu__grid">
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#627367" }}
-              >
-                <TransitionLink
-                  to="/services#wedding"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  свадьбы
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#832A46" }}
-              >
-                <TransitionLink
-                  to="/services#corporate"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  корпоративы
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#24222F" }}
-              >
-                <TransitionLink
-                  to="/services#kids"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  детские праздники
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#4C4C4C" }}
-              >
-                <TransitionLink
-                  to="/services#birthday"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  дни рождения
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#a83849" }}
-              >
-                <TransitionLink
-                  to="/services#private"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  частные праздники
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#f09e84" }}
-              >
-                <TransitionLink
-                  to="/services#city"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  городские праздники
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#3c3d57" }}
-              >
-                <TransitionLink
-                  to="/services#promo"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  промоакции
-                </TransitionLink>
-              </div>
-              <div
-                className="grid__item"
-                style={{ backgroundColor: "#515e55" }}
-              >
-                <TransitionLink
-                  to="/reviews"
-                  onClick={() => this.handleSubmenu()}
-                  exit={{
-                    length: 0.5,
-                  }}
-                  entry={{
-                    delay: 1,
-                  }}
-                >
-                  отзывы
-                </TransitionLink>
-              </div>
+              {navData.map((item, index) => (
+                <SubmenuItem
+                  handleClick={() => this.handleSubmenu()}
+                  key={index}
+                  color={item.color}
+                  image={item.image}
+                  link={item.link}
+                  name={item.name}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -247,5 +216,3 @@ class Nav extends React.Component {
     )
   }
 }
-
-export default Nav

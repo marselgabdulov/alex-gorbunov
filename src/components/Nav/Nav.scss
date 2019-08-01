@@ -63,34 +63,6 @@
       display: -ms-flex;
       display: flex;
       flex-wrap: wrap;
-
-      .grid__item {
-        width: 25%;
-        height: 50%;
-
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        a {
-          color: white;
-          text-transform: uppercase;
-          text-decoration: none;
-          font-family: "Playfair Display", serif;
-          font-size: 1.4em;
-          transition: all 0.3s ease-in-out;
-        }
-
-        &:hover {
-          cursor: pointer;
-
-          a {
-            transform: scale(1.2);
-          }
-        }
-      }
     }
   }
 }
