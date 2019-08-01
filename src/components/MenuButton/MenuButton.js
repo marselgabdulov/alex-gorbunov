@@ -2,19 +2,6 @@ import React from "react"
 import { connect } from "react-redux"
 import "./MenuButton.scss"
 
-// function Button({ toggleNavPannel, isNavPannelVisible }) {
-//   return (
-//     <button
-//       className="button"
-//       onClick={event => {
-//         toggleNavPannel()
-//       }}
-//     >
-//       {isNavPannelVisible ? "открыть" : "закрыть"}
-//     </button>
-//   )
-// }
-
 function MenuButton({ toggleNavPannel, isNavPannelVisible, color }) {
   return (
     <div className="menu-button" onClick={toggleNavPannel}>
