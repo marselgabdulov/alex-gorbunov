@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
 import Instagram from "../../images/icons/social/instagram.svg"
 import Facebook from "../../images/icons/social/facebook.svg"
@@ -8,18 +9,21 @@ import Vimeo from "../../images/icons/social/vimeo.svg"
 import Vk from "../../images/icons/social/vk.svg"
 import Phone from "../../images/icons/phone.svg"
 
-const NavPannel = props => {
-  let pannelClass = "nav-closed"
-  if (props.show === true) {
-    pannelClass = "nav-opened"
-  }
+function NavPannel({ show }) {
+  let isVisible = show
+  const [visible, setVisible] = useState(isVisible)
+
+  useEffect(() => {
+    setVisible(show)
+  }, [show])
+
   return (
     <>
       <div className="nav-pannel">
-        <div className={pannelClass}>
+        <div className={visible ? "nav-opened" : "nav-closed"}>
           <button
             className="nav-pannel__close-button"
-            onClick={props.handleClick}
+            onClick={() => setVisible(false)}
           >
             <div className="button-text">закрыть</div>
             <div className="button-icon">
@@ -120,20 +124,33 @@ const NavPannel = props => {
             </div>
             <div className="nav-pannel__wrapper--right">
               <div className="nav-pannel__right-wrapper">
-                <Link to="/" title="Главная" activeStyle={{ color: "#e82a6e" }}>
+                <Link
+                  to="/"
+                  title="Главная"
+                  activeStyle={{ color: "#e82a6e" }}
+                  onClick={() => setVisible(false)}
+                >
                   Главная
                 </Link>
-                <Link
-                  to="/reviews"
-                  title="Отзывы"
+                <TransitionLink
                   activeStyle={{ color: "#e82a6e" }}
+                  to="/reviews"
+                  exit={{
+                    trigger: () => setVisible(false),
+                    length: 1,
+                  }}
+                  entry={{
+                    delay: 0.6,
+                  }}
                 >
                   Отзывы
-                </Link>
+                </TransitionLink>
+
                 <Link
                   to="/services#wedding"
                   title="Свадьбы"
                   activeStyle={{ color: "#e82a6e" }}
+                  onClick={() => setVisible(false)}
                 >
                   Свадьбы
                 </Link>
@@ -141,6 +158,7 @@ const NavPannel = props => {
                   to="/services#corporate"
                   title="Корпоративы"
                   activeStyle={{ color: "#e82a6e" }}
+                  onClick={() => setVisible(false)}
                 >
                   Корпоративы
                 </Link>
@@ -148,6 +166,7 @@ const NavPannel = props => {
                   to="/services#kids"
                   title="Детские праздники"
                   activeStyle={{ color: "#e82a6e" }}
+                  onClick={() => setVisible(false)}
                 >
                   Детские праздники
                 </Link>
@@ -155,6 +174,7 @@ const NavPannel = props => {
                   to="/services#"
                   title="Контакты"
                   activeStyle={{ color: "#e82a6e" }}
+                  onClick={() => setVisible(false)}
                 >
                   все услуги
                 </Link>

@@ -3,6 +3,9 @@
 .reviews {
   width: 100%;
   min-height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
 }
 
 .full-review--hidden {
@@ -79,7 +82,7 @@
 //////////////////////
 
 .reviews__gallery-wrapper {
-  position: absolute;
+  // position: absolute;
   background-color: #1a1a1a;
 }
 

@@ -98,10 +98,10 @@
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .social-links {
-    top: 47%;
+    top: 16%;
     left: 1.5%;
     width: 1.75em;
-    height: 25%;
+    height: 10%;
     flex-direction: column;
     .social-link {
       svg {
@@ -115,10 +115,10 @@
 // Laptops
 @media (min-width: 1200px) and (max-width: 1679px) {
   .social-links {
-    top: 47%;
+    top: 16%;
     left: 1.5%;
     width: 1.75em;
-    height: 25%;
+    height: 10%;
     flex-direction: column;
     .social-link {
       svg {
@@ -132,10 +132,10 @@
 // desktops
 @media (min-width: 1680px) {
   .social-links {
-    top: 47%;
+    top: 16%;
     left: 1.5%;
     width: 1.75em;
-    height: 25%;
+    height: 10%;
     flex-direction: column;
     .social-link {
       svg {

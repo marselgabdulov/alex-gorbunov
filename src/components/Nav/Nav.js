@@ -31,7 +31,6 @@ class Nav extends React.Component {
 
   handleScroll = () => {
     const { prevScrollPosition } = this.state
-
     const currentScrollPosition = window.pageYOffset
     const visible = prevScrollPosition > currentScrollPosition
     const isTop = currentScrollPosition > 0

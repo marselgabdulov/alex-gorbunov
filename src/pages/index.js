@@ -21,7 +21,7 @@ function IndexPage(props) {
       subtitle: "ведущий на свадьбу",
 
       link: {
-        to: "/reviews#wedding",
+        to: "/services#wedding",
         text: "подробнее",
         title: "подробнее",
       },
@@ -32,7 +32,7 @@ function IndexPage(props) {
       subtitle: "ведущий на корпоратив",
 
       link: {
-        to: "/reviews#corporate",
+        to: "/services#corporate",
         text: "Подробнее",
         title: "свадьбы",
       },
@@ -42,7 +42,7 @@ function IndexPage(props) {
       title: "детские праздники",
       subtitle: "ведущий на радость детям",
       link: {
-        to: "/reviews#kids",
+        to: "/services#kids",
         text: "Подробнее",
         title: "корпоративы",
       },
@@ -52,7 +52,7 @@ function IndexPage(props) {
       title: "частные праздники",
       subtitle: "юбилеи и не только",
       link: {
-        to: "/reviews#private",
+        to: "/services#private",
         text: "Подробнее",
         title: "детские праздники",
       },

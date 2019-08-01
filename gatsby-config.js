@@ -7,6 +7,7 @@ module.exports = {
     author: `@marselgabdulov`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
