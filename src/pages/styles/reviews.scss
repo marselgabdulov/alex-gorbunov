@@ -1,380 +1,409 @@
-@import "./pages.scss";
+@import "../../shared-styles/colors.scss";
 
+// General
 .reviews {
   width: 100%;
-  min-height: 100vh;
+  height: auto;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  justify-content: space-between;
 }
 
+// Left side
+.reviews__intro {
+  height: 100%;
+  .intro__subtitle {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Right side Gallery
+.reviews__gallery-wrapper {
+  background-color: #1a1a1a;
+}
+
+.reviews__gallery {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviews-gallery__item {
+  &:hover {
+    cursor: pointer;
+    .image-wrapper {
+      filter: brightness(1);
+    }
+    .image {
+      transform: scale(1.1);
+    }
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    filter: brightness(0.75);
+  }
+}
+
+// full review
 .full-review--hidden {
   position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
   visibility: hidden;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .full-review {
-  opacity: 1;
-  width: 100%;
-  height: 100vh;
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
-  z-index: 1000;
+  opacity: 1;
   visibility: visible;
-  transition: all 0.5s ease-in-out;
+  z-index: 2000;
+  transition: all 0.3s ease-in-out;
 }
 
 .full-review__sider {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background: white;
   opacity: 0.5;
-  background-color: white;
-  z-index: 0;
+  z-index: -1;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .full-review__wrapper {
-  position: absolute;
   background-color: white;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
-  z-index: 2000;
+  z-index: 10;
 
   .close {
-    position: absolute;
+    text-transform: uppercase;
 
     &:hover {
       cursor: pointer;
+      color: $color-pink;
     }
   }
 
-  .full-review__info {
+  .full-review__content {
+    width: 100%;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    .full-review__info {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+    }
 
     .author {
-      text-align: center;
-
+      text-transform: uppercase;
       a {
         color: black;
+
+        &:hover {
+          color: $color-pink;
+        }
       }
     }
-
-    .text {
-      width: 80%;
-      height: 50%;
-      font-size: 1.1em;
-      line-height: 1.5em;
-    }
-  }
-}
-
-//////////////////////
-
-.reviews__gallery-wrapper {
-  // position: absolute;
-  background-color: #1a1a1a;
-}
-
-.reviews__gallery {
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-wrap: wrap;
-
-  .reviews-gallery__item {
-    position: relative;
-
-    &:hover {
-      cursor: pointer;
-      .image {
-        transform: scale(1.1);
-      }
-    }
-
-    .image-wrapper {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-  }
-}
-
-.reviews__intro {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  h2 {
-    text-transform: uppercase;
-  }
-
-  .text {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
 // -- Default -- Mobile portrait
 @media (max-width: 479px) {
+  // General
   .reviews {
-    width: 100%;
-    min-height: 450vh;
+    margin-bottom: 10em;
   }
-  .full-review__wrapper {
-    top: 2.5%;
+
+  .mobile-title {
+    display: block;
+    color: black;
+    text-align: center;
+    margin-top: 5%;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  // Left side
+  .reviews__intro {
+    display: none;
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
     width: 100%;
-    height: 95%;
-    flex-direction: column;
+    height: 100%;
+    background-color: white;
+  }
+
+  .reviews__gallery {
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 100%;
+    height: 50%;
+  }
+
+  // full review
+  .full-review__wrapper {
+    width: 100%;
+    height: 100%;
 
     .close {
-      top: 0;
-      right: 2em;
-      font-size: 1em;
+      text-align: center;
+      height: 3em;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        margin-top: 2em;
+      }
     }
 
-    .full-review__image {
-      width: 95%;
-      height: 35%;
+    .full-review__content {
       margin-top: 2em;
-      margin-left: 2.5%;
-    }
+      height: calc(100% - 4em);
+      flex-direction: column;
+      justify-content: space-between;
 
-    .full-review__info {
-      width: 95%;
-      height: 65%;
-      margin-top: 5%;
-      margin-left: 2.5%;
+      .full-review__image {
+        width: 100%;
+        height: 40%;
+      }
+
+      .full-review__info {
+        width: 100%;
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: auto;
+        font-size: 1.2em;
         margin-bottom: 1em;
       }
 
       .text {
-        width: 100%;
-        height: auto;
-        font-size: 0.8em;
-        line-height: 1.3em;
+        width: 90%;
+        font-size: 0.85em;
+        line-height: 1.25em;
       }
     }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 5em;
-    right: 0%;
-    height: 100%;
-    width: 100%;
-
-    .mobile-title {
-      margin-top: 2.5em;
-      color: white;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-  }
-
-  .reviews__gallery {
-    width: 95%;
-    height: 80%;
-    margin-left: 2.5%;
-    margin-top: 12.5%;
-
-    .reviews-gallery__item {
-      width: 100%;
-      height: 60%;
-    }
-  }
-
-  .reviews__intro {
-    display: none;
   }
 }
 
 // Tablet portrait
 @media (min-width: 768px) and (max-width: 991px) {
-  .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
-    flex-direction: column;
-
-    .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
-    }
-
-    .full-review__image {
-      width: 90%;
-      height: 55%;
-      margin-top: 4em;
-      margin-left: 5%;
-    }
-
-    .full-review__info {
-      width: 90%;
-      height: 40%;
-      margin-top: 5%;
-      margin-left: 5%;
-
-      .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
-      }
-
-      .text {
-        width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
+  // General
+  .reviews {
+    margin-bottom: 10em;
   }
 
-  //////////////////////
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 100%;
+  .mobile-title {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 12.5%;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-    .mobile-title {
-      display: none;
-    }
+  // Left side
+  .reviews__intro {
+    display: none;
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 100%;
+    height: 100%;
   }
 
   .reviews__gallery {
     width: 95%;
-    height: 80%;
+    height: 85%;
+    margin-top: 1em;
     margin-left: 2.5%;
-    margin-top: 15%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
+    flex-direction: row;
   }
 
-  .reviews__intro {
-    display: none;
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
+  .full-review__wrapper {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    .close {
+      padding-top: 1em;
+      margin-left: 85%;
+    }
+
+    .full-review__content {
+      margin-top: 2em;
+      height: calc(100% - 4em);
+      flex-direction: column;
+      justify-content: space-between;
+
+      .full-review__image {
+        width: 90%;
+        margin-left: 2em;
+        height: 60%;
+      }
+
+      .full-review__info {
+        width: 100%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .author {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+      }
+
+      .text {
+        width: 80%;
+        font-size: 1em;
+        line-height: 1.4em;
+      }
+    }
   }
 }
 
 // Tablets landscape
 @media (min-width: 992px) and (max-width: 1199px) {
+  // General
+  .reviews {
+    margin-bottom: 10em;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  // Left side
+  .reviews__intro {
+    width: 35%;
+
+    .intro__title {
+      width: 50%;
+      font-size: 2.5em;
+      margin-top: 7em;
+      margin-left: 2.5em;
+    }
+
+    .intro__subtitle {
+      width: 55%;
+      height: 2em;
+      margin-top: 2em;
+      margin-left: 6em;
+
+      span {
+        font-size: 1.2em;
+      }
+
+      svg {
+        width: 2em;
+        height: 100%;
+      }
+    }
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 65%;
+    height: 100%;
+  }
+
+  .reviews__gallery {
+    width: 85%;
+    height: 85%;
+    margin-top: 12%;
+    margin-left: 7.5%;
+
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
   .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 85%;
+    margin-left: 5%;
+    margin-top: 5%;
 
     .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
+      padding-top: 1em;
+      margin-left: 90%;
     }
 
-    .full-review__image {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
+    .full-review__content {
+      height: calc(100% - 1em);
 
-    .full-review__info {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-right: 5%;
+      .full-review__image {
+        width: 55%;
+        margin-left: 1em;
+        height: 94%;
+      }
+
+      .full-review__info {
+        width: 45%;
+        height: 94%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
+        font-size: 1.2em;
+        margin-bottom: 2em;
       }
 
       .text {
         width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 63.5%;
-
-    .mobile-title {
-      display: none;
-    }
-  }
-
-  .reviews__gallery {
-    width: 92.5%;
-    height: 80%;
-    margin-right: 2.5%;
-    margin-top: 15%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
-  }
-
-  .reviews__intro {
-    width: 31.6%;
-    margin-left: 4%;
-    margin-top: 15%;
-    height: 45%;
-
-    h2 {
-      width: 60%;
-      font-size: 2.2em;
-    }
-
-    .text {
-      width: 70%;
-      height: 2em;
-
-      span {
-        width: 80%;
-        font-size: 1.1em;
-      }
-
-      svg {
-        height: auto;
-        width: 2em;
+        font-size: 1em;
+        line-height: 1.5em;
       }
     }
   }
@@ -383,166 +412,186 @@
 /*iPad Pro 9.7"*/
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
-    flex-direction: column;
-
-    .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
-    }
-
-    .full-review__image {
-      width: 90%;
-      height: 55%;
-      margin-top: 4em;
-      margin-left: 5%;
-    }
-
-    .full-review__info {
-      width: 90%;
-      height: 40%;
-      margin-top: 5%;
-      margin-left: 5%;
-
-      .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
-      }
-
-      .text {
-        width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
+  // General
+  .reviews {
+    margin-bottom: 10em;
   }
 
-  //////////////////////
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 100%;
+  .mobile-title {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 12.5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 
-    .mobile-title {
-      display: none;
-    }
+  // Left side
+  .reviews__intro {
+    display: none;
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 100%;
+    height: 100%;
   }
 
   .reviews__gallery {
     width: 95%;
-    height: 80%;
+    height: 85%;
+    margin-top: 1em;
     margin-left: 2.5%;
-    margin-top: 15%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
+    flex-direction: row;
   }
 
-  .reviews__intro {
-    display: none;
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
+  .full-review__wrapper {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    .close {
+      padding-top: 1em;
+      margin-left: 85%;
+    }
+
+    .full-review__content {
+      margin-top: 2em;
+      height: calc(100% - 4em);
+      flex-direction: column;
+      justify-content: space-between;
+
+      .full-review__image {
+        width: 90%;
+        margin-left: 2em;
+        height: 60%;
+      }
+
+      .full-review__info {
+        width: 100%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .author {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+      }
+
+      .text {
+        width: 80%;
+        font-size: 1em;
+        line-height: 1.5em;
+      }
+    }
   }
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  // General
+  .reviews {
+    margin-bottom: 10em;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  // Left side
+  .reviews__intro {
+    width: 35%;
+
+    .intro__title {
+      width: 50%;
+      font-size: 2.5em;
+      margin-top: 7em;
+      margin-left: 2.5em;
+    }
+
+    .intro__subtitle {
+      width: 55%;
+      height: 2em;
+      margin-top: 2em;
+      margin-left: 6em;
+
+      span {
+        font-size: 1.2em;
+      }
+
+      svg {
+        width: 2em;
+        height: 100%;
+      }
+    }
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 65%;
+    height: 100%;
+  }
+
+  .reviews__gallery {
+    width: 85%;
+    height: 85%;
+    margin-top: 12%;
+    margin-left: 7.5%;
+
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
   .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 85%;
+    margin-left: 5%;
+    margin-top: 5%;
 
     .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
+      padding-top: 1em;
+      margin-left: 90%;
     }
 
-    .full-review__image {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
+    .full-review__content {
+      height: calc(100% - 1em);
 
-    .full-review__info {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-right: 5%;
+      .full-review__image {
+        width: 55%;
+        margin-left: 1em;
+        height: 94%;
+      }
+
+      .full-review__info {
+        width: 45%;
+        height: 94%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
+        font-size: 1.2em;
+        margin-bottom: 2em;
       }
 
       .text {
         width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 63.5%;
-
-    .mobile-title {
-      display: none;
-    }
-  }
-
-  .reviews__gallery {
-    width: 92.5%;
-    height: 80%;
-    margin-right: 2.5%;
-    margin-top: 15%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
-  }
-
-  .reviews__intro {
-    width: 31.6%;
-    margin-left: 4%;
-    margin-top: 15%;
-    height: 45%;
-
-    h2 {
-      width: 60%;
-      font-size: 2.2em;
-    }
-
-    .text {
-      width: 70%;
-      height: 2em;
-
-      span {
-        width: 80%;
-        font-size: 1.1em;
-      }
-
-      svg {
-        height: auto;
-        width: 2em;
+        font-size: 1em;
+        line-height: 1.5em;
       }
     }
   }
@@ -551,167 +600,187 @@
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
-    flex-direction: column;
-
-    .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
-    }
-
-    .full-review__image {
-      width: 90%;
-      height: 55%;
-      margin-top: 4em;
-      margin-left: 5%;
-    }
-
-    .full-review__info {
-      width: 90%;
-      height: 40%;
-      margin-top: 5%;
-      margin-left: 5%;
-
-      .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
-      }
-
-      .text {
-        width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
+  // General
+  .reviews {
+    margin-bottom: 10em;
   }
 
-  //////////////////////
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 100%;
+  .mobile-title {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 12.5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 
-    .mobile-title {
-      display: none;
-    }
+  // Left side
+  .reviews__intro {
+    display: none;
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 100%;
+    height: 100%;
   }
 
   .reviews__gallery {
     width: 95%;
-    height: 80%;
+    height: 85%;
+    margin-top: 1em;
     margin-left: 2.5%;
-    margin-top: 12.5%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
+    flex-direction: row;
   }
 
-  .reviews__intro {
-    display: none;
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
+  .full-review__wrapper {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    .close {
+      padding-top: 1em;
+      margin-left: 85%;
+    }
+
+    .full-review__content {
+      margin-top: 2em;
+      height: calc(100% - 4em);
+      flex-direction: column;
+      justify-content: space-between;
+
+      .full-review__image {
+        width: 90%;
+        margin-left: 2em;
+        height: 60%;
+      }
+
+      .full-review__info {
+        width: 100%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .author {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+      }
+
+      .text {
+        width: 80%;
+        font-size: 1.1em;
+        line-height: 1.5em;
+      }
+    }
   }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  // General
+  .reviews {
+    margin-bottom: 10em;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  // Left side
+  .reviews__intro {
+    width: 35%;
+
+    .intro__title {
+      width: 50%;
+      font-size: 2.5em;
+      margin-top: 7em;
+      margin-left: 2.5em;
+    }
+
+    .intro__subtitle {
+      width: 55%;
+      height: 2em;
+      margin-top: 2em;
+      margin-left: 6em;
+
+      span {
+        font-size: 1.2em;
+      }
+
+      svg {
+        width: 2em;
+        height: 100%;
+      }
+    }
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 65%;
+    height: 100%;
+  }
+
+  .reviews__gallery {
+    width: 85%;
+    height: 85%;
+    margin-top: 12%;
+    margin-left: 7.5%;
+
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
   .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 85%;
+    margin-left: 5%;
+    margin-top: 5%;
 
     .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
+      padding-top: 1em;
+      margin-left: 90%;
     }
 
-    .full-review__image {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
+    .full-review__content {
+      height: calc(100% - 1em);
 
-    .full-review__info {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-right: 5%;
+      .full-review__image {
+        width: 55%;
+        margin-left: 1em;
+        height: 94%;
+      }
+
+      .full-review__info {
+        width: 45%;
+        height: 94%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
+        font-size: 1.2em;
+        margin-bottom: 2em;
       }
 
       .text {
         width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 63.5%;
-
-    .mobile-title {
-      display: none;
-    }
-  }
-
-  .reviews__gallery {
-    width: 92.5%;
-    height: 80%;
-    margin-right: 2.5%;
-    margin-top: 15%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
-  }
-
-  .reviews__intro {
-    width: 31.6%;
-    margin-left: 4%;
-    margin-top: 15%;
-    height: 45%;
-
-    h2 {
-      width: 60%;
-      font-size: 2.2em;
-    }
-
-    .text {
-      width: 70%;
-      height: 2em;
-
-      span {
-        width: 80%;
-        font-size: 1.1em;
-      }
-
-      svg {
-        height: auto;
-        width: 2em;
+        font-size: 1em;
+        line-height: 1.5em;
       }
     }
   }
@@ -720,167 +789,188 @@
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
-    flex-direction: column;
-
-    .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
-    }
-
-    .full-review__image {
-      width: 90%;
-      height: 55%;
-      margin-top: 4em;
-      margin-left: 5%;
-    }
-
-    .full-review__info {
-      width: 90%;
-      height: 40%;
-      margin-top: 5%;
-      margin-left: 5%;
-
-      .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
-      }
-
-      .text {
-        width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
+  // General
+  .reviews {
+    margin-bottom: 10em;
   }
 
-  //////////////////////
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 100%;
+  .mobile-title {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 12.5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 
-    .mobile-title {
-      display: none;
-    }
+  // Left side
+  .reviews__intro {
+    display: none;
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 100%;
+    height: 100%;
   }
 
   .reviews__gallery {
     width: 95%;
-    height: 80%;
+    height: 85%;
+    margin-top: 1em;
     margin-left: 2.5%;
-    margin-top: 12.5%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
+    flex-direction: row;
   }
 
-  .reviews__intro {
-    display: none;
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
+  .full-review__wrapper {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    .close {
+      padding-top: 1em;
+      margin-left: 85%;
+    }
+
+    .full-review__content {
+      margin-top: 2em;
+      height: calc(100% - 4em);
+      flex-direction: column;
+      justify-content: space-between;
+
+      .full-review__image {
+        width: 90%;
+        margin-left: 2em;
+        height: 60%;
+      }
+
+      .full-review__info {
+        width: 100%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .author {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+      }
+
+      .text {
+        width: 80%;
+        font-size: 1.2em;
+        line-height: 1.55em;
+      }
+    }
   }
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  // General
+  .reviews {
+    margin-bottom: 10em;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  // Left side
+  .reviews__intro {
+    width: 35%;
+
+    .intro__title {
+      width: 50%;
+      font-size: 2.5em;
+      margin-top: 7em;
+      margin-left: 3em;
+    }
+
+    .intro__subtitle {
+      width: 50%;
+
+      height: 2em;
+      margin-top: 2em;
+      margin-left: 8em;
+
+      span {
+        font-size: 1.2em;
+      }
+
+      svg {
+        width: 2em;
+        height: 100%;
+      }
+    }
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 65%;
+    height: 100%;
+  }
+
+  .reviews__gallery {
+    width: 77.5%;
+    height: 85%;
+    margin-top: 9%;
+    margin-left: 7.5%;
+
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
   .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 5%;
 
     .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.2em;
+      padding-top: 1em;
+      margin-left: 90%;
     }
 
-    .full-review__image {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
+    .full-review__content {
+      height: calc(100% - 1em);
 
-    .full-review__info {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-right: 5%;
+      .full-review__image {
+        width: 45%;
+        margin-left: 2em;
+        height: 94%;
+      }
+
+      .full-review__info {
+        width: 50%;
+        height: 94%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.4em;
-        width: 100%;
-        height: 10%;
+        font-size: 1.2em;
+        margin-bottom: 2em;
       }
 
       .text {
         width: 80%;
-        height: 50%;
-        font-size: 0.9em;
-        line-height: 1.4em;
-      }
-    }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 63.5%;
-
-    .mobile-title {
-      display: none;
-    }
-  }
-
-  .reviews__gallery {
-    width: 92.5%;
-    height: 80%;
-    margin-right: 2.5%;
-    margin-top: 15%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
-  }
-
-  .reviews__intro {
-    width: 31.6%;
-    margin-left: 4%;
-    margin-top: 15%;
-    height: 45%;
-
-    h2 {
-      width: 60%;
-      font-size: 2.2em;
-    }
-
-    .text {
-      width: 70%;
-      height: 2em;
-
-      span {
-        width: 80%;
         font-size: 1.1em;
-      }
-
-      svg {
-        height: auto;
-        width: 2em;
+        line-height: 1.5em;
       }
     }
   }
@@ -888,94 +978,101 @@
 
 // Laptops
 @media (min-width: 1200px) and (max-width: 1679px) {
+  // General
+  .reviews {
+    margin-bottom: 10em;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  // Left side
+  .reviews__intro {
+    width: 35%;
+
+    .intro__title {
+      width: 50%;
+      font-size: 2.5em;
+      margin-top: 7em;
+      margin-left: 3em;
+    }
+
+    .intro__subtitle {
+      width: 50%;
+
+      height: 2em;
+      margin-top: 2em;
+      margin-left: 8em;
+
+      span {
+        font-size: 1.2em;
+      }
+
+      svg {
+        width: 2em;
+        height: 100%;
+      }
+    }
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 65%;
+    height: 100%;
+  }
+
+  .reviews__gallery {
+    width: 77.5%;
+    height: 85%;
+    margin-top: 9%;
+    margin-left: 7.5%;
+
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
   .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 5%;
 
     .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.4em;
+      padding-top: 1em;
+      margin-left: 90%;
     }
 
-    .full-review__image {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
+    .full-review__content {
+      height: calc(100% - 1em);
 
-    .full-review__info {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-right: 5%;
+      .full-review__image {
+        width: 45%;
+        margin-left: 2em;
+        height: 94%;
+      }
+
+      .full-review__info {
+        width: 50%;
+        height: 94%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.5em;
-        width: 100%;
-        height: 10%;
+        font-size: 1.2em;
+        margin-bottom: 2em;
       }
 
       .text {
         width: 80%;
-        height: 50%;
         font-size: 1.1em;
         line-height: 1.5em;
-      }
-    }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 63.5%;
-
-    .mobile-title {
-      display: none;
-    }
-  }
-
-  .reviews__gallery {
-    width: 85%;
-    height: 85%;
-    margin-right: 10%;
-    margin-top: 10%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
-  }
-
-  .reviews__intro {
-    width: 31.6%;
-    margin-left: 9%;
-    margin-top: 15%;
-    height: 50%;
-
-    h2 {
-      width: 50%;
-      font-size: 2.5em;
-    }
-
-    .text {
-      width: 50%;
-      height: 2em;
-
-      span {
-        width: 80%;
-        font-size: 1.1em;
-      }
-
-      svg {
-        height: auto;
-        width: 2em;
       }
     }
   }
@@ -983,94 +1080,101 @@
 
 // desktops
 @media (min-width: 1680px) {
+  // General
+  .reviews {
+    margin-bottom: 10em;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  // Left side
+  .reviews__intro {
+    width: 35%;
+
+    .intro__title {
+      width: 50%;
+      font-size: 3.5em;
+      margin-top: 5em;
+      margin-left: 3em;
+    }
+
+    .intro__subtitle {
+      width: 35%;
+
+      height: 2em;
+      margin-top: 2em;
+      margin-left: 10.5em;
+
+      span {
+        font-size: 1.2em;
+      }
+
+      svg {
+        width: 2em;
+        height: 100%;
+      }
+    }
+  }
+
+  // Right side Gallery
+  .reviews__gallery-wrapper {
+    width: 65%;
+    height: 100%;
+  }
+
+  .reviews__gallery {
+    width: 77.5%;
+    height: 85%;
+    margin-top: 9%;
+    margin-left: 7.5%;
+
+    flex-direction: row;
+  }
+
+  .reviews-gallery__item {
+    width: 33.33%;
+    height: 33.33%;
+  }
+
+  // full review
   .full-review__wrapper {
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    width: 70%;
+    height: 80%;
+    margin-left: 15%;
+    margin-top: 5%;
 
     .close {
-      top: 1em;
-      right: 2em;
-      font-size: 1.4em;
+      padding-top: 1em;
+      margin-left: 93%;
     }
 
-    .full-review__image {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
+    .full-review__content {
+      height: calc(100% - 1em);
 
-    .full-review__info {
-      width: 42.5%;
-      height: 80%;
-      margin-top: 5%;
-      margin-right: 5%;
+      .full-review__image {
+        width: 45%;
+        margin-left: 2em;
+        height: 94%;
+      }
+
+      .full-review__info {
+        width: 50%;
+        height: 94%;
+        justify-content: center;
+        align-items: center;
+      }
 
       .author {
-        font-size: 1.5em;
-        width: 100%;
-        height: 10%;
+        font-size: 1.2em;
+        margin-bottom: 2em;
       }
 
       .text {
         width: 80%;
-        height: 50%;
         font-size: 1.1em;
         line-height: 1.5em;
-      }
-    }
-  }
-
-  //////////////////////
-
-  .reviews__gallery-wrapper {
-    top: 0;
-    right: 0%;
-    height: 100%;
-    width: 63.5%;
-
-    .mobile-title {
-      display: none;
-    }
-  }
-
-  .reviews__gallery {
-    width: 85%;
-    height: 85%;
-    margin-right: 10%;
-    margin-top: 10%;
-
-    .reviews-gallery__item {
-      width: 33.33%;
-      height: 33.33%;
-    }
-  }
-
-  .reviews__intro {
-    width: 31.6%;
-    margin-left: 9%;
-    margin-top: 15%;
-    height: 30%;
-
-    h2 {
-      width: 50%;
-      font-size: 3em;
-    }
-
-    .text {
-      width: 40%;
-      height: 2em;
-
-      span {
-        width: 80%;
-        font-size: 1.4em;
-      }
-
-      svg {
-        height: auto;
-        width: 2em;
       }
     }
   }

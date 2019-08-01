@@ -2,7 +2,9 @@ import React from "react"
 import "./Nav.scss"
 import { Link } from "gatsby"
 import Logo from "../Logo/Logo"
+import TransitionLink from "gatsby-plugin-transition-link"
 import MenuButton from "../MenuButton/MenuButton"
+import Arrow from "../../images/icons/play-button.svg"
 import classnames from "classnames"
 
 class Nav extends React.Component {
@@ -10,6 +12,7 @@ class Nav extends React.Component {
     prevScrollPosition: null,
     visible: true,
     top: false,
+    submenuVisible: false,
   }
 
   scrollToBottom = () => {
@@ -18,6 +21,10 @@ class Nav extends React.Component {
       left: 0,
       top: document.body.scrollHeight,
     })
+  }
+
+  handleSubmenu = () => {
+    this.setState({ submenuVisible: false })
   }
 
   componentDidMount() {
@@ -56,13 +63,20 @@ class Nav extends React.Component {
       >
         <Logo />
         <div className="navbar__main">
-          <Link
+          <div
+            className="services__list"
             style={this.state.top ? { color: "black" } : { color: "white" }}
-            to="/services"
-            activeStyle={{ color: "#e82a6e" }}
+            onClick={() => {
+              this.setState({ submenuVisible: true })
+            }}
           >
-            услуги
-          </Link>
+            <div className="text">Я веду</div>
+            <div className="icon">
+              <Arrow
+                style={this.state.top ? { fill: "black" } : { fill: "white" }}
+              />
+            </div>
+          </div>
           <Link
             to="/reviews"
             style={this.state.top ? { color: "black" } : { color: "white" }}
@@ -81,6 +95,154 @@ class Nav extends React.Component {
           handleClick={this.props.handleClick}
           color={this.state.top ? "black" : "white"}
         />
+        <div
+          className={this.state.submenuVisible ? "submenu" : "submenu--hidden"}
+        >
+          <div className="submenu__sider" onClick={this.handleSubmenu}></div>
+          <div className="submenu__wrapper">
+            <div className="submenu__close" onClick={this.handleSubmenu}>
+              закрыть
+            </div>
+            <div className="submenu__grid">
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#627367" }}
+              >
+                <TransitionLink
+                  to="/services#wedding"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  свадьбы
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#832A46" }}
+              >
+                <TransitionLink
+                  to="/services#corporate"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  корпоративы
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#24222F" }}
+              >
+                <TransitionLink
+                  to="/services#kids"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  детские праздники
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#4C4C4C" }}
+              >
+                <TransitionLink
+                  to="/services#birthday"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  дни рождения
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#a83849" }}
+              >
+                <TransitionLink
+                  to="/services#private"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  частные праздники
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#f09e84" }}
+              >
+                <TransitionLink
+                  to="/services#city"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  городские праздники
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#3c3d57" }}
+              >
+                <TransitionLink
+                  to="/services#promo"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  промоакции
+                </TransitionLink>
+              </div>
+              <div
+                className="grid__item"
+                style={{ backgroundColor: "#515e55" }}
+              >
+                <TransitionLink
+                  to="/reviews"
+                  onClick={() => this.handleSubmenu()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
+                >
+                  отзывы
+                </TransitionLink>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     )
   }

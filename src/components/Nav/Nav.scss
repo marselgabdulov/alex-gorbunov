@@ -4,6 +4,97 @@
 .navbar--hidden {
 }
 
+.submenu--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+
+  .submenu__sider {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: white;
+
+    opacity: 0.5;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .submenu__wrapper {
+    border: 1px dotted #1a1a1a;
+    width: 95%;
+    height: 70%;
+    position: absolute;
+    top: 14%;
+    left: 2.5%;
+    background-color: white;
+
+    .submenu__close {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-pink;
+      }
+    }
+
+    .submenu__grid {
+      width: 95%;
+      height: 87.5%;
+      margin-left: 2.5%;
+      margin-top: 2.5%;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-wrap: wrap;
+
+      .grid__item {
+        width: 25%;
+        height: 50%;
+
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-family: "Playfair Display", serif;
+          font-size: 1.4em;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          a {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -20,6 +111,20 @@
   align-items: center;
   justify-content: space-between;
 
+  .services__list {
+    display: inline-flex;
+    width: auto;
+
+    .text {
+      margin-right: 1em;
+    }
+
+    .icon {
+      width: 0.9em;
+      transform: rotate(90deg);
+    }
+  }
+
   * {
     position: relative;
     text-decoration: none;
@@ -28,7 +133,6 @@
 
     &:hover {
       cursor: pointer;
-      text-decoration: underline;
     }
   }
 }

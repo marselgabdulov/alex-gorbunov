@@ -88,8 +88,8 @@ function reviewsPage(props) {
       <div className="page">
         <section className="reviews">
           <div className="reviews__intro">
-            <h2>Я люблю своих клиентов.</h2>
-            <div className="text">
+            <h2 className="intro__title">Я люблю своих клиентов.</h2>
+            <div className="intro__subtitle">
               <span>Убедитесь сами</span> <Hand />
             </div>
           </div>
@@ -115,24 +115,26 @@ function reviewsPage(props) {
               ></div>
               <div className="full-review__wrapper">
                 <div className="close" onClick={() => setVisible(false)}>
-                  закрыть
+                  <span>закрыть</span>
                 </div>
-                <div className="full-review__image">
-                  <Image image={reviews[currentIndex].image} />
-                </div>
-                <div className="full-review__info">
-                  <div className="author">
-                    <a
-                      href={reviews[currentIndex].link}
-                      title="автор отзыва"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {reviews[currentIndex].author}
-                    </a>
+                <div className="full-review__content">
+                  <div className="full-review__image">
+                    <Image image={reviews[currentIndex].image} />
                   </div>
-                  <div className="text">
-                    <p>{reviews[currentIndex].text}</p>
+                  <div className="full-review__info">
+                    <div className="author">
+                      <a
+                        href={reviews[currentIndex].link}
+                        title="автор отзыва"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {reviews[currentIndex].author}
+                      </a>
+                    </div>
+                    <div className="text">
+                      <p>{reviews[currentIndex].text}</p>
+                    </div>
                   </div>
                 </div>
               </div>
