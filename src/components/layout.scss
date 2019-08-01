@@ -1,17 +1,26 @@
 $aos-distance: 20px; // It has to be above import
 @import "node_modules/aos/src/sass/aos.scss";
 
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+html,
+body {
+  height: 100%;
 }
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Ubuntu", monospace;
   letter-spacing: 1px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  font-family: "Ubuntu", monospace;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.layout-footer {
+  flex-shrink: 0;
 }
 
 h1,
@@ -28,7 +37,6 @@ h6 {
 }
 
 p {
-  font-family: "Ubuntu", monospace;
   letter-spacing: 1px;
   margin: 0;
   padding: 0;

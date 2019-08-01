@@ -20,9 +20,12 @@ function Layout({ children }) {
       <Nav />
       <NavMobile />
       <NavPannel />
-
-      <main>{children}</main>
-      <Footer />
+      <div className="content">
+        <main>{children}</main>
+      </div>
+      <div className="layout-footer">
+        <Footer />
+      </div>
     </>
   )
 }
