@@ -1,19 +1,48 @@
 import React from "react"
+import { connect } from "react-redux"
 import "./MenuButton.scss"
 
-function MenuButton(props) {
+// function Button({ toggleNavPannel, isNavPannelVisible }) {
+//   return (
+//     <button
+//       className="button"
+//       onClick={event => {
+//         toggleNavPannel()
+//       }}
+//     >
+//       {isNavPannelVisible ? "открыть" : "закрыть"}
+//     </button>
+//   )
+// }
+
+function MenuButton({ toggleNavPannel, isNavPannelVisible, color }) {
   return (
-    <div className="menu-button" onClick={props.handleClick}>
-      <span className="menu-button__text" style={{ color: props.color }}>
+    <div className="menu-button" onClick={toggleNavPannel}>
+      <span className="menu-button__text" style={{ color: color }}>
         меню
       </span>
       <div className="menu-button__lines">
-        <div className="one" style={{ backgroundColor: props.color }}></div>
-        <div className="two" style={{ backgroundColor: props.color }}></div>
-        <div className="three" style={{ backgroundColor: props.color }}></div>
+        <div className="one" style={{ backgroundColor: color }}></div>
+        <div className="two" style={{ backgroundColor: color }}></div>
+        <div className="three" style={{ backgroundColor: color }}></div>
       </div>
     </div>
   )
 }
 
-export default MenuButton
+const mapStateToProps = ({ isNavPannelVisible }) => {
+  return { isNavPannelVisible }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleNavPannel: () => dispatch({ type: `TOGGLE_NAVPANNEL` }),
+  }
+}
+
+const ConnectedButton = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MenuButton)
+
+export default ConnectedButton

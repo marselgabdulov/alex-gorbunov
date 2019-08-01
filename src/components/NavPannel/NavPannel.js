@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
+import { connect } from "react-redux"
 import { Link } from "gatsby"
 import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
@@ -9,21 +10,24 @@ import Vimeo from "../../images/icons/social/vimeo.svg"
 import Vk from "../../images/icons/social/vk.svg"
 import Phone from "../../images/icons/phone.svg"
 
-function NavPannel({ show }) {
-  let isVisible = show
-  const [visible, setVisible] = useState(isVisible)
+const mapStateToProps = ({ isNavPannelVisible }) => {
+  return { isNavPannelVisible }
+}
 
-  useEffect(() => {
-    setVisible(show)
-  }, [show])
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleNavPannel: () => dispatch({ type: `TOGGLE_NAVPANNEL` }),
+  }
+}
 
+function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
   return (
     <>
       <div className="nav-pannel">
-        <div className={visible ? "nav-opened" : "nav-closed"}>
+        <div className={isNavPannelVisible ? "nav-opened" : "nav-closed"}>
           <button
             className="nav-pannel__close-button"
-            onClick={() => setVisible(false)}
+            onClick={() => toggleNavPannel()}
           >
             <div className="button-text">закрыть</div>
             <div className="button-icon">
@@ -128,7 +132,7 @@ function NavPannel({ show }) {
                   to="/"
                   title="Главная"
                   activeStyle={{ color: "#e82a6e" }}
-                  onClick={() => setVisible(false)}
+                  onClick={() => toggleNavPannel()}
                 >
                   Главная
                 </Link>
@@ -136,7 +140,7 @@ function NavPannel({ show }) {
                   activeStyle={{ color: "#e82a6e" }}
                   to="/reviews"
                   exit={{
-                    trigger: () => setVisible(false),
+                    trigger: () => toggleNavPannel(),
                     length: 1,
                   }}
                   entry={{
@@ -150,7 +154,7 @@ function NavPannel({ show }) {
                   to="/services#wedding"
                   title="Свадьбы"
                   activeStyle={{ color: "#e82a6e" }}
-                  onClick={() => setVisible(false)}
+                  onClick={() => toggleNavPannel()}
                 >
                   Свадьбы
                 </Link>
@@ -158,7 +162,7 @@ function NavPannel({ show }) {
                   to="/services#corporate"
                   title="Корпоративы"
                   activeStyle={{ color: "#e82a6e" }}
-                  onClick={() => setVisible(false)}
+                  onClick={() => toggleNavPannel()}
                 >
                   Корпоративы
                 </Link>
@@ -166,7 +170,7 @@ function NavPannel({ show }) {
                   to="/services#kids"
                   title="Детские праздники"
                   activeStyle={{ color: "#e82a6e" }}
-                  onClick={() => setVisible(false)}
+                  onClick={() => toggleNavPannel()}
                 >
                   Детские праздники
                 </Link>
@@ -174,7 +178,7 @@ function NavPannel({ show }) {
                   to="/services#"
                   title="Контакты"
                   activeStyle={{ color: "#e82a6e" }}
-                  onClick={() => setVisible(false)}
+                  onClick={() => toggleNavPannel()}
                 >
                   все услуги
                 </Link>
@@ -187,4 +191,9 @@ function NavPannel({ show }) {
   )
 }
 
-export default NavPannel
+const ConnectedNavPannel = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavPannel)
+
+export default ConnectedNavPannel

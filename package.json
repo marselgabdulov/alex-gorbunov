@@ -13,6 +13,7 @@
     "gatsby-plugin-offline": "^2.2.2",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
     "gatsby-plugin-react-helmet": "^3.1.1",
+    "gatsby-plugin-react-redux": "^1.0.10",
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sass": "^2.1.1",
@@ -28,9 +29,11 @@
     "react-dom": "^16.8.6",
     "react-easy-swipe": "0.0.18",
     "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.0",
     "react-scroll-wheel-handler": "^1.0.9",
     "react-swipe": "^6.0.4",
     "react-transition-group": "^4.2.1",
+    "redux": "^4.0.4",
     "swipe-js-iso": "^2.1.5"
   },
   "devDependencies": {
