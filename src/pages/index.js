@@ -57,6 +57,36 @@ function IndexPage(props) {
         title: "детские праздники",
       },
     },
+    {
+      image: props.data.image5.childImageSharp.fluid,
+      title: "дни рождения",
+      subtitle: "лучший подарок",
+      link: {
+        to: "/services#birthday",
+        text: "Подробнее",
+        title: "Дни рождения",
+      },
+    },
+    {
+      image: props.data.image6.childImageSharp.fluid,
+      title: "городские праздники",
+      subtitle: "веду массовые мероприятия",
+      link: {
+        to: "/services#city",
+        text: "Подробнее",
+        title: "городские праздники",
+      },
+    },
+    {
+      image: props.data.image7.childImageSharp.fluid,
+      title: "промоакции",
+      subtitle: "ведущий",
+      link: {
+        to: "/services#promo",
+        text: "Подробнее",
+        title: "промоакции",
+      },
+    },
   ]
   return (
     <Layout>
