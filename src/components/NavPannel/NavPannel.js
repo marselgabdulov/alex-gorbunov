@@ -128,60 +128,88 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
             </div>
             <div className="nav-pannel__wrapper--right">
               <div className="nav-pannel__right-wrapper">
-                <Link
-                  to="/"
+                <TransitionLink
                   title="Главная"
-                  activeStyle={{ color: "#e82a6e" }}
+                  to="/"
                   onClick={() => toggleNavPannel()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
                 >
                   Главная
-                </Link>
+                </TransitionLink>
+
                 <TransitionLink
                   activeStyle={{ color: "#e82a6e" }}
                   to="/reviews"
+                  onClick={() => toggleNavPannel()}
                   exit={{
-                    trigger: () => toggleNavPannel(),
-                    length: 1,
+                    length: 0.5,
                   }}
                   entry={{
-                    delay: 0.6,
+                    delay: 1,
                   }}
                 >
                   Отзывы
                 </TransitionLink>
 
-                <Link
-                  to="/services#wedding"
-                  title="Свадьбы"
+                <TransitionLink
                   activeStyle={{ color: "#e82a6e" }}
+                  to="/services#wedding"
                   onClick={() => toggleNavPannel()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
                 >
                   Свадьбы
-                </Link>
-                <Link
-                  to="/services#corporate"
-                  title="Корпоративы"
+                </TransitionLink>
+
+                <TransitionLink
                   activeStyle={{ color: "#e82a6e" }}
+                  to="/services#corporate"
                   onClick={() => toggleNavPannel()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
                 >
                   Корпоративы
-                </Link>
-                <Link
-                  to="/services#kids"
-                  title="Детские праздники"
+                </TransitionLink>
+
+                <TransitionLink
                   activeStyle={{ color: "#e82a6e" }}
+                  to="/services#kids"
                   onClick={() => toggleNavPannel()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
                 >
                   Детские праздники
-                </Link>
-                <Link
-                  to="/services#"
-                  title="Контакты"
+                </TransitionLink>
+                <TransitionLink
                   activeStyle={{ color: "#e82a6e" }}
+                  to="/services"
                   onClick={() => toggleNavPannel()}
+                  exit={{
+                    length: 0.5,
+                  }}
+                  entry={{
+                    delay: 1,
+                  }}
                 >
                   все услуги
-                </Link>
+                </TransitionLink>
               </div>
             </div>
           </div>
