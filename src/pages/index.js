@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles/index.scss"
-import TestGallery from "../components/TestGallery/TestGallery"
+import IndexGallery from "../components/IndexGallery/IndexGallery"
 import Layout from "../components/layout"
 
 function Test(props) {
@@ -35,7 +35,7 @@ function Test(props) {
   return (
     <Layout>
       <div className="test-page">
-        <TestGallery data={testData} />
+        <IndexGallery data={testData} />
       </div>
     </Layout>
   )
