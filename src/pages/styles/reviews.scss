@@ -24,7 +24,6 @@
 
 // Right side Gallery
 .reviews__gallery-wrapper {
-  background-color: #1a1a1a;
 }
 
 .reviews__gallery {
@@ -991,10 +990,10 @@
     width: 35%;
 
     .intro__title {
-      width: 50%;
-      font-size: 2.5em;
+      width: 60%;
+      font-size: 3em;
       margin-top: 7em;
-      margin-left: 3em;
+      margin-left: 2.5em;
     }
 
     .intro__subtitle {
@@ -1002,10 +1001,11 @@
 
       height: 2em;
       margin-top: 2em;
-      margin-left: 8em;
+      margin-left: 7.5em;
 
       span {
-        font-size: 1.2em;
+        text-transform: uppercase;
+        font-size: 1.1em;
       }
 
       svg {
@@ -1091,23 +1091,22 @@
   // Left side
   .reviews__intro {
     width: 35%;
-
     .intro__title {
-      width: 50%;
-      font-size: 3.5em;
-      margin-top: 5em;
-      margin-left: 3em;
+      width: 60%;
+      font-size: 4.5em;
+      margin-top: 4.8em;
+      margin-left: 2.5em;
     }
 
     .intro__subtitle {
       width: 35%;
-
       height: 2em;
       margin-top: 2em;
-      margin-left: 10.5em;
+      margin-left: 11.5em;
 
       span {
         font-size: 1.2em;
+        text-transform: uppercase;
       }
 
       svg {
