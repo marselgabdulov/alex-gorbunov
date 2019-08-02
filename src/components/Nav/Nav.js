@@ -150,45 +150,36 @@ class Nav extends React.Component {
         className={classnames("navbar", {
           "navbar--hidden": !this.state.visible,
         })}
-        style={
-          this.state.top
-            ? { background: "white" }
-            : { background: "transparent" }
-        }
+        style={{ backgroundColor: "white" }}
       >
         <Logo />
         <div className="navbar__main">
           <div
             className="services__list"
-            style={this.state.top ? { color: "black" } : { color: "white" }}
+            style={{ color: "black" }}
             onClick={() => {
               this.setState({ submenuVisible: true })
             }}
           >
-            <div className="text">Я веду</div>
+            <div className="services__submenu">Я веду</div>
             <div className="icon">
-              <ArrowIcon
-                style={this.state.top ? { fill: "black" } : { fill: "white" }}
-              />
+              <ArrowIcon style={{ color: "black" }} />
             </div>
           </div>
           <Link
             to="/reviews"
-            style={this.state.top ? { color: "black" } : { color: "white" }}
+            style={{ color: "black" }}
             activeStyle={{ color: "#e82a6e" }}
           >
             отзывы
           </Link>
-          <div
-            style={this.state.top ? { color: "black" } : { color: "white" }}
-            onClick={this.scrollToBottom}
-          >
+          <div className="contacts-link" onClick={this.scrollToBottom}>
             контакты
           </div>
         </div>
         <MenuButton
           handleClick={this.props.handleClick}
-          color={this.state.top ? "black" : "white"}
+          style={{ color: "black" }}
         />
         <div
           className={this.state.submenuVisible ? "submenu" : "submenu--hidden"}

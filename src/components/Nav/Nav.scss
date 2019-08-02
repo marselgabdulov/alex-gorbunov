@@ -92,19 +92,38 @@
     }
 
     .icon {
+      margin-left: 0.5em;
       width: 0.9em;
       transform: rotate(90deg);
     }
   }
 
-  * {
+  .services__list,
+  .contacts-link,
+  a {
     position: relative;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
 
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.5em;
+      left: 0;
+      height: 100%;
+      width: 0;
+      opacity: 0.3;
+      background: #9f9f9f;
+      transition: all 0.4s ease-in-out;
+    }
+
     &:hover {
       cursor: pointer;
+
+      &:before {
+        width: 100%;
+      }
     }
   }
 }
