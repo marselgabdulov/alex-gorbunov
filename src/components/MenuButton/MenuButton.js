@@ -5,13 +5,13 @@ import "./MenuButton.scss"
 function MenuButton({ toggleNavPannel, isNavPannelVisible, color }) {
   return (
     <div className="menu-button" onClick={toggleNavPannel}>
-      <span className="menu-button__text" style={{ color: color }}>
+      <span className="menu-button__text" style={{ color: "black" }}>
         меню
       </span>
       <div className="menu-button__lines">
-        <div className="one" style={{ backgroundColor: color }}></div>
-        <div className="two" style={{ backgroundColor: color }}></div>
-        <div className="three" style={{ backgroundColor: color }}></div>
+        <div className="one" style={{ backgroundColor: "black" }}></div>
+        <div className="two" style={{ backgroundColor: "black" }}></div>
+        <div className="three" style={{ backgroundColor: "black" }}></div>
       </div>
     </div>
   )
