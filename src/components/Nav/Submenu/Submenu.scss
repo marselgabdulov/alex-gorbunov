@@ -1,0 +1,64 @@
+@import "../../../shared-styles/colors.scss";
+
+.submenu--hidden {
+  position: absolute;
+  top: 2em;
+  left: 0em;
+  width: 15em;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu--visible {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 1em;
+  left: 0em;
+  width: 15em;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  line-height: 1.75em;
+  background-color: white;
+
+  .submenu__link {
+    margin-left: 1em;
+    &:first-child {
+      margin-top: 1em;
+    }
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+    a {
+      color: black;
+
+      &:hover {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 599px) {
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+}
+
+// desktop
+@media (min-width: 1200px) {
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+}

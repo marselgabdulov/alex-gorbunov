@@ -1,56 +1,11 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import "./Nav.scss"
 import { Link } from "gatsby"
 import Logo from "../Logo/Logo"
 import MenuButton from "../MenuButton/MenuButton"
+import Submenu from "./Submenu/Submenu"
 import ArrowIcon from "../../images/icons/play-button.svg"
 import classnames from "classnames"
-import SubmenuItem from "./SubmenuItem/SubmenuItem"
-
-export const navImage = graphql`
-  fragment navImage on File {
-    childImageSharp {
-      fluid(maxWidth: 400) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        image1: file(relativePath: { eq: "index/wedding.jpg" }) {
-          ...navImage
-        }
-        image2: file(relativePath: { eq: "index/party.jpg" }) {
-          ...navImage
-        }
-        image3: file(relativePath: { eq: "index/children.jpg" }) {
-          ...navImage
-        }
-        image4: file(relativePath: { eq: "index/pull.jpg" }) {
-          ...navImage
-        }
-        image5: file(relativePath: { eq: "index/hb.jpg" }) {
-          ...navImage
-        }
-        image6: file(relativePath: { eq: "index/salut.jpg" }) {
-          ...navImage
-        }
-        image7: file(relativePath: { eq: "index/microphone.jpg" }) {
-          ...navImage
-        }
-        image8: file(relativePath: { eq: "index/smoke.jpg" }) {
-          ...navImage
-        }
-      }
-    `}
-    render={data => <Nav data={data} {...props} />}
-  />
-)
 
 class Nav extends React.Component {
   state = {
@@ -95,56 +50,6 @@ class Nav extends React.Component {
   }
 
   render() {
-    const navData = [
-      {
-        link: "/services#wedding",
-        image: this.props.data.image1.childImageSharp.fluid,
-        name: "свадьбы",
-        color: "#627367",
-      },
-      {
-        link: "/services#corporate",
-        image: this.props.data.image2.childImageSharp.fluid,
-        name: "корпоративы",
-        color: "#832A46",
-      },
-      {
-        link: "/services#kids",
-        image: this.props.data.image3.childImageSharp.fluid,
-        name: "детские праздники",
-        color: "#24222F",
-      },
-      {
-        link: "/services#birthday",
-        image: this.props.data.image4.childImageSharp.fluid,
-        name: "дни рождения",
-        color: "#4C4C4C",
-      },
-      {
-        link: "/services#private",
-        image: this.props.data.image5.childImageSharp.fluid,
-        name: "частные праздники",
-        color: "#a83849",
-      },
-      {
-        link: "/services#city",
-        image: this.props.data.image8.childImageSharp.fluid,
-        name: "городские праздники",
-        color: "#f09e84",
-      },
-      {
-        link: "/services#promo",
-        image: this.props.data.image7.childImageSharp.fluid,
-        name: "промоакции",
-        color: "#3c3d57",
-      },
-      {
-        link: "/reviews",
-        image: this.props.data.image8.childImageSharp.fluid,
-        name: "отзывы",
-        color: "#515e55",
-      },
-    ]
     return (
       <nav
         className={classnames("navbar", {
@@ -157,14 +62,19 @@ class Nav extends React.Component {
           <div
             className="services__list"
             style={{ color: "black" }}
+            onMouseEnter={() => this.setState({ submenuVisible: true })}
+            onMouseLeave={() => this.setState({ submenuVisible: false })}
             onClick={() => {
-              this.setState({ submenuVisible: true })
+              this.setState({ submenuVisible: !this.state.submenuVisible })
             }}
           >
-            <div className="services__submenu">Я веду</div>
-            <div className="icon">
-              <ArrowIcon style={{ color: "black" }} />
+            <div className="link__wrapper">
+              <span>Я веду</span>
+              <div className="icon">
+                <ArrowIcon style={{ color: "black" }} />
+              </div>
             </div>
+            <Submenu visible={this.state.submenuVisible} />
           </div>
           <Link
             to="/reviews"
@@ -181,29 +91,9 @@ class Nav extends React.Component {
           handleClick={this.props.handleClick}
           style={{ color: "black" }}
         />
-        <div
-          className={this.state.submenuVisible ? "submenu" : "submenu--hidden"}
-        >
-          <div className="submenu__sider" onClick={this.handleSubmenu}></div>
-          <div className="submenu__wrapper">
-            <div className="submenu__close" onClick={this.handleSubmenu}>
-              закрыть
-            </div>
-            <div className="submenu__grid">
-              {navData.map((item, index) => (
-                <SubmenuItem
-                  handleClick={() => this.handleSubmenu()}
-                  key={index}
-                  color={item.color}
-                  image={item.image}
-                  link={item.link}
-                  name={item.name}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
       </nav>
     )
   }
 }
+
+export default Nav
