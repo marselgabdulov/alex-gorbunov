@@ -2,451 +2,90 @@
 
 .logo {
   position: absolute;
-  text-align: center;
-  text-transform: uppercase;
-  z-index: 2;
-}
-
-.logo-wrapper {
-  position: absolute;
-}
-
-.logo__link {
-  text-decoration: none;
-  color: black;
-
+  // font-family: "Playfair Display", serif;
   a {
+    text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-family: "Playfair Display", serif;
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    height: 3px;
-    width: 1.5em;
-    background-color: white;
-    transform: skewX(-45deg);
-    transition: all 0.5s ease-in-out;
-  }
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -3px;
-    right: 10%;
-    height: 3px;
-    width: 1.5em;
-    background-color: white;
-    transform: skewX(-45deg);
-    transition: all 0.5s ease-in-out;
-  }
-
-  &:hover {
-    cursor: pointer;
-    &:before {
-      left: 70%;
-    }
-
-    &:after {
-      right: 70%;
-    }
-  }
-}
-
-// -- Default -- Mobile portrait
-@media (max-width: 479px) {
-  .logo-wrapper {
-    top: 1em;
-    left: 4%;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    z-index: 1000;
-  }
-  .logo {
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    font-size: 0.8em;
-    border: none;
-  }
-
-  .logo__link {
-    text-decoration: none;
-
-    &:before,
-    &:after {
-      display: none;
-    }
-
-    a {
-      font-weight: 700;
-      color: black !important;
-    }
-  }
-}
-
-// Tablet portrait
-@media (min-width: 768px) and (max-width: 991px) {
-  .logo-wrapper {
-    top: 1em;
-    left: 4%;
-    width: 13em;
-    height: 6em;
-    background-color: white;
-  }
-  .logo {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-
-// Tablets landscape
-@media (min-width: 992px) and (max-width: 1199px) {
-  .logo-wrapper {
-    top: 1em;
-    left: 4%;
-    width: 13em;
-    height: 6em;
-    background: transparent;
-  }
-  .logo {
-    top: 0;
-    left: 0;
-    width: 10em;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-
-/*iPad Pro 9.7"*/
-/* Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .logo-wrapper {
-    top: 1em;
-    left: 4%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-
-/* Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .logo-wrapper {
-    top: 1em;
-    left: 9%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-/*iPad Pro 10.5"*/
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .logo-wrapper {
-    top: 1em;
-    left: 4%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .logo-wrapper {
-    top: 1em;
-    left: 9%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-/*ipad PRo 12.9"*/
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .logo-wrapper {
-    top: 1em;
-    left: 4%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .logo-wrapper {
-    top: 1em;
-    left: 9%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      font-weight: 700;
-    }
-  }
-}
-
-// Laptops
-@media (min-width: 1200px) and (max-width: 1679px) {
-  .logo-wrapper {
-    top: 1em;
-    left: 9%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
-  .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
-    a {
-      text-decoration: none;
-      color: black;
-      font-family: "Playfair Display", serif;
-      font-weight: 700;
-    }
 
     &:before {
       content: "";
-      display: block;
       position: absolute;
-      top: 100%;
-      left: 10%;
-      height: 3px;
-      width: 1.5em;
-      background-color: white;
-      transform: skewX(-45deg);
-      transition: all 0.5s ease-in-out;
+      top: 0.5em;
+      left: 0;
+      height: 100%;
+      width: 0;
+      opacity: 0.3;
+      background: $color-light-grey;
+      transition: all 0.4s ease-in-out;
     }
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -3px;
-      right: 10%;
-      height: 3px;
-      width: 1.5em;
-      background-color: white;
-      transform: skewX(-45deg);
-      transition: all 0.5s ease-in-out;
+    &:hover {
+      cursor: pointer;
+
+      &:before {
+        width: 100%;
+      }
     }
   }
 }
 
-// desktops
-@media (min-width: 1680px) {
-  .logo-wrapper {
-    top: 1em;
-    left: 9%;
-    width: 11em;
-    height: 5em;
-    background-color: white;
-  }
+// mobile
+@media (max-width: 599px) {
   .logo {
-    width: 80%;
-    left: 5px;
-    top: 7px;
-    height: auto;
-    padding: 10px;
-    border: 1px;
-    font-size: 1em;
-    border: 3px solid black;
-  }
-
-  .logo__link {
-    text-decoration: none;
-    color: black;
-
+    top: 2em;
+    left: 1em;
     a {
       font-weight: 700;
+      font-size: 0.9em;
     }
+  }
+}
 
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 100%;
-      left: 10%;
-      height: 3px;
-      width: 1.5em;
-      background-color: white;
-      transform: skewX(-45deg);
-      transition: all 0.5s ease-in-out;
+// tublet-portrait
+@media (min-width: 600px) {
+  .logo {
+    top: 2.5em;
+    left: 2em;
+    a {
+      font-weight: 700;
+      font-size: 1em;
     }
+  }
+}
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -3px;
-      right: 10%;
-      height: 3px;
-      width: 1.5em;
-      background-color: white;
-      transform: skewX(-45deg);
-      transition: all 0.5s ease-in-out;
+// tablet-landscape
+@media (min-width: 900px) {
+  .logo {
+    top: 2.5em;
+    left: 2.5em;
+    a {
+      font-weight: 700;
+      font-size: 1em;
+    }
+  }
+}
+
+// desktop
+@media (min-width: 1200px) {
+  .logo {
+    top: 2.5em;
+    left: 7em;
+    a {
+      font-weight: 700;
+      font-size: 1em;
+    }
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .logo {
+    top: 2.5em;
+    left: 10em;
+    a {
+      font-weight: 700;
+      font-size: 1em;
     }
   }
 }
