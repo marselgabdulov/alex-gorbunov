@@ -76,19 +76,15 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Montserrat Alternates`,
+            family: `Source Sans Pro`,
             subsets: [`cyrillic`],
-            variants: [`400`, `500`, `700`],
+            variants: [`400`, `500`, `700`, `800`, `900`],
           },
-          {
-            family: `Ubuntu`,
-            subsets: [`cyrillic`],
-            variants: [`400`, `500`, `700`],
-          },
+
           {
             family: `Playfair Display`,
             subsets: [`cyrillic`],
-            variants: [`400`, `700`],
+            variants: [`400`, `500`, `700`, `800`, `900`],
           },
         ],
       },
