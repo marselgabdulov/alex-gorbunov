@@ -54,7 +54,7 @@ class IndexGallery extends React.Component {
     }
 
     return (
-      <div className="test-gallery">
+      <div className="index-gallery">
         <div
           className="gallery__links"
           data-aos="fade"
