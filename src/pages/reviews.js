@@ -1,19 +1,24 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
+import "./styles/reviews.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import SocialLinks from "../components/SocialLinks/SocialLinks"
-import "./styles/reviews.scss"
-import Hand from "../images/icons/hand.svg"
-import Image from "../components/Image/Image"
+import Review from "../components/Review/Review"
 
-function reviewsPage(props) {
-  const [visible, setVisible] = useState(false)
+function Reviews(props) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  function handleFullReview(index) {
-    setCurrentIndex(index)
-    setVisible(true)
+  function handlePrev() {
+    currentIndex === 0
+      ? setCurrentIndex(reviews.length - 1)
+      : setCurrentIndex(currentIndex - 1)
+    console.log(currentIndex)
+  }
+  function handleNext() {
+    currentIndex === reviews.length - 1
+      ? setCurrentIndex(0)
+      : setCurrentIndex(currentIndex + 1)
+    console.log(currentIndex)
   }
 
   const reviews = [
@@ -29,7 +34,7 @@ function reviewsPage(props) {
       author: "сергей",
       link: "https://www.facebook.com/alex.gorbunov.969",
       text:
-        "Пользуемся ребятами уже не первый раз. В октябре столкнулись с проблемой — свадьба и ее декор. Определились со стилем — рустик. На первой встрече даже не пришлось объяснять как я это вижу, Вике удалось каким-то образом проникнуть мне в голову и сделать в итоге все именно так как хотелось. P.S. декор был выполнен надежно и на совесть. Проверено — невменяемыми танцами гостей. Спасибо!",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel amet temporibus tempore a dicta commodi velit dolorum delectus, aperiam laborum ipsam in fugit asperiores illo necessitatibus ullam quas, officiis inventore similique facilis libero. Nobis mollitia aliquam quia, iure aperiam officiis. Molestias possimus, odit tenetur delectus laudantium, incidunt quas, dolor ut quae nisi aperiam fugit asperiores. Voluptas, voluptatem eos natus vel dolorum. In incidunt beatae nemo ab error eveniet, corrupti consequuntur enim corporis porro nisi fugit commodi at doloribus reiciendis recusandae mollitia omnis hic. Natus itaque, vero, accusantium possimus culpa consequuntur. Necessitatibus odio, odit reiciendis. Repellat, consequatur laborum assumenda unde ipsa.,",
     },
     {
       image: props.data.image3.childImageSharp.fluid,
@@ -81,70 +86,26 @@ function reviewsPage(props) {
         "Пользуемся ребятами уже не первый раз. В октябре столкнулись с проблемой — свадьба и ее декор. Определились со стилем — рустик. На первой встрече даже не пришлось объяснять как я это вижу, Вике удалось каким-то образом проникнуть мне в голову и сделать в итоге все именно так как хотелось. P.S. декор был выполнен надежно и на совесть. Проверено — невменяемыми танцами гостей. Спасибо!",
     },
   ]
-
   return (
     <Layout>
-      <SEO title="Отзывы" />
-      <div className="page">
-        <section className="reviews">
-          <div className="reviews__intro">
-            <h2 className="intro__title">Я люблю своих клиентов.</h2>
-            <div className="intro__subtitle">
-              <span>Убедитесь сами</span> <Hand />
-            </div>
-          </div>
-          <div className="reviews__gallery-wrapper">
-            <div className="mobile-title">Отзывы</div>
-            <div className="reviews__gallery">
-              {reviews.map((item, index) => (
-                <div
-                  className="reviews-gallery__item"
-                  key={index}
-                  onClick={() => handleFullReview(index)}
-                >
-                  <div className="image-wrapper">
-                    <Image image={item.image} />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className={visible ? "full-review" : "full-review--hidden"}>
-              <div
-                className="full-review__sider"
-                onClick={() => setVisible(false)}
-              ></div>
-              <div className="full-review__wrapper">
-                <div className="close" onClick={() => setVisible(false)}>
-                  <span>закрыть</span>
-                </div>
-                <div className="full-review__content">
-                  <div className="full-review__image">
-                    <Image image={reviews[currentIndex].image} />
-                  </div>
-                  <div className="full-review__info">
-                    <div className="author">
-                      <a
-                        href={reviews[currentIndex].link}
-                        title="автор отзыва"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {reviews[currentIndex].author}
-                      </a>
-                    </div>
-                    <div className="text">
-                      <p>{reviews[currentIndex].text}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      <section className="reviews">
+        <h1 className="page__title">Отзывы</h1>
+        <span className="page__subtitle">
+          что говорят клиенты о моей работе
+        </span>
+        <Review data={reviews[currentIndex]} />
+        <div className="prev" onClick={handlePrev}>
+          пред
+        </div>
+        <div className="next" onClick={handlePrev}>
+          след
+        </div>
+      </section>
     </Layout>
   )
 }
+
+export default Reviews
 
 export const reviewsImage = graphql`
   fragment reviewsImage on File {
@@ -187,5 +148,3 @@ export const reviewsPageQuery = graphql`
     }
   }
 `
-
-export default reviewsPage
