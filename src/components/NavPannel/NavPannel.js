@@ -47,7 +47,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
   return (
     <>
       <div className="nav-pannel">
-        <div className={!isNavPannelVisible ? "nav-opened" : "nav-closed"}>
+        <div className={isNavPannelVisible ? "nav-opened" : "nav-closed"}>
           <button
             className="nav-pannel__close-button"
             onClick={() => toggleNavPannel()}

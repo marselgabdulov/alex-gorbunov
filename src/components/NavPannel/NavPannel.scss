@@ -1,3 +1,5 @@
+@import "../../shared-styles/colors.scss";
+
 // MAIN
 .nav-pannel {
   position: relative;
@@ -153,9 +155,16 @@
     justify-content: space-between;
 
     .nav-pannel__social-icon {
+      width: 1em;
+      height: 1em;
+
+      svg {
+        width: 0.85em;
+        height: 0.85em;
+      }
       &:hover {
         svg {
-          fill: #e28921;
+          fill: $color-pink;
         }
       }
     }
@@ -190,31 +199,9 @@
     }
   }
 
-  .nav-pannel__email,
-  .nav-pannel__phone {
-    a {
-      font-size: 1em;
-    }
-  }
-
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
-
-    .nav-pannel__social-icon {
-      width: 1em;
-      height: 1em;
-
-      &:hover {
-        svg {
-          fill: #e28921;
-        }
-      }
-      svg {
-        width: 0.85em;
-        height: 0.85em;
-      }
-    }
   }
 }
 
@@ -246,21 +233,6 @@
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
-
-    .nav-pannel__social-icon {
-      width: 1em;
-      height: 1em;
-
-      &:hover {
-        svg {
-          fill: #e28921;
-        }
-      }
-      svg {
-        width: 0.85em;
-        height: 0.85em;
-      }
-    }
   }
 }
 
@@ -292,21 +264,6 @@
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
-
-    .nav-pannel__social-icon {
-      width: 1em;
-      height: 1em;
-
-      &:hover {
-        svg {
-          fill: #e28921;
-        }
-      }
-      svg {
-        width: 0.85em;
-        height: 0.85em;
-      }
-    }
   }
 }
 
@@ -338,21 +295,6 @@
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
-
-    .nav-pannel__social-icon {
-      width: 1em;
-      height: 1em;
-
-      &:hover {
-        svg {
-          fill: #e28921;
-        }
-      }
-      svg {
-        width: 0.85em;
-        height: 0.85em;
-      }
-    }
   }
 }
 
@@ -384,20 +326,5 @@
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
-
-    .nav-pannel__social-icon {
-      width: 1em;
-      height: 1em;
-
-      &:hover {
-        svg {
-          fill: #e28921;
-        }
-      }
-      svg {
-        width: 0.85em;
-        height: 0.85em;
-      }
-    }
   }
 }

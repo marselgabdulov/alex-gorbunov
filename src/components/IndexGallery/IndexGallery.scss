@@ -21,7 +21,7 @@
       &:before {
         content: "";
         position: absolute;
-        border-bottom: 2px solid $color-orange;
+        border-bottom: 2px solid $color-sky;
         transition: all 0.4s ease-in-out;
       }
 
@@ -258,7 +258,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-orange;
+          border-bottom: 4px solid $color-sky;
           top: 40%;
           right: 105%;
           width: 0;
@@ -392,7 +392,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-orange;
+          border-bottom: 4px solid $color-sky;
           top: 40%;
           right: 105%;
           width: 0;
@@ -525,7 +525,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-orange;
+          border-bottom: 4px solid $color-sky;
           top: 40%;
           right: 105%;
           width: 0;
@@ -559,6 +559,7 @@
       right: 11%;
       width: 40px;
       height: 100%;
+      background-color: white;
     }
 
     .border {
@@ -657,7 +658,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-orange;
+          border-bottom: 4px solid $color-sky;
           top: 40%;
           right: 105%;
           width: 0;
@@ -691,6 +692,7 @@
       right: 11%;
       width: 40px;
       height: 100%;
+      background-color: white;
     }
 
     .border {
@@ -789,7 +791,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-orange;
+          border-bottom: 4px solid $color-sky;
           top: 40%;
           right: 105%;
           width: 0;
@@ -823,6 +825,7 @@
       right: 12%;
       width: 90px;
       height: 100%;
+      background-color: white;
     }
 
     .border {

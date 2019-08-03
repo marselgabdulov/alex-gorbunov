@@ -2,9 +2,10 @@ import React from "react"
 import "./styles/index.scss"
 import IndexGallery from "../components/IndexGallery/IndexGallery"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-function Test(props) {
-  const testData = [
+function IndexPage(props) {
+  const indexData = [
     {
       image: props.data.image1.childImageSharp.fluid,
 
@@ -34,8 +35,9 @@ function Test(props) {
   ]
   return (
     <Layout>
+      <SEO title="Главная" />
       <div className="test-page">
-        <IndexGallery data={testData} />
+        <IndexGallery data={indexData} />
       </div>
     </Layout>
   )
@@ -64,4 +66,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default Test
+export default IndexPage
