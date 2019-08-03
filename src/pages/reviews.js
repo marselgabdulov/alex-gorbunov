@@ -88,6 +88,7 @@ function Reviews(props) {
   ]
   return (
     <Layout>
+      <SEO title="Отзывы" />
       <section className="reviews">
         <h1 className="page__title">Отзывы</h1>
         <span className="page__subtitle">
