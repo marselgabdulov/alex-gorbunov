@@ -16,13 +16,12 @@
 
     .gallery__link--active {
       position: relative;
-      transition: all 0.4s ease-in-out;
-
+      transition: all 0.45s ease-in-out;
       &:before {
         content: "";
         position: absolute;
-        border-bottom: 2px solid $color-sky;
-        transition: all 0.4s ease-in-out;
+        border-bottom: 2px solid orange;
+        transition: all 0.45s ease-in-out;
       }
 
       a {
@@ -33,14 +32,14 @@
 
     .gallery__link {
       position: relative;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.45s ease-in-out;
       font-weight: 700;
       width: auto;
 
       &:before {
         content: "";
         position: absolute;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.45s ease-in-out;
       }
 
       &:hover {
@@ -79,7 +78,6 @@
 
   .images-wrapper {
     position: absolute;
-    transition: all 0.45s ease-in-out;
   }
 
   .image-container {
@@ -109,12 +107,10 @@
 
   .counter {
     position: absolute;
-
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     justify-content: space-between;
-
     align-items: center;
 
     .current {
@@ -150,7 +146,7 @@
   background-color: white;
   border: 2px solid $color-light-sky;
   position: relative;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.45s ease-in-out;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -174,7 +170,7 @@
     height: 100%;
     border-radius: 50%;
     opacity: 0;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.45s ease-in-out;
   }
 
   &:hover {
@@ -258,7 +254,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-sky;
+          border-bottom: 4px solid orange;
           top: 40%;
           right: 105%;
           width: 0;
@@ -392,7 +388,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-sky;
+          border-bottom: 4px solid orange;
           top: 40%;
           right: 105%;
           width: 0;
@@ -525,7 +521,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-sky;
+          border-bottom: 4px solid orange;
           top: 40%;
           right: 105%;
           width: 0;
@@ -658,7 +654,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-sky;
+          border-bottom: 4px solid orange;
           top: 40%;
           right: 105%;
           width: 0;
@@ -791,7 +787,7 @@
 
         &:before {
           height: 5px;
-          border-bottom: 4px solid $color-sky;
+          border-bottom: 4px solid orange;
           top: 40%;
           right: 105%;
           width: 0;

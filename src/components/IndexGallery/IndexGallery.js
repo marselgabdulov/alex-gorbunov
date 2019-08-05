@@ -55,13 +55,7 @@ class IndexGallery extends React.Component {
 
     return (
       <div className="index-gallery">
-        <div
-          className="gallery__links"
-          data-aos="fade"
-          data-aos-delay="100"
-          data-aos-duration="750"
-          data-aos-once="true"
-        >
+        <div className="gallery__links">
           {links.map((link, index) => (
             <div
               className={
@@ -76,25 +70,17 @@ class IndexGallery extends React.Component {
             </div>
           ))}
         </div>
-        <div
-          className="gallery-bg"
-          data-aos="fade"
-          data-aos-delay="100"
-          data-aos-duration="1200"
-          data-aos-once="true"
-        ></div>
+        <div className="gallery-bg"></div>
         <div className="images-separator"></div>
         <div className="border">
           <div
             className="images-wrapper"
             style={{
+              transition: `all 0.75s ease-in-out`,
               transform: `translateX(${this.state.translateValue +
                 translate}%)`,
             }}
             data-aos="fade"
-            data-aos-delay="200"
-            data-aos-duration="750"
-            data-aos-once="true"
           >
             {this.props.data.map((item, index) => (
               <div className="image-container" key={index}>
@@ -103,23 +89,11 @@ class IndexGallery extends React.Component {
             ))}
           </div>
         </div>
-        <div
-          className="counter"
-          data-aos="fade"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
+        <div className="counter">
           <div className="current">{`0${this.state.currentIndex + 1}`}</div>
           <div className="all">{`0${this.props.data.length - 1}`}</div>
         </div>
-        <div
-          className="control"
-          data-aos="fade"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
+        <div className="control">
           <button
             className="control-button"
             disabled={this.state.currentIndex === 0}
