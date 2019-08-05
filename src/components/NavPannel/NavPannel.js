@@ -8,7 +8,6 @@ import Facebook from "../../images/icons/social/facebook.svg"
 import Youtube from "../../images/icons/social/youtube.svg"
 import Vimeo from "../../images/icons/social/vimeo.svg"
 import Vk from "../../images/icons/social/vk.svg"
-import Phone from "../../images/icons/phone.svg"
 
 const mapStateToProps = ({ isNavPannelVisible }) => {
   return { isNavPannelVisible }

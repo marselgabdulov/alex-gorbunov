@@ -1,7 +1,6 @@
 import React from "react"
 import "./IndexGallery.scss"
 import Image from "../Image/Image"
-import ArrowRight from "../../images/icons/arrow-point-to-right.svg"
 import { Link } from "gatsby"
 
 class IndexGallery extends React.Component {

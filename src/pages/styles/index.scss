@@ -1,4 +1,248 @@
-.test-page {
+@import "../../shared-styles/colors.scss";
+
+.index-page {
   width: 100%;
-  height: 100vh;
+  height: auto;
+}
+
+.about {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  .about__title {
+    text-transform: uppercase;
+    align-self: flex-start;
+    font-weight: bold;
+  }
+
+  .about__skills {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+
+    .skill {
+      .skill__title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 599px) {
+  .about {
+    margin-top: 5em;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+
+    .about__title {
+      order: 1;
+      align-self: center;
+      margin-bottom: 1em;
+      font-size: 1.2em;
+    }
+
+    .about__skills {
+      margin-top: 1em;
+      order: 3;
+      width: 95%;
+      margin-left: 2.5%;
+      height: 100vh;
+      flex-direction: column;
+
+      .skill {
+        .skill__title {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+        height: 25%;
+        width: 100%;
+      }
+
+      .skill__body {
+        height: 1.5em;
+      }
+    }
+
+    .about__image {
+      order: 2;
+      width: 95%;
+      margin-left: 2.5%;
+      height: 100vw;
+    }
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .about {
+    margin-top: 10em;
+    width: 100%;
+    height: 65vh;
+
+    .about__title {
+      display: none;
+    }
+
+    .about__skills {
+      width: 45%;
+      margin-left: 5%;
+      height: 100%;
+      flex-direction: column;
+
+      .skill {
+        .skill__title {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+        height: 25%;
+        width: 100%;
+      }
+
+      .skill__body {
+        height: 1.5em;
+      }
+    }
+
+    .about__image {
+      width: 50%;
+      height: 90%;
+    }
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .about {
+    margin-top: 10em;
+    width: 100%;
+    height: 65vh;
+
+    .about__title {
+      display: block;
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+      margin-left: 5%;
+      width: 10%;
+      font-size: 1.5em;
+      align-self: flex-start;
+      letter-spacing: 2px;
+    }
+
+    .about__skills {
+      width: 45%;
+      height: 100%;
+      flex-direction: column;
+
+      .skill {
+        .skill__title {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+        height: 25%;
+        width: 90%;
+      }
+
+      .skill__body {
+        height: 1.5em;
+      }
+    }
+
+    .about__image {
+      width: 40%;
+      height: 100%;
+    }
+  }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+  .about {
+    margin-top: 10em;
+    width: 100%;
+    height: 65vh;
+
+    .about__title {
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+      margin-left: 17%;
+      width: 10%;
+      font-size: 1.75em;
+      align-self: flex-start;
+      letter-spacing: 2px;
+    }
+
+    .about__skills {
+      width: 30%;
+      height: 100%;
+      flex-direction: column;
+
+      .skill {
+        .skill__title {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+        height: 25%;
+        width: 90%;
+      }
+
+      .skill__body {
+        height: 1.5em;
+      }
+    }
+
+    .about__image {
+      width: 27%;
+      height: 90%;
+    }
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .about {
+    margin-top: 10em;
+    width: 100%;
+    height: 85vh;
+    flex-direction: row;
+
+    .about__title {
+      display: block;
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+      margin-left: 22%;
+      width: 10%;
+      font-size: 2.25em;
+      align-self: flex-start;
+      letter-spacing: 2px;
+    }
+
+    .about__skills {
+      width: 33%;
+      height: 100%;
+      flex-direction: column;
+
+      .skill {
+        .skill__title {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+        height: 20%;
+        width: 70%;
+      }
+
+      .skill__body {
+        height: 1.5em;
+      }
+    }
+
+    .about__image {
+      width: 22%;
+      height: 70%;
+      margin-right: 5%;
+    }
+  }
 }
