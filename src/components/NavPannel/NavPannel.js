@@ -65,6 +65,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
               <div className="menu__item" key={index}>
                 <TransitionLink
                   to={item.to}
+                  activeStyle={{ color: "#e82a6e" }}
                   onClick={() => toggleNavPannel()}
                   exit={{
                     length: 0.5,

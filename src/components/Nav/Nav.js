@@ -9,9 +9,6 @@ import classnames from "classnames"
 
 class Nav extends React.Component {
   state = {
-    prevScrollPosition: null,
-    visible: true,
-    top: false,
     submenuVisible: false,
   }
 
@@ -28,7 +25,6 @@ class Nav extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ prevScrollPosition: window.pagesYOffset })
     window.addEventListener("scroll", this.handleScroll)
   }
 
@@ -36,27 +32,9 @@ class Nav extends React.Component {
     window.removeEventListener("scroll", this.handleScroll)
   }
 
-  handleScroll = () => {
-    const { prevScrollPosition } = this.state
-    const currentScrollPosition = window.pageYOffset
-    const visible = prevScrollPosition > currentScrollPosition
-    const isTop = currentScrollPosition > 0
-
-    this.setState({
-      prevScrollPosition: currentScrollPosition,
-      visible,
-      top: isTop,
-    })
-  }
-
   render() {
     return (
-      <nav
-        className={classnames("navbar", {
-          "navbar--hidden": !this.state.visible,
-        })}
-        style={{ backgroundColor: "white" }}
-      >
+      <nav className="navbar" style={{ backgroundColor: "white" }}>
         <Logo />
         <div className="navbar__main">
           <div
