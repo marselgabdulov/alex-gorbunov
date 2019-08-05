@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react"
 import "./Review.scss"
 import Image from "../Image/Image"
+import { TransitionGroup, CSSTransition } from "react-transition-group"
 
 function ReviewBody({ text, handleClick }) {
-  if (text.length > 200) {
-    return (
-      <p>
-        {text.slice(0, 200)}...
-        <span className="show-more" onClick={handleClick}>
-          читать дальше
-        </span>
-      </p>
-    )
-  } else {
-    return <p>{text}</p>
-  }
+  return text.length > 200 ? (
+    <p>
+      {text.slice(0, 200)}...
+      <span className="show-more" onClick={handleClick}>
+        читать дальше
+      </span>
+    </p>
+  ) : (
+    <p>{text}</p>
+  )
 }
 
 function Review({ data }) {
@@ -26,8 +25,12 @@ function Review({ data }) {
 
   return (
     <div className="review">
-      <div className="review__image">
-        <Image image={data.image} />
+      <div className="review__image--wrapper">
+        <TransitionGroup className="review__image">
+          <CSSTransition key={data.id} timeout={1000} classNames="slide">
+            <Image image={data.image} />
+          </CSSTransition>
+        </TransitionGroup>
       </div>
       <div className="review__author">
         <a
@@ -39,12 +42,14 @@ function Review({ data }) {
           {data.author}
         </a>
       </div>
-      <div className="review__body">
-        <ReviewBody
-          text={data.text}
-          handleClick={() => setFullReviewVisible(true)}
-        />
-      </div>
+      <TransitionGroup className="review__body">
+        <CSSTransition key={data.id} timeout={1000} classNames="fade">
+          <ReviewBody
+            text={data.text}
+            handleClick={() => setFullReviewVisible(true)}
+          />
+        </CSSTransition>
+      </TransitionGroup>
 
       <div
         className={

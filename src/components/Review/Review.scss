@@ -1,9 +1,22 @@
 @import "../../shared-styles/colors.scss";
+@import "../../shared-styles/transitions.scss";
 
 .review {
   text-align: center;
 
+  .review__image--wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .review__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
   .review__body {
+    position: relative;
     text-align: justify;
     transition: all 0.3s ease-in-out;
   }
@@ -101,7 +114,7 @@
     height: 50%;
     text-align: center;
 
-    .review__image {
+    .review__image--wrapper {
       width: 200px;
       height: 200px;
       margin-left: calc(50% - 100px);
@@ -155,7 +168,7 @@
     height: 50%;
     text-align: center;
 
-    .review__image {
+    .review__image--wrapper {
       width: 200px;
       height: 200px;
       margin-left: calc(50% - 100px);
@@ -209,7 +222,7 @@
     height: 50%;
     text-align: center;
 
-    .review__image {
+    .review__image--wrapper {
       width: 200px;
       height: 200px;
       margin-left: calc(50% - 100px);
@@ -262,7 +275,7 @@
     height: 50%;
     text-align: center;
 
-    .review__image {
+    .review__image--wrapper {
       width: 200px;
       height: 200px;
       margin-left: calc(50% - 100px);
@@ -315,7 +328,7 @@
     height: 50%;
     text-align: center;
 
-    .review__image {
+    .review__image--wrapper {
       width: 200px;
       height: 200px;
       margin-left: calc(50% - 100px);
