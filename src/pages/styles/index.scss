@@ -74,6 +74,20 @@
       height: 100vw;
     }
   }
+
+  .video {
+    margin-top: 2em;
+    width: 95%;
+    height: 40vh;
+    margin-left: 2.5%;
+
+    .video__title {
+      letter-spacing: 2px;
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+  }
 }
 
 // tublet-portrait
@@ -110,6 +124,20 @@
     .about__image {
       width: 50%;
       height: 90%;
+    }
+  }
+
+  .video {
+    margin-top: 5em;
+    width: 90%;
+    height: 40vh;
+    margin-left: 5%;
+
+    .video__title {
+      letter-spacing: 2px;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 1em;
     }
   }
 }
@@ -156,6 +184,20 @@
       height: 100%;
     }
   }
+
+  .video {
+    margin-top: 5em;
+    width: 60%;
+    height: 50vh;
+    margin-left: 20%;
+
+    .video__title {
+      letter-spacing: 2px;
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  }
 }
 
 // desktop/laptop
@@ -197,6 +239,20 @@
     .about__image {
       width: 27%;
       height: 90%;
+    }
+  }
+
+  .video {
+    margin-top: 10em;
+    width: 50%;
+    height: 50vh;
+    margin-left: 25%;
+
+    .video__title {
+      letter-spacing: 2px;
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 1em;
     }
   }
 }
@@ -243,6 +299,20 @@
       width: 22%;
       height: 70%;
       margin-right: 5%;
+    }
+  }
+
+  .video {
+    margin-top: 0em;
+    width: 50%;
+    height: 50vh;
+    margin-left: 25%;
+
+    .video__title {
+      letter-spacing: 2px;
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 1em;
     }
   }
 }

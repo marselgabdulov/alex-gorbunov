@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import "./styles/index.scss"
 import IndexGallery from "../components/IndexGallery/IndexGallery"
+import Video from "../components/Video/Video"
 import Layout from "../components/layout"
 import Image from "../components/Image/Image"
 import SEO from "../components/seo"
@@ -71,6 +72,7 @@ function IndexPage(props) {
         <section className="intro">
           <IndexGallery data={indexData} />
         </section>
+
         <section className="about">
           <div className="about__title">Обо мне</div>
           <div className="about__skills">
@@ -117,6 +119,13 @@ function IndexPage(props) {
           >
             <Image image={props.data.image4.childImageSharp.fluid} />
           </div>
+        </section>
+        <section className="video">
+          <h2 className="video__title">Видео</h2>
+          <Video
+            videoId="tNs3exn6PKk"
+            cover={props.data.image3.childImageSharp.fluid}
+          />
         </section>
       </div>
     </Layout>
