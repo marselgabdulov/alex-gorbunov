@@ -48,7 +48,7 @@ class Video extends React.Component {
               playing={this.state.playing}
               muted={this.state.muted}
               controls={true}
-              volume="0.5"
+              volume={0.5}
             />
           </div>
         </div>

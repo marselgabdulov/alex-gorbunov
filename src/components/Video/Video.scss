@@ -79,10 +79,11 @@
   opacity: 1;
   visibility: visible;
   background: black;
-  z-index: 1000000;
+  z-index: 10000;
 
   .close-full {
     position: absolute;
+    z-index: 12000;
     svg {
       fill: white;
     }
@@ -97,6 +98,10 @@
 
   .full__wrapper {
     position: relative;
+    width: 90%;
+    height: 90%;
+    margin-top: 2.5%;
+    margin-left: 5%;
 
     .youtube-video {
       position: absolute;
@@ -105,6 +110,7 @@
       width: 100% !important;
       height: auto;
       min-height: 100%;
+      z-index: 110000;
     }
   }
 }
@@ -139,12 +145,6 @@
         width: 1em;
       }
     }
-
-    .full__wrapper {
-      width: 90%;
-      height: 90%;
-      margin: 2.5%;
-    }
   }
 }
 
@@ -177,12 +177,6 @@
       svg {
         width: 1.25em;
       }
-    }
-
-    .full__wrapper {
-      width: 90%;
-      height: 90%;
-      margin: 2.5%;
     }
   }
 }
@@ -217,12 +211,6 @@
         width: 1.25em;
       }
     }
-
-    .full__wrapper {
-      width: 90%;
-      height: 90%;
-      margin: 2.5%;
-    }
   }
 }
 
@@ -256,12 +244,6 @@
         width: 1.5em;
       }
     }
-
-    .full__wrapper {
-      width: 90%;
-      height: 90%;
-      margin: 2.5%;
-    }
   }
 }
 
@@ -294,12 +276,6 @@
       svg {
         width: 1.5em;
       }
-    }
-
-    .full__wrapper {
-      width: 90%;
-      height: 90%;
-      margin: 2.5%;
     }
   }
 }
