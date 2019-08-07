@@ -5,8 +5,6 @@ import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
 import Instagram from "../../images/icons/social/instagram.svg"
 import Facebook from "../../images/icons/social/facebook.svg"
-import Youtube from "../../images/icons/social/youtube.svg"
-import Vimeo from "../../images/icons/social/vimeo.svg"
 import Vk from "../../images/icons/social/vk.svg"
 
 const mapStateToProps = ({ isNavPannelVisible }) => {
@@ -51,7 +49,6 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
             className="nav-pannel__close-button"
             onClick={() => toggleNavPannel()}
           >
-            <div className="button-text">закрыть</div>
             <div className="button-icon">
               <div className="one"></div>
               <div className="two"></div>
@@ -64,7 +61,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
               <div className="menu__item" key={index}>
                 <TransitionLink
                   to={item.to}
-                  activeStyle={{ color: "#e82a6e" }}
+                  activeStyle={{ color: "#f1891d" }}
                   onClick={() => toggleNavPannel()}
                   exit={{
                     length: 0.5,
@@ -117,26 +114,6 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
                   rel="noopener noreferrer"
                 >
                   <Instagram />
-                </a>
-              </div>
-              <div className="nav-pannel__social-icon">
-                <a
-                  href="https://www.youtube.com/watch?v=xkAQ6bhpwYw"
-                  title="youtube"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Youtube />
-                </a>
-              </div>
-              <div className="nav-pannel__social-icon">
-                <a
-                  href="https://vimeo.com/"
-                  title="vimeo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Vimeo />
                 </a>
               </div>
             </div>

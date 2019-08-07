@@ -4,7 +4,6 @@
 .nav-pannel {
   position: relative;
   width: 100%;
-  color: black;
   overflow: hidden;
   z-index: 1000000;
 }
@@ -16,7 +15,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: white;
+  background: #1c1b1b;
   transition: transform 0.5s ease-in-out;
   overflow: hidden;
   display: -webkit-flex;
@@ -65,14 +64,6 @@
     }
   }
 
-  .button-text {
-    transition: all 0.5s ease-in-out;
-    color: black;
-    font-size: 1.25em;
-    margin-top: 0.4em;
-    text-transform: uppercase;
-  }
-
   .button-icon {
     transition: all 0.5s ease-in-out;
     position: absolute;
@@ -86,7 +77,7 @@
     .three {
       transition: all 0.5s ease-in-out;
       position: absolute;
-      background: black;
+      background: white;
       height: 2px;
     }
 
@@ -127,9 +118,10 @@
   height: auto;
 
   .menu__item a {
-    font-family: "Playfair Display", serif;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: uppercase;
   }
 
@@ -140,9 +132,9 @@
   .nav-pannel__email,
   .nav-pannel__phone {
     a {
-      color: black;
+      color: white;
       text-decoration: none;
-      font-weight: normal;
+      font-weight: 300;
     }
   }
 
@@ -159,12 +151,13 @@
       height: 1em;
 
       svg {
-        width: 0.85em;
-        height: 0.85em;
+        width: 0.75em;
+        height: 0.75em;
+        fill: white;
       }
       &:hover {
         svg {
-          fill: $color-pink;
+          fill: $color-orange;
         }
       }
     }
@@ -174,34 +167,32 @@
 // mobile
 @media (max-width: 599px) {
   .nav-pannel__close-button {
-    top: 1em;
-    right: 1em;
+    top: 0.25em;
+    right: 0.25em;
     width: auto;
     height: auto;
-  }
-
-  .button-text {
-    display: none;
   }
 
   .nav-pannel__menu {
     a {
       font-size: 1em;
-      font-weight: 400;
-      line-height: 2em;
+      font-weight: 300;
+      line-height: 2.5em;
     }
   }
 
   .nav-pannel__email,
   .nav-pannel__phone {
     a {
-      font-size: 1em;
+      font-size: 0.85em;
     }
   }
 
   .nav-pannel__social-links {
-    margin-top: 2em;
-    height: 4em;
+    margin-top: 1em;
+    height: 2em;
+    width: 40%;
+    margin-left: 30%;
   }
 }
 
@@ -209,9 +200,7 @@
 @media (min-width: 600px) {
   .nav-pannel__close-button {
     top: 1em;
-    right: 1em;
-    width: 10em;
-    height: auto;
+    right: 0.5em;
   }
 
   .nav-pannel__menu {
@@ -226,13 +215,15 @@
   .nav-pannel__email,
   .nav-pannel__phone {
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
+    width: 40%;
+    margin-left: 30%;
   }
 }
 
@@ -241,8 +232,6 @@
   .nav-pannel__close-button {
     top: 1em;
     right: 1em;
-    width: 10em;
-    height: auto;
   }
 
   .nav-pannel__menu {
@@ -257,23 +246,23 @@
   .nav-pannel__email,
   .nav-pannel__phone {
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
+    width: 40%;
+    margin-left: 30%;
   }
 }
 
 // desktop
 @media (min-width: 1200px) {
   .nav-pannel__close-button {
-    top: 1em;
-    right: 1em;
-    width: 10em;
-    height: auto;
+    top: 5%;
+    right: 5%;
   }
 
   .nav-pannel__menu {
@@ -288,23 +277,23 @@
   .nav-pannel__email,
   .nav-pannel__phone {
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
+    width: 40%;
+    margin-left: 30%;
   }
 }
 
 // desktop x-large
 @media (min-width: 1800px) {
   .nav-pannel__close-button {
-    top: 1em;
-    right: 1em;
-    width: 10em;
-    height: auto;
+    top: 4%;
+    right: 5%;
   }
 
   .nav-pannel__menu {
@@ -312,19 +301,20 @@
     a {
       font-size: 1.5em;
       letter-spacing: 2px;
-      font-weight: 600;
     }
   }
 
   .nav-pannel__email,
   .nav-pannel__phone {
     a {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
   .nav-pannel__social-links {
     margin-top: 2em;
     height: 4em;
+    width: 40%;
+    margin-left: 30%;
   }
 }
