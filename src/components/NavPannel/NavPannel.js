@@ -5,6 +5,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
 import Instagram from "../../images/icons/social/instagram.svg"
 import Facebook from "../../images/icons/social/facebook.svg"
+import Cross from "../../images/icons/cross.svg"
 import Vk from "../../images/icons/social/vk.svg"
 
 const mapStateToProps = ({ isNavPannelVisible }) => {
@@ -50,9 +51,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
             onClick={() => toggleNavPannel()}
           >
             <div className="button-icon">
-              <div className="one"></div>
-              <div className="two"></div>
-              <div className="three"></div>
+              <Cross />
             </div>
           </button>
 
