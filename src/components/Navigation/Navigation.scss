@@ -1,0 +1,151 @@
+.navigation {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+
+  .logo {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .menu-button {
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+      .one {
+        top: 0;
+      }
+
+      .three {
+        bottom: 0;
+      }
+    }
+
+    .one,
+    .two,
+    .three {
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      width: 100%;
+      background-color: white;
+      height: 2px;
+
+      left: 0;
+    }
+    .one {
+      top: 2px;
+    }
+    .two {
+      top: calc(50% - 1px);
+    }
+
+    .three {
+      bottom: 2px;
+    }
+  }
+}
+
+// mobile
+@media (max-width: 599px) {
+  .navigation {
+    height: 40px;
+
+    .logo {
+      margin-left: 2%;
+      font-size: 0.75em;
+    }
+
+    .menu-button {
+      margin-right: 2%;
+      width: 1.5em;
+      height: 1.2em;
+    }
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .navigation {
+    height: 60px;
+
+    .logo {
+      margin-left: 2%;
+      font-size: 1em;
+    }
+
+    .menu-button {
+      margin-right: 2%;
+      width: 1.75em;
+      height: 1.2em;
+    }
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .navigation {
+    height: 60px;
+
+    .logo {
+      margin-left: 2%;
+      font-size: 1em;
+    }
+
+    .menu-button {
+      margin-right: 2%;
+      width: 1.75em;
+      height: 1.2em;
+    }
+  }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+  .navigation {
+    height: 100px;
+
+    .logo {
+      margin-left: 5%;
+      font-size: 1em;
+    }
+
+    .menu-button {
+      margin-right: 5%;
+      width: 2em;
+      height: 1.4em;
+    }
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .navigation {
+    height: 100px;
+
+    .logo {
+      margin-left: 5%;
+      font-size: 1em;
+    }
+
+    .menu-button {
+      margin-right: 5%;
+      width: 2em;
+      height: 1.4em;
+    }
+  }
+}
