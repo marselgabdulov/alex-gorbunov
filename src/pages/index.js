@@ -7,6 +7,10 @@ import Layout from "../components/layout"
 import Image from "../components/Image/Image"
 import SEO from "../components/seo"
 
+import Instagram from "../images/icons/social/instagram.svg"
+import Facebook from "../images/icons/social/facebook.svg"
+import Vk from "../images/icons/social/vk.svg"
+
 function IndexPage(props) {
   const indexData = [
     {
@@ -69,64 +73,57 @@ function IndexPage(props) {
     <Layout>
       <SEO title="Главная" />
       <div className="index-page">
-        <section className="intro">
-          <IndexGallery data={indexData} />
-        </section>
+        <section className="index-intro">
+          <div className="intro__contacts">
+            <a href="tel:+79166228889" className="phone">
+              +7 916 622 88 89
+            </a>
 
-        <section className="about">
-          <div className="about__title">Обо мне</div>
-          <div className="about__skills">
-            <div className="skill">
-              <div className="skill__title">Я люблю праздники</div>
-              <div className="skill__body">
-                Каждый праздник можно сравнить с полнометражным фильмом с
-                уникальной идеей и своим сюжетом. Здесь главные герои вы – наши
-                друзья-клиенты.
-              </div>
-            </div>
-
-            <div className="skill">
-              <div className="skill__title">Я надежный и мне не все равно</div>
-              <div className="skill__body">
-                Мои услуги прошли настоящее испытание качеством. Мои клиенты
-                всегда требовательны. И Ч постоянно двигаюсь вперед.
-              </div>
-            </div>
-
-            <div className="skill">
-              <div className="skill__title">Профессиональная команда</div>
-              <div className="skill__body">
-                Я много учусь, путешествую и вдохновляюсь идеями по всему миру,
-                чтобы проекты, организуемые мною для вас, были актуальными. Это
-                очень важно.
-              </div>
-            </div>
-            <div className="skill">
-              <div className="skill__title">Я - Ваша уверенность</div>
-              <div className="skill__body">
-                Со мной Вы узнаете, что процесс подготовки к празднику может
-                быть исключительно приятным. А на своем празднике вы забудете
-                обо всех организационных вопросах
-              </div>
-            </div>
+            <a href="mailto:alex.gorbunov@gmail.com" className="email">
+              alex.gorbunov@gmail.com
+            </a>
           </div>
-          <div
-            className="about__image"
-            data-aos="fade-left"
-            data-aos-delay="200"
-            data-aos-duration="500"
-            data-aos-once="true"
-          >
-            <Image image={props.data.image4.childImageSharp.fluid} />
+          <div className="intro__social">
+            <a
+              className="social-link"
+              href="https://vk.com/alexgrantshow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Vk />
+            </a>
+            <a
+              className="social-link"
+              href="https://www.facebook.com/alex.gorbunov.969"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook />
+            </a>
+
+            <a
+              className="social-link"
+              href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram />
+            </a>
           </div>
+          <div className="intro__background">
+            <Image image={props.data.image0.childImageSharp.fluid} />
+          </div>
+          <h1 className="intro__title">Ведущий Алексей Горбунов</h1>
+          <p className="intro__text">
+            С 2000 года работает ведущим праздничных мероприятий абсолютно
+            любого формата. За эти годы провел огромное количество свадеб, дней
+            рождений, корпоративных вечеринок, вёл промо-акции, новогодние и
+            тематические вечера, несколько шоу – проектов, концертов,
+            разнообразные городские мероприятия, детские праздники и даже один
+            развод. 
+          </p>
         </section>
-        <section className="video">
-          <h2 className="video__title">Видео</h2>
-          <Video
-            videoId="tNs3exn6PKk"
-            cover={props.data.image3.childImageSharp.fluid}
-          />
-        </section>
+        <section className="index-about"></section>
       </div>
     </Layout>
   )
@@ -135,7 +132,7 @@ function IndexPage(props) {
 export const testPageImage = graphql`
   fragment testPageImage on File {
     childImageSharp {
-      fluid(maxWidth: 1200) {
+      fluid(maxWidth: 2400) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -144,6 +141,9 @@ export const testPageImage = graphql`
 
 export const pageQuery = graphql`
   query {
+    image0: file(relativePath: { eq: "index/alex-bond-horizontal.jpg" }) {
+      ...testPageImage
+    }
     image1: file(relativePath: { eq: "index/wedding.jpg" }) {
       ...testPageImage
     }
@@ -159,3 +159,5 @@ export const pageQuery = graphql`
   }
 `
 export default IndexPage
+
+// <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
