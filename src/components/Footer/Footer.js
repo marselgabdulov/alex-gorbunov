@@ -3,13 +3,11 @@ import "./Footer.scss"
 import { Link } from "gatsby"
 import Instagram from "../../images/icons/social/instagram.svg"
 import Facebook from "../../images/icons/social/facebook.svg"
-import Youtube from "../../images/icons/social/youtube.svg"
-import Vimeo from "../../images/icons/social/vimeo.svg"
 import Vk from "../../images/icons/social/vk.svg"
 
 function Footer(props) {
   return (
-    <footer className="footer" id="contacts">
+    <footer className="footer" id="footer">
       <div className="footer__logo">
         <h2>
           <Link to="/" title="вернуться на главную">
@@ -27,8 +25,7 @@ function Footer(props) {
         <div className="center">
           <div className="social-icon">
             <a
-              href="vk.com"
-              title="в контакте"
+              href="https://vk.com/alexgrantshow"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,7 +35,6 @@ function Footer(props) {
           <div className="social-icon">
             <a
               href="https://www.facebook.com/alex.gorbunov.969"
-              title="facebook"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -47,32 +43,11 @@ function Footer(props) {
           </div>
           <div className="social-icon">
             <a
-              href="https://www.instagram.com/"
-              title="instagram"
+              href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a
-              href="https://www.youtube.com/watch?v=xkAQ6bhpwYw"
-              title="youtube"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Youtube />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a
-              href="https://vimeo.com/"
-              title="vimeo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Vimeo />
             </a>
           </div>
         </div>
@@ -85,10 +60,10 @@ function Footer(props) {
       </div>
       <div className="footer__contacts">
         <div className="footer__phone">
-          <a href="tel:+79166228889">+7 916 622 88 89</a>
+          <a href="tel:+79856446489">+7 985 644 64 89</a>
         </div>
         <div className="footer__email">
-          <a href="mailto:alex.gorbunov@gmail.com">alex.gorbunov@gmail.com</a>
+          <a href="mailto:gorbunov_show@mail.ru">gorbunov_show@mail.ru</a>
         </div>
       </div>
 

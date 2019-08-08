@@ -7,6 +7,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0d0d0d;
+
+  color: #f1f1f1;
+
+  svg {
+    fill: #f1f1f1;
+    stroke: #f1f1f1;
+  }
 }
 
 .footer__logo {
@@ -22,7 +30,7 @@
 
     a {
       text-decoration: none;
-      color: black;
+      color: #f1f1f1;
     }
   }
 
@@ -56,7 +64,7 @@
 
   a {
     position: relative;
-    color: black;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -67,7 +75,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: rgb(139, 143, 143);
+      background: #f1f1f1;
     }
 
     &:hover {
@@ -92,10 +100,9 @@
   }
 
   .social-icon {
+    transition: all 0.4s ease-in-out;
     &:hover {
-      svg {
-        fill: $color-pink;
-      }
+      transform: scale(1.2);
     }
   }
 }
@@ -110,7 +117,7 @@
 
   a {
     transition: all 0.25s ease-in-out;
-    color: black;
+    color: white;
     font-weight: bold;
     text-decoration: none;
   }
@@ -118,17 +125,21 @@
   .footer__phone,
   .footer__email {
     position: relative;
-    border: 1px solid black;
+    border: 1px solid white;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    a {
+      z-index: 2;
+    }
+
     &:hover {
       cursor: pointer;
       a {
-        color: white;
+        color: black;
       }
       &:before {
         width: 100%;
@@ -143,15 +154,15 @@
       left: 0;
       width: 0;
       height: 100%;
-      background: #1a1a1a;
-      z-index: -1;
+      background: #f1f1f1;
+      z-index: 1;
     }
   }
 }
 
 .footer__developer {
   a {
-    color: black;
+    color: white;
   }
 }
 
@@ -540,6 +551,7 @@
 
   .footer__logo {
     margin-top: 5%;
+    margin-left: 1em;
 
     h2 {
       font-size: 1.75em;
@@ -549,7 +561,7 @@
     &:before,
     &:after {
       top: 50%;
-      width: 150%;
+      width: 275%;
     }
 
     &:before {
@@ -585,7 +597,7 @@
 
   .center {
     margin-top: 2.5%;
-    width: 33%;
+    width: 20%;
     height: 100%;
 
     &:before {
