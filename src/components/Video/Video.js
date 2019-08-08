@@ -15,9 +15,10 @@ class Video extends React.Component {
   render() {
     return (
       <div className="video-cover">
-        <div className="cover__wrapper">
-          <Image image={this.props.cover} />
-        </div>
+        <div
+          className="cover__wrapper"
+          style={{ backgroundImage: `url(${this.props.cover.src})` }}
+        ></div>
         <div
           className="cover__button"
           onClick={() => {
@@ -26,11 +27,12 @@ class Video extends React.Component {
         >
           <ArrowIcon />
         </div>
-        <div className="video-name">Relieve Your Stress</div>
+        <div className="video-name">{this.props.name}</div>
         <div
           className={
             this.state.visible ? "video__full--visible" : "video-full--hidden"
           }
+          style={{ top: `${this.props.top}vh` }}
         >
           <div
             className="close-full"
@@ -42,13 +44,13 @@ class Video extends React.Component {
           </div>
           <div className="full__wrapper">
             <ReactPlayer
-              url="https://www.youtube.com/watch?v=tNs3exn6PKk"
+              url={this.props.url}
               width="100%"
               height="100%"
               playing={this.state.playing}
               muted={this.state.muted}
               controls={true}
-              volume={0.5}
+              volume={0.2}
             />
           </div>
         </div>

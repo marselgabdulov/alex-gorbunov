@@ -1,6 +1,8 @@
+@import "../../shared-styles/colors.scss";
+
 .navigation {
-  z-index: 1000;
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,7 +14,9 @@
   align-items: center;
 
   .logo {
-    font-family: "Playfair Display", serif;
+    font-size: 1.35em;
+    font-family: "Oswald", sans-serif;
+    // font-family: "Playfair Display", serif;
     text-transform: uppercase;
     font-weight: 700;
 
@@ -63,15 +67,14 @@
 // mobile
 @media (max-width: 599px) {
   .navigation {
-    height: 40px;
+    height: 60px;
 
     .logo {
-      margin-left: 2%;
-      font-size: 0.75em;
+      margin-left: 2.5%;
     }
 
     .menu-button {
-      margin-right: 2%;
+      margin-right: 2.5%;
       width: 1.5em;
       height: 1.2em;
     }
@@ -85,7 +88,6 @@
 
     .logo {
       margin-left: 2%;
-      font-size: 1em;
     }
 
     .menu-button {
@@ -103,7 +105,6 @@
 
     .logo {
       margin-left: 2%;
-      font-size: 1em;
     }
 
     .menu-button {
@@ -121,7 +122,6 @@
 
     .logo {
       margin-left: 5%;
-      font-size: 1em;
     }
 
     .menu-button {
@@ -139,7 +139,6 @@
 
     .logo {
       margin-left: 5%;
-      font-size: 1em;
     }
 
     .menu-button {

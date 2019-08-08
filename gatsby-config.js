@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/alex-gorbunov",
   siteMetadata: {
     siteUrl: `https://marselgabdulov.github.io/alex-gorbunov`,
-    title: `Алексей Горбунов. Ведущий мероприятий любой сложности в Москве и Москоской области.`,
+    title: `Алексей Горбунов. Ведущий праздничных мероприятий абсолютно любого формата`,
     description: `Ведущий. Москва. Свадьба. Корпоратив. Детский праздник. Торжества.`,
     author: `@marselgabdulov`,
   },
@@ -76,15 +76,24 @@ module.exports = {
       options: {
         fonts: [
           {
+            family: `Oswald`,
+            subsets: [`cyrillic`],
+            variants: [`300`, `400`, `500`, `600`, `700`],
+          },
+          {
             family: `Source Sans Pro`,
             subsets: [`cyrillic`],
-            variants: [`400`, `500`, `700`, `800`, `900`],
+            variants: [`300`, `400`, `500`, `700`, `800`, `900`],
           },
-
           {
-            family: `Playfair Display`,
+            family: `Roboto`,
             subsets: [`cyrillic`],
-            variants: [`400`, `500`, `700`, `800`, `900`],
+            variants: [`300`, `400`, `500`, `700`, `800`, `900`],
+          },
+          {
+            family: `Ubuntu`,
+            subsets: [`cyrillic`],
+            variants: [`300`, `400`, `500`, `700`, `800`, `900`],
           },
         ],
       },
