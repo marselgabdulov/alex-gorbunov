@@ -60,7 +60,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
               <div className="menu__item" key={index}>
                 <TransitionLink
                   to={item.to}
-                  activeStyle={{ color: "#f1891d" }}
+                  activeStyle={{ textDecoration: "#f43327 double underline" }}
                   onClick={() => toggleNavPannel()}
                   exit={{
                     length: 0.5,
@@ -75,19 +75,17 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
             ))}
 
             <div className="nav-pannel__phone">
-              <a href="tel:+79166228889">+7 916 622 88 89</a>
+              <a href="tel:+79856446489">+7 985 644 64 89</a>
             </div>
 
             <div className="nav-pannel__email">
-              <a href="mailto:alex.gorbunov@gmail.com">
-                alex.gorbunov@gmail.com
-              </a>
+              <a href="mailto:gorbunov_show@mail.ru">gorbunov_show@mail.ru</a>
             </div>
 
             <div className="nav-pannel__social-links">
               <div className="nav-pannel__social-icon">
                 <a
-                  href="vk.com"
+                  href="https://vk.com/alexgrantshow"
                   title="в контакте"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +105,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
               </div>
               <div className="nav-pannel__social-icon">
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
                   title="instagram"
                   target="_blank"
                   rel="noopener noreferrer"

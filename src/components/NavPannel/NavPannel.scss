@@ -98,7 +98,7 @@
       }
       &:hover {
         svg {
-          fill: $color-orange;
+          fill: $color-red;
         }
       }
     }
@@ -108,8 +108,8 @@
 // mobile
 @media (max-width: 599px) {
   .nav-pannel__close-button {
-    top: 0.5em;
-    right: 0.5em;
+    top: 2%;
+    right: 2%;
 
     .button-icon {
       width: 1.75em;
