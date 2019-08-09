@@ -76,24 +76,9 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Oswald`,
+            family: `Montserrat`,
             subsets: [`cyrillic`],
-            variants: [`300`, `400`, `500`, `600`, `700`],
-          },
-          {
-            family: `Source Sans Pro`,
-            subsets: [`cyrillic`],
-            variants: [`300`, `400`, `500`, `700`, `800`, `900`],
-          },
-          {
-            family: `Roboto`,
-            subsets: [`cyrillic`],
-            variants: [`300`, `400`, `500`, `700`, `800`, `900`],
-          },
-          {
-            family: `Ubuntu`,
-            subsets: [`cyrillic`],
-            variants: [`300`, `400`, `500`, `700`, `800`, `900`],
+            variants: [`300`, `400`, `500`, `600`, `700`, `900`],
           },
         ],
       },
