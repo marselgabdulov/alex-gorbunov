@@ -12,13 +12,10 @@
 
 .loader__logo {
   position: absolute;
-  top: calc(50% - 1em);
-  left: calc(50% - 6em);
+  font-weight: 900;
   color: #f3f2f4;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: 3em;
 }
 
 @keyframes animate {
@@ -35,4 +32,49 @@
   transition: all 1s ease-in-out;
   z-index: -100;
   visibility: hidden;
+}
+
+// mobile
+@media (max-width: 599px) {
+  .loader__logo {
+    top: calc(50% - 1em);
+    left: calc(50% - 10em);
+    font-size: 0.75em;
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .loader__logo {
+    top: calc(50% - 1em);
+    left: calc(50% - 9em);
+    font-size: 2em;
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .loader__logo {
+    top: calc(50% - 1em);
+    left: calc(50% - 9em);
+    font-size: 2em;
+  }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+  .loader__logo {
+    top: calc(50% - 1em);
+    left: calc(50% - 9em);
+    font-size: 3em;
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .loader__logo {
+    top: calc(50% - 1em);
+    left: calc(50% - 9em);
+    font-size: 3em;
+  }
 }
