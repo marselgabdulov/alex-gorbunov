@@ -1,17 +1,17 @@
 import React from "react"
-import "./styles/services.scss"
+import "./styles/photos.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-function ServicesPage(props) {
+function PhotosPage(props) {
   return (
     <Layout>
-      <SEO title="Я веду" />
-      <div className="services-page">
+      <SEO title="Фото" />
+      <div className="photos-page">
         <h1>В разработке</h1>
       </div>
     </Layout>
   )
 }
 
-export default ServicesPage
+export default PhotosPage
