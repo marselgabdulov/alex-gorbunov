@@ -13,18 +13,46 @@ class IndexPage extends React.Component {
         <div className="index-page">
           <section className="index-intro">
             <div
+              className="index__phone"
+              data-aos="fade"
+              data-aos-delay="150"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <a href="tel:+79856446489">+7 985 644 64 89</a>
+            </div>
+            <div
               className="index__bg-image"
+              data-aos="fade"
+              data-aos-delay="50"
+              data-aos-duration="1200"
+              data-aos-once="true"
               style={{
                 backgroundImage: `url(${this.props.data.image0.childImageSharp.fluid.src})`,
               }}
             ></div>
-            <h1 className="index__title">
-              Алексей Горбунов <br />
+            <h1
+              className="index__title"
+              data-aos="fade"
+              data-aos-delay="150"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center-bottom"
+            >
+              Алексей Горбунов
             </h1>
-            <div className="index__phone">
-              <a href="tel:+79856446489">+7 985 644 64 89</a>
-            </div>
-            <span className="index__subtitle">Ведущий Москва</span>
+
+            <span
+              className="index__subtitle"
+              data-aos="fade"
+              data-aos-delay="250"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center-bottom"
+            >
+              Ведущий Москва
+            </span>
             <div className="video-container">
               <div className="video-foreground">
                 <ReactPlayer
@@ -33,7 +61,7 @@ class IndexPage extends React.Component {
                   height="100%"
                   playing={true}
                   loop={true}
-                  muted={1}
+                  muted={true}
                 />
               </div>
             </div>
@@ -62,11 +90,3 @@ export const pageQuery = graphql`
   }
 `
 export default IndexPage
-
-//
-// url="https://vimeo.com/352916646"
-// <iframe
-//   src="https://www.youtube.com/33gGO3nu4Yk?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1"
-//   frameBorder="0"
-//   allowFullScreen
-// ></iframe>
