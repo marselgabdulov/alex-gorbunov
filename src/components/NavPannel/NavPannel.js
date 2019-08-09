@@ -24,20 +24,28 @@ const links = [
     name: "Главная",
   },
   {
-    to: "/wedding",
-    name: "Свадьбы",
+    to: "/about",
+    name: "Обо мне",
   },
   {
-    to: "/corporate",
-    name: "Корпоративы",
+    to: "/photos",
+    name: "Фото",
   },
   {
-    to: "/celebration",
-    name: "Праздники",
+    to: "/videos",
+    name: "Видео",
+  },
+  {
+    to: "/services",
+    name: "Я провожу",
   },
   {
     to: "/reviews",
     name: "Отзывы",
+  },
+  {
+    to: "/contacts",
+    name: "Контакты",
   },
 ]
 
@@ -60,7 +68,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
               <div className="menu__item" key={index}>
                 <TransitionLink
                   to={item.to}
-                  activeStyle={{ textDecoration: "#f43327 double underline" }}
+                  activeStyle={{ color: "#f77905" }}
                   onClick={() => toggleNavPannel()}
                   exit={{
                     length: 0.5,

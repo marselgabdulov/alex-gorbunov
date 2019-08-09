@@ -49,7 +49,7 @@ function Navigation({ toggleNavPannel, isNavPannelVisible }) {
           Я провожу
         </Link>
         <Link
-          to="/photo"
+          to="/photos"
           activeStyle={{ color: "#f77905" }}
           data-aos="fade"
           data-aos-delay="200"
@@ -59,7 +59,7 @@ function Navigation({ toggleNavPannel, isNavPannelVisible }) {
           Фото
         </Link>
         <Link
-          to="/video"
+          to="/videos"
           activeStyle={{ color: "#f77905" }}
           data-aos="fade"
           data-aos-delay="250"
