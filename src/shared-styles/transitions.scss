@@ -31,7 +31,7 @@
   left: 0;
   opacity: 1;
   transition: opacity;
-  transition-duration: 0.4s;
+  transition-duration: 1s;
   transition-delay: 0s;
   transition-timing-function: ease-in-out;
   z-index: 1;
@@ -51,8 +51,8 @@
   left: 0;
   opacity: 0;
   transition: opacity;
-  transition-duration: 0.4s;
-  transition-delay: 0s;
+  transition-duration: 1s;
+  transition-delay: 0.25s;
   transition-timing-function: ease-in-out;
   z-index: -1;
 }
@@ -110,4 +110,76 @@
   opacity: 0;
   height: 0;
   z-index: -10;
+}
+
+/* appear - on page load */
+// .destortion-appear {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   opacity: 0;
+//   z-index: 1;
+// }
+// .destortion-appear.destortion-appear-active {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   opacity: 1;
+//   transition: opacity;
+//   transition-duration: 0.4s;
+//   transition-delay: 0s;
+//   transition-timing-function: ease-in-out;
+// }
+
+/* enter */
+.destortion-enter {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  opacity: 0.5;
+  transform: scaleX(1.5);
+  filter: blur(10px);
+  z-index: 1;
+}
+.destortion-enter.destortion-enter-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scaleX(1);
+  filter: blur(0px) brightness(0.5);
+  transition: transform opacity filter;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+/* exit */
+.destortion-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+.destortion-exit.destortion-exit-active {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  opacity: 0;
+  filter: blur(10px) brightness(0.5);
+  transform: scaleX(1);
+  transition: transform opacity filter;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  z-index: -1;
+}
+.destortion-exit-done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
 }
