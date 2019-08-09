@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
-Sitemap: https://marselgabdulov.github.io/alex-gorbunov/sitemap.xml
-Host: https://marselgabdulov.github.io
+Sitemap: https://alexeygorbunov.com/sitemap.xml
+Host: https://alexeygorbunov.com
