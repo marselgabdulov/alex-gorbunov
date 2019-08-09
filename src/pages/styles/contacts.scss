@@ -1,0 +1,146 @@
+.contacts-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0d0d0d;
+
+  .social {
+    position: absolute;
+
+    a {
+      color: #f0ecec;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 900;
+    }
+  }
+
+  .contacts {
+    position: absolute;
+    color: #f0ecec;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #f0ecec;
+      text-decoration: none;
+    }
+  }
+}
+
+// mobile
+@media (max-width: 599px) {
+  .social {
+    top: 20%;
+    left: 20%;
+    line-height: 3em;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+
+  .contacts {
+    top: 50%;
+    left: 20%;
+    line-height: 3em;
+
+    a {
+      font-size: 1em;
+    }
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .social {
+    top: 20%;
+    left: 30%;
+    line-height: 4em;
+
+    a {
+      font-size: 2.5em;
+    }
+  }
+
+  .contacts {
+    top: 55%;
+    left: 30%;
+    line-height: 4em;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .social {
+    top: 34%;
+    left: 15%;
+    line-height: 4em;
+
+    a {
+      font-size: 2.5em;
+    }
+  }
+
+  .contacts {
+    top: 35%;
+    left: 55%;
+    line-height: 4em;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+  .social {
+    top: 34%;
+    left: 20%;
+    line-height: 4em;
+
+    a {
+      font-size: 2.5em;
+    }
+  }
+
+  .contacts {
+    top: 35%;
+    left: 50%;
+    line-height: 4em;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .social {
+    top: 35%;
+    left: 20%;
+    line-height: 3.9em;
+
+    a {
+      font-size: 3em;
+    }
+  }
+
+  .contacts {
+    top: 35%;
+    left: 45%;
+    line-height: 3.5em;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+}
