@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 Sitemap: https://alexeygorbunov.com/sitemap.xml
 Host: https://alexeygorbunov.com
