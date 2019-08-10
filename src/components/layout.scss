@@ -73,6 +73,12 @@ button {
   }
 }
 
+.page-link {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 1023px) and (orientation: landscape) {
   .turn {
     display: block;
