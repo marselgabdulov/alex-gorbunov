@@ -1,18 +1,7 @@
 import React from "react"
-import { connect } from "react-redux"
 import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
 import Cross from "../../images/icons/cross.svg"
-
-const mapStateToProps = ({ isNavPannelVisible }) => {
-  return { isNavPannelVisible }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    toggleNavPannel: () => dispatch({ type: `TOGGLE_NAVPANNEL` }),
-  }
-}
 
 const links = [
   {
@@ -45,15 +34,12 @@ const links = [
   },
 ]
 
-function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
+function NavPannel({ handleClick, visible }) {
   return (
     <>
       <div className="nav-pannel">
-        <div className={isNavPannelVisible ? "nav-opened" : "nav-closed"}>
-          <button
-            className="nav-pannel__close-button"
-            onClick={() => toggleNavPannel()}
-          >
+        <div className={visible ? "nav-opened" : "nav-closed"}>
+          <button className="nav-pannel__close-button" onClick={handleClick}>
             <div className="button-icon">
               <Cross />
             </div>
@@ -65,7 +51,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
                 <TransitionLink
                   to={item.to}
                   activeStyle={{ color: "#f77905" }}
-                  onClick={() => toggleNavPannel()}
+                  onClick={handleClick}
                   exit={{
                     length: 0.5,
                   }}
@@ -125,9 +111,4 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
   )
 }
 
-const ConnectedNavPannel = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavPannel)
-
-export default ConnectedNavPannel
+export default NavPannel
