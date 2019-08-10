@@ -61,7 +61,7 @@
   height: auto;
 
   .menu__item a {
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -73,7 +73,7 @@
     a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1em;
       line-height: 2.5em;
     }
@@ -91,13 +91,10 @@
       width: auto;
       height: auto;
 
-      svg {
-        fill: white;
-      }
-      &:hover {
-        svg {
-          fill: $color-red;
-        }
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
       }
     }
   }

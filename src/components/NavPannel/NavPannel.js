@@ -3,10 +3,7 @@ import { connect } from "react-redux"
 import { Link } from "gatsby"
 import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
-import Instagram from "../../images/icons/social/instagram.svg"
-import Facebook from "../../images/icons/social/facebook.svg"
 import Cross from "../../images/icons/cross.svg"
-import Vk from "../../images/icons/social/vk.svg"
 
 const mapStateToProps = ({ isNavPannelVisible }) => {
   return { isNavPannelVisible }
@@ -98,7 +95,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Vk />
+                  Vk
                 </a>
               </div>
               <div className="nav-pannel__social-icon">
@@ -108,7 +105,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Facebook />
+                  Fb
                 </a>
               </div>
               <div className="nav-pannel__social-icon">
@@ -118,7 +115,7 @@ function NavPannel({ toggleNavPannel, isNavPannelVisible }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Instagram />
+                  Inst
                 </a>
               </div>
             </div>
