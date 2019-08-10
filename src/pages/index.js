@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import "./styles/index.scss"
 import Layout from "../components/layout"
 import ReactPlayer from "react-player"
@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
               data-aos-duration="1200"
               data-aos-once="true"
               style={{
-                backgroundImage: `url(${this.props.data.image0.childImageSharp.fluid.src})`,
+                backgroundImage: `url(${this.props.data.imageMobileBG.childImageSharp.fluid.src})`,
               }}
             ></div>
             <h1
@@ -75,7 +75,7 @@ class IndexPage extends React.Component {
 export const indexPageImage = graphql`
   fragment indexPageImage on File {
     childImageSharp {
-      fluid(maxWidth: 2400) {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -84,7 +84,7 @@ export const indexPageImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    image0: file(relativePath: { eq: "index/alex-bond-horizontal.jpg" }) {
+    imageMobileBG: file(relativePath: { eq: "photos/a3.jpg" }) {
       ...indexPageImage
     }
   }
