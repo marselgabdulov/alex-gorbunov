@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 function ContactsPage(props) {
   return (
     <Layout>
-      <SEO title="Контакты" />
+      <SEO title="Контакты | Алексей Горбунов. Ведущий. Шоумен. +7 985 644 64 89" />
       <div className="contacts-page">
         <div className="contacts">
           <div

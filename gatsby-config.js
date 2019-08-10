@@ -1,9 +1,9 @@
 module.exports = {
   // pathPrefix: "/alex-gorbunov",
   siteMetadata: {
-    title: `Алексей Горбунов. Ведущий праздничных мероприятий абсолютно любого формата`,
-    description: `Ведущий. Москва. Свадьба. Корпоратив. Детский праздник. Торжества.`,
-    author: `@marselgabdulov`,
+    title: `Алексей Горбунов. Ведущий. Шоумен. +7 985 644 64 89`,
+    description: `Алексей Горбунов. Ведущий праздничных мероприятий любого формата. Веду свадьбы, корпоративы, дни рождения, детские и городские праздники и т.д. +7 985 644 64 89`,
+    author: `marsel.gabdulov@gmail.com`,
     siteUrl: `https://alexeygorbunov.com`,
   },
   plugins: [

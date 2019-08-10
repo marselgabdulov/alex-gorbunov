@@ -58,7 +58,7 @@ function PhotosPage(props) {
 
   return (
     <Layout>
-      <SEO title="Фото" />
+      <SEO title="Фото | Алексей Горбунов. Ведущий. Шоумен. +7 985 644 64 89" />
       <div className="photos-page">
         <div className="photos-page__scroll">
           <div

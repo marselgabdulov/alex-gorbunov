@@ -9,7 +9,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Главная" />
+        <SEO title="Алексей Горбунов. Ведущий. Шоумен. +7 985 644 64 89" />
         <div className="index-page">
           <section className="index-intro">
             <div

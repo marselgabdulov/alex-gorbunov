@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 function ServicesPage(props) {
   return (
     <Layout>
-      <SEO title="Я веду" />
+      <SEO title="Я веду | Алексей Горбунов. Ведущий. Шоумен. +7 985 644 64 89" />
       <div className="services-page">
         <h1>В разработке</h1>
       </div>
