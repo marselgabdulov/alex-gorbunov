@@ -1,6 +1,5 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Link } from "gatsby"
 import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
 import Cross from "../../images/icons/cross.svg"
