@@ -16,6 +16,20 @@ function PhotosPage(props) {
     props.data.image15.childImageSharp.fluid,
     props.data.image16.childImageSharp.fluid,
     props.data.image17.childImageSharp.fluid,
+    props.data.image18.childImageSharp.fluid,
+    props.data.image19.childImageSharp.fluid,
+    props.data.image20.childImageSharp.fluid,
+    props.data.image21.childImageSharp.fluid,
+    props.data.image22.childImageSharp.fluid,
+    props.data.image23.childImageSharp.fluid,
+    props.data.image24.childImageSharp.fluid,
+    props.data.image25.childImageSharp.fluid,
+    props.data.image26.childImageSharp.fluid,
+    props.data.image27.childImageSharp.fluid,
+    props.data.image28.childImageSharp.fluid,
+    props.data.image29.childImageSharp.fluid,
+    props.data.image30.childImageSharp.fluid,
+    props.data.image31.childImageSharp.fluid,
     props.data.image1.childImageSharp.fluid,
     props.data.image2.childImageSharp.fluid,
     props.data.image3.childImageSharp.fluid,
@@ -170,6 +184,48 @@ export const pageQuery = graphql`
       ...photosPageImage
     }
     image17: file(relativePath: { eq: "photos/17.jpg" }) {
+      ...photosPageImage
+    }
+    image18: file(relativePath: { eq: "photos/18.jpg" }) {
+      ...photosPageImage
+    }
+    image19: file(relativePath: { eq: "photos/19.jpg" }) {
+      ...photosPageImage
+    }
+    image20: file(relativePath: { eq: "photos/20.jpg" }) {
+      ...photosPageImage
+    }
+    image21: file(relativePath: { eq: "photos/21.jpg" }) {
+      ...photosPageImage
+    }
+    image22: file(relativePath: { eq: "photos/22.jpg" }) {
+      ...photosPageImage
+    }
+    image23: file(relativePath: { eq: "photos/23.jpg" }) {
+      ...photosPageImage
+    }
+    image24: file(relativePath: { eq: "photos/24.jpg" }) {
+      ...photosPageImage
+    }
+    image25: file(relativePath: { eq: "photos/25.jpg" }) {
+      ...photosPageImage
+    }
+    image26: file(relativePath: { eq: "photos/26.jpg" }) {
+      ...photosPageImage
+    }
+    image27: file(relativePath: { eq: "photos/27.jpg" }) {
+      ...photosPageImage
+    }
+    image28: file(relativePath: { eq: "photos/28.jpg" }) {
+      ...photosPageImage
+    }
+    image29: file(relativePath: { eq: "photos/29.jpg" }) {
+      ...photosPageImage
+    }
+    image30: file(relativePath: { eq: "photos/30.jpg" }) {
+      ...photosPageImage
+    }
+    image31: file(relativePath: { eq: "photos/31.jpg" }) {
       ...photosPageImage
     }
     imageA1: file(relativePath: { eq: "photos/a1.jpg" }) {
