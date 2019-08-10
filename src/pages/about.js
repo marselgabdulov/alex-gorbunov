@@ -119,6 +119,9 @@ class AboutPage extends React.Component {
                 советами и при необходимости консультировать по всем
                 интересующим вас вопросам.
               </p>
+              <Link to="/reviews" className="page-link">
+                отзывы
+              </Link>
             </div>
           </div>
         </div>
