@@ -61,13 +61,22 @@ function PhotosPage(props) {
       <SEO title="Фото" />
       <div className="photos-page">
         <div className="photos-page__scroll">
-          <div className="photo-gallery">
+          <div
+            className="photo-gallery"
+            data-aos="fade"
+            data-aos-delay="150"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
             {pageImages.map((image, index) => (
               <div
                 className="gallery-image"
                 key={index}
                 style={{ backgroundImage: `url(${image.src})` }}
-                onClick={handleVisible}
+                onClick={() => {
+                  setCurrentIndex(index)
+                  handleVisible()
+                }}
               ></div>
             ))}
           </div>
