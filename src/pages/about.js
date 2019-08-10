@@ -37,7 +37,14 @@ class AboutPage extends React.Component {
     return (
       <Layout>
         <SEO title="Обо мне" />
-        <div className="about-page">
+        <div
+          className="about-page"
+          data-aos="fade"
+          data-aos-delay="400"
+          data-aos-duration="1200"
+          data-aos-once="true"
+          data-aos-anchor-placement="center-bottom"
+        >
           <TransitionGroup className="about-page__bg">
             <CSSTransition
               appear={true}
