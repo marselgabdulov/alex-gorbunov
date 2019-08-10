@@ -8,6 +8,11 @@
   z-index: 1000000;
 }
 
+svg {
+  fill: white;
+  stroke: white;
+}
+
 .nav-closed,
 .nav-opened {
   position: fixed;
@@ -139,7 +144,7 @@
 @media (min-width: 600px) {
   .nav-pannel__close-button {
     top: 1.25em;
-    right: 1em;
+    right: 2.5em;
 
     .button-icon {
       width: 1.75em;
@@ -159,10 +164,6 @@
 
   .nav-pannel__social-icon {
     margin-top: 0.5em;
-    svg {
-      width: 1.2em;
-      height: 1.2em;
-    }
   }
 }
 
@@ -170,7 +171,7 @@
 @media (min-width: 900px) {
   .nav-pannel__close-button {
     top: 1.5%;
-    right: 1.5%;
+    right: 2.5%;
 
     .button-icon {
       width: 1.9em;
@@ -189,10 +190,6 @@
 
   .nav-pannel__social-icon {
     margin-top: 0.5em;
-    svg {
-      width: 1.2em;
-      height: 1.2em;
-    }
   }
 }
 
@@ -224,10 +221,6 @@
 
   .nav-pannel__social-icon {
     margin-top: 0.5em;
-    svg {
-      width: 1em;
-      height: 1em;
-    }
   }
 }
 
@@ -258,9 +251,5 @@
 
   .nav-pannel__social-icon {
     margin-top: 0.5em;
-    svg {
-      width: 0.85em;
-      height: 0.85em;
-    }
   }
 }
