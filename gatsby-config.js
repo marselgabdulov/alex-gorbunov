@@ -1,10 +1,10 @@
 module.exports = {
-  pathPrefix: "/alex-gorbunov",
+  // pathPrefix: "/alex-gorbunov",
   siteMetadata: {
-    siteUrl: `https://marselgabdulov.github.io/alex-gorbunov`,
     title: `Алексей Горбунов. Ведущий праздничных мероприятий абсолютно любого формата`,
     description: `Ведущий. Москва. Свадьба. Корпоратив. Детский праздник. Торжества.`,
     author: `@marselgabdulov`,
+    siteUrl: `https://alexeygorbunov.com`,
   },
   plugins: [
     {
@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://marselgabdulov.github.io/alex-gorbunov",
-        sitemap: "https://marselgabdulov.github.io/alex-gorbunov/sitemap.xml",
+        host: "https://alexeygorbunov.com",
+        sitemap: "https://alexeygorbunov.com/sitemap.xml",
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
