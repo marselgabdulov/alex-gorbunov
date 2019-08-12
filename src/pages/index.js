@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import "./styles/index.scss"
 import Layout from "../components/layout"
-import ReactPlayer from "react-player"
 import SEO from "../components/seo"
 import BackgroundVideo from "../components/BackgroundVideo/BackgroundVideo"
+import AnimatedIntro from "../components/AnimatedIntro/AnimatedIntro"
 
 class IndexPage extends React.Component {
   render() {
@@ -33,27 +33,9 @@ class IndexPage extends React.Component {
                 backgroundImage: `url(${this.props.data.imageMobileBG.childImageSharp.fluid.src})`,
               }}
             ></div>
-            <h1
-              className="index__title"
-              data-aos="fade"
-              data-aos-delay="150"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              data-aos-anchor-placement="center-bottom"
-            >
-              Алексей Горбунов
-            </h1>
-
-            <span
-              className="index__subtitle"
-              data-aos="fade"
-              data-aos-delay="250"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              data-aos-anchor-placement="center-bottom"
-            >
-              Ведущий Москва
-            </span>
+            <div className="index__title">
+              <AnimatedIntro />
+            </div>
             <BackgroundVideo />
           </section>
         </div>
@@ -80,16 +62,3 @@ export const pageQuery = graphql`
   }
 `
 export default IndexPage
-
-// <div className="video-container">
-//   <div className="video-foreground">
-//     <ReactPlayer
-//       url="https://www.youtube.com/watch?v=33gGO3nu4Yk&t=10s&loop=1&mute=1"
-//       width="100%"
-//       height="100%"
-//       playing={true}
-//       loop={true}
-//       muted={true}
-//     />
-//   </div>
-// </div>

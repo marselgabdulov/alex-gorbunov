@@ -28,7 +28,13 @@ class BackgroundVideo extends React.Component {
 
   render() {
     return (
-      <div className="background-video">
+      <div
+        className="background-video"
+        data-aos="fade"
+        data-aos-delay="1100"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         <div className="background-video__cover-layer"></div>
         <video loop autoPlay muted ref="vidRef">
           <source type="video/webm" src={VideoWEBM} />
@@ -37,6 +43,10 @@ class BackgroundVideo extends React.Component {
         <button
           className="video-control"
           onClick={event => this.handlePlayingState(event)}
+          data-aos="fade"
+          data-aos-delay="1000"
+          data-aos-duration="1200"
+          data-aos-once="true"
         >
           {this.state.isPlaying ? <Pause /> : <Play />}
         </button>

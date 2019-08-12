@@ -52,7 +52,7 @@
 @media (min-width: 900px) {
   .video-control {
     display: block;
-    bottom: 42%;
+    bottom: 32%;
     right: 1%;
 
     svg {
@@ -65,7 +65,7 @@
 // desktop/laptop
 @media (min-width: 1200px) {
   .video-control {
-    bottom: 42%;
+    bottom: 31%;
     right: 1.2%;
 
     svg {
@@ -78,7 +78,7 @@
 // desktop x-large
 @media (min-width: 1800px) {
   .video-control {
-    bottom: 40%;
+    bottom: 31.5%;
     right: 4.5%;
 
     svg {
