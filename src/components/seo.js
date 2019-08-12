@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl }) {
               },
               {
                 name: `twitter:image`,
-                content: data.ogImage.childImageSharp.fluid.src,
+                content: data.ogImage.childImageSharp.fluid,
               },
               {
                 name: `twitter:site`,
@@ -111,7 +111,7 @@ const detailsQuery = graphql`
         siteUrl
       }
     }
-    ogImage: file(relativePath: { eq: "og.jpg" }) {
+    ogImage: file(relativePath: { eq: "seoImage.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid
