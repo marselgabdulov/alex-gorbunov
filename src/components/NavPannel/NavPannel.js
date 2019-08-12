@@ -21,8 +21,8 @@ const links = [
     name: "Видео",
   },
   {
-    to: "/services",
-    name: "Я провожу",
+    to: "/cooperation",
+    name: "Взаимодействие",
   },
   {
     to: "/reviews",

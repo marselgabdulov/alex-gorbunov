@@ -9,108 +9,60 @@ function Navigation({ handleClick }) {
       <div
         className="nav__logo"
         data-aos="fade"
-        data-aos-delay="100"
-        data-aos-duration="500"
+        data-aos-delay="1000"
+        data-aos-duration="1200"
         data-aos-once="true"
       >
         <Link to="/" title="вернуться на главную">
           А.Г.
         </Link>
       </div>
-      <div className="nav__menu">
-        <Link
-          to="/"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="100"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
+      <div
+        className="nav__menu"
+        data-aos="fade"
+        data-aos-delay="1000"
+        data-aos-duration="1200"
+        data-aos-once="true"
+      >
+        <Link to="/" activeStyle={{ color: "#f77905" }}>
           Главная
         </Link>
-        <Link
-          to="/about"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="150"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
+        <Link to="/about" activeStyle={{ color: "#f77905" }}>
           Обо мне
         </Link>
-        <Link
-          to="/services"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="300"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
-          Я провожу
+        <Link to="/cooperation" activeStyle={{ color: "#f77905" }}>
+          Договор
         </Link>
-        <Link
-          to="/photos"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="200"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
+        <Link to="/photos" activeStyle={{ color: "#f77905" }}>
           Фото
         </Link>
-        <Link
-          to="/videos"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="250"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
+        <Link to="/videos" activeStyle={{ color: "#f77905" }}>
           Видео
         </Link>
 
-        <Link
-          to="/reviews"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="350"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
+        <Link to="/reviews" activeStyle={{ color: "#f77905" }}>
           Отзывы
         </Link>
-        <Link
-          to="/contacts"
-          activeStyle={{ color: "#f77905" }}
-          data-aos="fade"
-          data-aos-delay="400"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
+        <Link to="/contacts" activeStyle={{ color: "#f77905" }}>
           Контакты
         </Link>
       </div>
-      <div
-        className="nav__menu-button"
-        onClick={handleClick}
-        data-aos="fade"
-        data-aos-delay="100"
-        data-aos-duration="500"
-        data-aos-once="true"
-      >
+      <div className="nav__menu-button" onClick={handleClick}>
         <Menu />
       </div>
-      <div className="nav__social">
+      <div
+        className="nav__social"
+        data-aos="fade"
+        data-aos-delay="1000"
+        data-aos-duration="12200"
+        data-aos-once="true"
+        data-aos-anchor-placement="center-bottom"
+      >
         <a
           className="social-link"
           href="https://www.facebook.com/alex.gorbunov.969"
           target="_blank"
           rel="noopener noreferrer"
-          data-aos="fade"
-          data-aos-delay="250"
-          data-aos-duration="1200"
-          data-aos-once="true"
-          data-aos-anchor-placement="center-bottom"
         >
           Facebook
         </a>
@@ -119,11 +71,6 @@ function Navigation({ handleClick }) {
           href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
           target="_blank"
           rel="noopener noreferrer"
-          data-aos="fade"
-          data-aos-delay="300"
-          data-aos-duration="1200"
-          data-aos-once="true"
-          data-aos-anchor-placement="center-bottom"
         >
           Instagram
         </a>
@@ -132,11 +79,6 @@ function Navigation({ handleClick }) {
           href="https://vk.com/alexgrantshow"
           target="_blank"
           rel="noopener noreferrer"
-          data-aos="fade"
-          data-aos-delay="200"
-          data-aos-duration="1200"
-          data-aos-once="true"
-          data-aos-anchor-placement="center-bottom"
         >
           Vk
         </a>
@@ -144,8 +86,8 @@ function Navigation({ handleClick }) {
       <div
         className="nav__creator"
         data-aos="fade"
-        data-aos-delay="200"
-        data-aos-duration="1200"
+        data-aos-delay="1000"
+        data-aos-duration="12200"
         data-aos-once="true"
         data-aos-anchor-placement="center-bottom"
       >

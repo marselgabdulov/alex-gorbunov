@@ -62,6 +62,7 @@ class AboutPage extends React.Component {
               ></div>
             </CSSTransition>
           </TransitionGroup>
+
           <div className="about-page__scroll">
             <div className="about-page__text">
               <h2 className="about__title">

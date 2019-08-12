@@ -36,6 +36,9 @@
 
 // mobile
 @media (max-width: 599px) {
+  .background-video {
+    display: none;
+  }
   .video-control {
     display: none;
   }
