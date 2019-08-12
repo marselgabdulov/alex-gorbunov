@@ -1,0 +1,133 @@
+@import "../../shared-styles/colors.scss";
+
+.cooperation-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #0d0d0d;
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.cooperation-page__scroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+.cooperation-page__scroll {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  z-index: 2;
+}
+
+.cooperation-page__text {
+  color: #f6f1f1;
+
+  .cooperation__title {
+    text-transform: uppercase;
+  }
+}
+
+// mobile
+@media (max-width: 599px) {
+  .cooperation-page__scroll {
+    width: 100%;
+  }
+
+  .cooperation-page__text {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20%;
+    margin-bottom: 50%;
+    .cooperation__title {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .cooperation-page__scroll {
+    width: 100%;
+  }
+
+  .cooperation-page__text {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    .cooperation__title {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .cooperation-page__scroll {
+    width: 100%;
+  }
+
+  .cooperation-page__text {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    .cooperation__title {
+      width: 90%;
+    }
+    p {
+      width: 85%;
+    }
+  }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+  .cooperation-page__scroll {
+    width: 100%;
+  }
+
+  .cooperation-page__text {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 22%;
+    margin-bottom: 10%;
+    .cooperation__title {
+      width: 90%;
+    }
+    p {
+      width: 85%;
+    }
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .cooperation-page__scroll {
+    width: 100%;
+  }
+
+  .cooperation-page__text {
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 18%;
+    margin-bottom: 10%;
+    .cooperation__title {
+      width: 90%;
+    }
+    p {
+      width: 85%;
+    }
+  }
+}
