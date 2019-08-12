@@ -50,7 +50,6 @@
 
   .card-author {
     a {
-      color: black;
       font-weight: 700;
     }
   }
@@ -62,7 +61,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: black;
   }
 }
 
@@ -79,6 +77,7 @@
     margin-bottom: 50%;
     .reviews__title {
       width: 100%;
+      text-align: center;
     }
     p {
       width: 100%;
@@ -86,19 +85,24 @@
   }
 
   .review-card {
+    background-color: transparent;
     width: 100%;
     height: auto;
     margin: 2em 0;
     flex-direction: column;
+
+    a {
+      color: white;
+    }
 
     .card-image {
       display: none;
     }
 
     .card-info {
-      width: 98%;
+      color: white;
+      width: 100%;
       height: 40%;
-      margin-left: 1%;
     }
 
     .card-author {
@@ -109,8 +113,6 @@
 
     .card-text {
       height: calc(100% - 2em);
-      font-size: 1em !important;
-      line-height: 1.4em !important;
     }
   }
 }
@@ -128,6 +130,7 @@
     margin-bottom: 10%;
     .reviews__title {
       width: 100%;
+      text-align: center;
     }
     p {
       width: 100%;
@@ -139,6 +142,7 @@
     height: 65vh;
     margin: 2em 0;
     flex-direction: column;
+    background-color: transparent;
 
     .card-image {
       width: 50%;
@@ -150,9 +154,12 @@
     }
 
     .card-info {
-      width: 98%;
+      width: 100%;
       height: 40%;
-      margin-left: 1%;
+
+      a {
+        color: white;
+      }
     }
 
     .card-author {
@@ -182,6 +189,7 @@
     margin-bottom: 10%;
     .reviews__title {
       width: 90%;
+      text-align: left;
     }
     p {
       width: 85%;
@@ -193,10 +201,11 @@
     height: 65vh;
     margin: 2em 0;
     flex-direction: row;
+    background-color: white;
 
     .card-image {
       width: 40%;
-      height: 95%;
+      height: 98%;
       margin: 1%;
       background-position: 40%;
     }
@@ -210,12 +219,17 @@
       margin-top: 1em;
       height: 1.2em;
       font-size: 1.1em;
+
+      a {
+        color: black;
+      }
     }
 
     .card-text {
       height: calc(100% - 2em);
       font-size: 1em !important;
       line-height: 1.4em !important;
+      color: black;
     }
   }
 }
