@@ -65,6 +65,11 @@ module.exports = {
             subsets: [`cyrillic`],
             variants: [`300`, `400`, `500`, `600`, `700`, `900`],
           },
+          {
+            family: `Marck Script`,
+            subsets: [`cyrillic`],
+            variants: [`400`],
+          },
         ],
       },
     },
