@@ -1,6 +1,7 @@
 import React from "react"
 import "./Navigation.scss"
 import { Link } from "gatsby"
+import Menu from "../../images/icons/menu.svg"
 
 function Navigation({ handleClick }) {
   return (
@@ -13,7 +14,7 @@ function Navigation({ handleClick }) {
         data-aos-once="true"
       >
         <Link to="/" title="вернуться на главную">
-          AG
+          А.Г.
         </Link>
       </div>
       <div className="nav__menu">
@@ -97,9 +98,7 @@ function Navigation({ handleClick }) {
         data-aos-duration="500"
         data-aos-once="true"
       >
-        <div className="one"></div>
-        <div className="two"></div>
-        <div className="three"></div>
+        <Menu />
       </div>
       <div className="nav__social">
         <a

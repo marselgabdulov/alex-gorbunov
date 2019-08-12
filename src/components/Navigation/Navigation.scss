@@ -31,6 +31,7 @@
 }
 
 .nav__logo {
+  font-family: "Marck Script", cursive;
   a {
     text-decoration: none;
   }
@@ -56,41 +57,6 @@
   }
 }
 
-.nav__menu-button {
-  &:hover {
-    cursor: pointer;
-    .one {
-      top: 0;
-    }
-
-    .three {
-      bottom: 0;
-    }
-  }
-
-  .one,
-  .two,
-  .three {
-    transition: all 0.2s ease-in-out;
-    position: absolute;
-    width: 100%;
-    background-color: #f0ecec;
-    height: 2px;
-
-    left: 0;
-  }
-  .one {
-    top: 2px;
-  }
-  .two {
-    top: calc(50% - 1px);
-  }
-
-  .three {
-    bottom: 2px;
-  }
-}
-
 .nav__social {
   display: -webkit-flex;
   display: -ms-flex;
@@ -110,14 +76,18 @@
 // mobile
 @media (max-width: 599px) {
   .nav__logo {
-    top: 1%;
-    left: 2%;
-    font-size: 1.8em;
+    top: 1.5%;
+    left: 3.5%;
+    font-size: 2em;
+
+    a {
+      color: white;
+    }
   }
 
   .nav__menu-button {
-    top: 1.5%;
-    right: 2%;
+    top: 0.75%;
+    right: 6%;
     width: 2em;
     height: 1.5em;
   }
@@ -144,13 +114,17 @@
 @media (min-width: 600px) {
   .nav__logo {
     top: 2.5%;
-    left: 2%;
-    font-size: 1.8em;
+    left: 3.5%;
+    font-size: 2em;
+
+    a {
+      color: white;
+    }
   }
 
   .nav__menu-button {
-    top: 2.5%;
-    right: 2%;
+    top: 2%;
+    right: 5%;
     width: 2em;
     height: 1.5em;
   }
@@ -179,6 +153,10 @@
     top: 2.5%;
     left: 2%;
     font-size: 1.8em;
+
+    a {
+      color: #f0ecec;
+    }
   }
 
   .nav__menu-button {
