@@ -4,6 +4,7 @@ import "./styles/index.scss"
 import Layout from "../components/layout"
 import ReactPlayer from "react-player"
 import SEO from "../components/seo"
+import BackgroundVideo from "../components/BackgroundVideo/BackgroundVideo"
 
 class IndexPage extends React.Component {
   render() {
@@ -53,18 +54,7 @@ class IndexPage extends React.Component {
             >
               Ведущий Москва
             </span>
-            <div className="video-container">
-              <div className="video-foreground">
-                <ReactPlayer
-                  url="https://www.youtube.com/watch?v=33gGO3nu4Yk&t=10s&loop=1&mute=1"
-                  width="100%"
-                  height="100%"
-                  playing={true}
-                  loop={true}
-                  muted={true}
-                />
-              </div>
-            </div>
+            <BackgroundVideo />
           </section>
         </div>
       </Layout>
@@ -90,3 +80,16 @@ export const pageQuery = graphql`
   }
 `
 export default IndexPage
+
+// <div className="video-container">
+//   <div className="video-foreground">
+//     <ReactPlayer
+//       url="https://www.youtube.com/watch?v=33gGO3nu4Yk&t=10s&loop=1&mute=1"
+//       width="100%"
+//       height="100%"
+//       playing={true}
+//       loop={true}
+//       muted={true}
+//     />
+//   </div>
+// </div>
