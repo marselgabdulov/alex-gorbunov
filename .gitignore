@@ -11,6 +11,10 @@ yarn-error.log*
 *.png
 *.svg
 
+# videos
+*.mp4
+*.webm
+
 # Runtime data
 pids
 *.pid
