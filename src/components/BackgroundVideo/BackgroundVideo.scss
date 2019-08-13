@@ -46,6 +46,9 @@
 
 // tublet-portrait
 @media (min-width: 600px) {
+  .background-video {
+    display: none;
+  }
   .video-control {
     display: none;
   }
@@ -53,6 +56,9 @@
 
 // tablet-landscape
 @media (min-width: 900px) {
+  .background-video {
+    display: block;
+  }
   .video-control {
     display: block;
     bottom: 32%;

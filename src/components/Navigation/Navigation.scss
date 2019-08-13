@@ -115,10 +115,7 @@
   }
 
   .nav__menu-button {
-    top: 2%;
-    right: 5%;
-    width: 2em;
-    height: 1.5em;
+    display: none;
   }
 
   .nav__social {
@@ -127,7 +124,10 @@
   }
 
   .nav__menu {
-    display: none;
+    top: 2.5%;
+    right: 2.5%;
+    display: flex;
+    line-height: 2em;
   }
 
   .nav__social {
@@ -156,7 +156,7 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    line-height: 1.5em;
+    line-height: 2em;
     font-size: 0.75em;
   }
 

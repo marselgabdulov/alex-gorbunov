@@ -47,7 +47,14 @@ function Navigation({ handleClick }) {
           Контакты
         </Link>
       </div>
-      <div className="nav__menu-button" onClick={handleClick}>
+      <div
+        className="nav__menu-button"
+        onClick={handleClick}
+        data-aos="fade"
+        data-aos-delay="1000"
+        data-aos-duration="1200"
+        data-aos-once="true"
+      >
         <Menu />
       </div>
       <div
