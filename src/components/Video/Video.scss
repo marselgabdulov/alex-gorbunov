@@ -95,7 +95,7 @@
     &:hover {
       cursor: pointer;
       svg {
-        fill: $color-pink;
+        fill: $color-orange;
       }
     }
   }
@@ -122,31 +122,34 @@
 // mobile
 @media (max-width: 599px) {
   .video-cover {
+    height: 40vh;
     .video-name {
-      top: 60%;
+      top: 70%;
       left: 0;
+      font-weight: bold;
     }
 
     .cover__button {
-      width: 50px;
-      height: 50px;
-      top: calc(50% - 30px);
-      left: calc(50% - 25px);
+      width: 70px;
+      height: 70px;
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
 
       svg {
-        width: 30%;
-        top: 35%;
-        left: 37%;
+        top: 27.5%;
+        left: 28.5%;
+        width: 2em;
+        height: 2em;
       }
     }
   }
-
   .video__full--visible {
     .close-full {
-      bottom: 2em;
-      right: 1em;
+      top: 89%;
+      right: 0%;
       svg {
-        width: 1.5em;
+        width: 2.5em;
+        height: 2.5em;
       }
     }
   }
@@ -155,31 +158,34 @@
 // tublet-portrait
 @media (min-width: 600px) {
   .video-cover {
+    height: 40vh;
     .video-name {
-      top: 60%;
+      top: 65%;
       left: 0;
     }
 
     .cover__button {
       width: 70px;
       height: 70px;
-      top: calc(50% - 40px);
-      left: calc(50% - 40px);
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
 
       svg {
-        width: 30%;
-        top: 35%;
-        left: 37%;
+        top: 27.5%;
+        left: 28.5%;
+        width: 2em;
+        height: 2em;
       }
     }
   }
 
   .video__full--visible {
     .close-full {
-      bottom: 2em;
-      right: 1em;
+      top: 49%;
+      right: 0%;
       svg {
-        width: 1.5em;
+        width: 2.5em;
+        height: 2.5em;
       }
     }
   }
@@ -188,31 +194,32 @@
 // tablet-landscape
 @media (min-width: 900px) {
   .video-cover {
+    height: 50vh;
     .video-name {
-      top: 60%;
-      left: 0;
     }
 
     .cover__button {
       width: 70px;
       height: 70px;
-      top: calc(50% - 40px);
-      left: calc(50% - 40px);
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
 
       svg {
-        width: 30%;
-        top: 35%;
-        left: 37%;
+        top: 27.5%;
+        left: 28.5%;
+        width: 2em;
+        height: 2em;
       }
     }
   }
 
   .video__full--visible {
     .close-full {
-      top: 48%;
-      right: 0.75em;
+      top: 49%;
+      right: 2%;
       svg {
-        width: 1.25em;
+        width: 2.5em;
+        height: 2.5em;
       }
     }
   }
@@ -221,31 +228,32 @@
 // desktop/laptop
 @media (min-width: 1200px) {
   .video-cover {
+    height: 50vh;
     .video-name {
-      top: 60%;
-      left: 0;
     }
 
     .cover__button {
       width: 70px;
       height: 70px;
-      top: calc(50% - 40px);
-      left: calc(50% - 40px);
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
 
       svg {
-        width: 30%;
-        top: 35%;
-        left: 37%;
+        top: 27.5%;
+        left: 28.5%;
+        width: 2em;
+        height: 2em;
       }
     }
   }
 
   .video__full--visible {
     .close-full {
-      top: 48%;
-      right: 1.5em;
+      top: 49%;
+      right: 2%;
       svg {
-        width: 1.5em;
+        width: 2.5em;
+        height: 2.5em;
       }
     }
   }
@@ -254,21 +262,21 @@
 // desktop x-large
 @media (min-width: 1800px) {
   .video-cover {
+    height: 50vh;
     .video-name {
-      top: 60%;
-      left: 0;
     }
 
     .cover__button {
       width: 70px;
       height: 70px;
-      top: calc(50% - 40px);
-      left: calc(50% - 40px);
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
 
       svg {
-        width: 30%;
-        top: 35%;
-        left: 37%;
+        top: 27.5%;
+        left: 28.5%;
+        width: 2em;
+        height: 2em;
       }
     }
   }
@@ -276,9 +284,10 @@
   .video__full--visible {
     .close-full {
       top: 49%;
-      right: 1.5em;
+      right: 5%;
       svg {
-        width: 1.5em;
+        width: 2.5em;
+        height: 2.5em;
       }
     }
   }

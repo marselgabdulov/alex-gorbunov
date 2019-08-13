@@ -1,6 +1,157 @@
+@import "../../shared-styles/colors.scss";
+
 .videos-page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   background: #0d0d0d;
+}
+
+.videos-page__scroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+.videos-page__scroll {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  z-index: 2;
+}
+
+.videos-page__text {
+  color: #f6f1f1;
+
+  .videos__title {
+    text-transform: uppercase;
+  }
+}
+
+.review-card {
+  background-color: white;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+
+  .card-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .card-info {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-author {
+    a {
+      font-weight: 700;
+    }
+  }
+
+  .card-text {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// mobile
+@media (max-width: 599px) {
+  .videos-page__scroll {
+    width: 100%;
+  }
+
+  .videos-page__text {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 25%;
+    margin-bottom: 50%;
+    .videos__title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .videos-page__scroll {
+    width: 100%;
+  }
+
+  .videos-page__text {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 40%;
+    margin-bottom: 10%;
+    .videos__title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .videos-page__scroll {
+    width: 100%;
+  }
+
+  .videos-page__text {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    .videos__title {
+      width: 90%;
+      text-align: left;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+  .videos-page__scroll {
+    width: 100%;
+  }
+
+  .videos-page__text {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 22%;
+    margin-bottom: 10%;
+    .videos__title {
+      width: 90%;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .videos-page__scroll {
+    width: 100%;
+  }
+
+  .videos-page__text {
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    .videos__title {
+      width: 90%;
+      margin-bottom: 1em;
+    }
+  }
 }

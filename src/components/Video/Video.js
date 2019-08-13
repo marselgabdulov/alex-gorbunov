@@ -1,7 +1,6 @@
 import React from "react"
-import Image from "../Image/Image"
 import ReactPlayer from "react-player"
-import ArrowIcon from "../../images/icons/play-button.svg"
+import ArrowIcon from "../../images/icons/play.svg"
 import Cross from "../../images/icons/cross.svg"
 import "./Video.scss"
 
