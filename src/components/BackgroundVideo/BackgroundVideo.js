@@ -35,7 +35,6 @@ class BackgroundVideo extends React.Component {
         data-aos-duration="1500"
         data-aos-once="true"
       >
-        <div className="background-video__cover-layer"></div>
         <video loop autoPlay muted ref="vidRef">
           <source type="video/webm" src={VideoWEBM} />
           <source type="video/mp4" src={VideoMP4} />

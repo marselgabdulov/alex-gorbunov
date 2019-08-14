@@ -9,7 +9,7 @@ function Navigation({ handleClick }) {
       <div
         className="nav__logo"
         data-aos="fade"
-        data-aos-delay="1000"
+        data-aos-delay="100"
         data-aos-duration="1200"
         data-aos-once="true"
       >
@@ -20,7 +20,7 @@ function Navigation({ handleClick }) {
       <div
         className="nav__menu"
         data-aos="fade"
-        data-aos-delay="1000"
+        data-aos-delay="500"
         data-aos-duration="1200"
         data-aos-once="true"
       >
@@ -51,7 +51,7 @@ function Navigation({ handleClick }) {
         className="nav__menu-button"
         onClick={handleClick}
         data-aos="fade"
-        data-aos-delay="1000"
+        data-aos-delay="500"
         data-aos-duration="1200"
         data-aos-once="true"
       >
@@ -60,8 +60,8 @@ function Navigation({ handleClick }) {
       <div
         className="nav__social"
         data-aos="fade"
-        data-aos-delay="1000"
-        data-aos-duration="12200"
+        data-aos-delay="500"
+        data-aos-duration="1200"
         data-aos-once="true"
         data-aos-anchor-placement="center-bottom"
       >
@@ -93,8 +93,8 @@ function Navigation({ handleClick }) {
       <div
         className="nav__creator"
         data-aos="fade"
-        data-aos-delay="1000"
-        data-aos-duration="12200"
+        data-aos-delay="500"
+        data-aos-duration="1200"
         data-aos-once="true"
         data-aos-anchor-placement="center-bottom"
       >

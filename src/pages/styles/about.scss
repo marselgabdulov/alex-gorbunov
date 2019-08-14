@@ -5,7 +5,10 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background: #0d0d0d;
+}
+
+.about-page__scroll {
+  width: 100%;
 }
 
 .about-page__scroll::-webkit-scrollbar {
@@ -53,10 +56,6 @@
     background-position: 80%;
   }
 
-  .about-page__scroll {
-    width: 100%;
-  }
-
   .about-page__text {
     width: 95%;
     margin-left: 2.5%;
@@ -75,10 +74,6 @@
 @media (min-width: 600px) {
   .bg__item {
     background-position: 80%;
-  }
-
-  .about-page__scroll {
-    width: 100%;
   }
 
   .about-page__text {
@@ -101,10 +96,6 @@
     background-position: 20%;
   }
 
-  .about-page__scroll {
-    width: 100%;
-  }
-
   .about-page__text {
     width: 70%;
     margin-left: 15%;
@@ -125,10 +116,6 @@
     background-position: 20%;
   }
 
-  .about-page__scroll {
-    width: 100%;
-  }
-
   .about-page__text {
     width: 60%;
     margin-left: 20%;
@@ -147,10 +134,6 @@
 @media (min-width: 1800px) {
   .bg__item {
     background-position: 20%;
-  }
-
-  .about-page__scroll {
-    width: 100%;
   }
 
   .about-page__text {
