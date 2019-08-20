@@ -13,16 +13,8 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://alexeygorbunov.com",
-        sitemap: "https://alexeygorbunov.com/sitemap.xml",
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-          },
-          production: {
-            policy: [{ userAgent: "*", allow: "/" }],
-          },
-        },
+        sitemap: "https://alexeygorbunov/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     `gatsby-plugin-sass`,
