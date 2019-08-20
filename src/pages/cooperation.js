@@ -35,7 +35,7 @@ function CooperationPage(props) {
               соотношение цена/качество, вы выбираете ведущим своего праздника
               именно меня.
               <br />В таком случае мы подписываем{" "}
-              <a href={Contract} download>
+              <a href={Contract} target="_blank" rel="noopener noreferrer">
                 ДОГОВОР О СОТРУДНИЧЕСТВЕ
               </a>
             </p>
