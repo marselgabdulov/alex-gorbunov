@@ -20,7 +20,6 @@ function PhotosPage(props) {
     props.data.image19.childImageSharp.fluid,
     props.data.image20.childImageSharp.fluid,
     props.data.image21.childImageSharp.fluid,
-    props.data.image22.childImageSharp.fluid,
     props.data.image23.childImageSharp.fluid,
     props.data.image24.childImageSharp.fluid,
     props.data.image25.childImageSharp.fluid,
@@ -196,9 +195,6 @@ export const pageQuery = graphql`
       ...photosPageImage
     }
     image21: file(relativePath: { eq: "photos/21.jpg" }) {
-      ...photosPageImage
-    }
-    image22: file(relativePath: { eq: "photos/22.jpg" }) {
       ...photosPageImage
     }
     image23: file(relativePath: { eq: "photos/23.jpg" }) {
