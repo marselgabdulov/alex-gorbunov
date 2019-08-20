@@ -64,7 +64,7 @@
 @media (max-width: 599px) {
   .index__bg-image {
     background-position: 15%;
-    filter: brightness(0.75) blur(1px);
+    filter: brightness(0.75);
   }
   .index__title {
     bottom: 40%;
@@ -85,7 +85,7 @@
 @media (min-width: 600px) {
   .index__bg-image {
     background-position: 5%;
-    filter: brightness(0.75) blur(2px);
+    filter: brightness(0.75);
   }
   .index__title {
     bottom: 45%;
