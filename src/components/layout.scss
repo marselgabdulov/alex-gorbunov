@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   background: #0d0d0d;
+  overscroll-behavior-y: contain;
 
   * {
     outline: 0 !important;

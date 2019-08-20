@@ -1,9 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import "./Navigation.scss"
 import { Link } from "gatsby"
 import Menu from "../../images/icons/menu.svg"
+import NavpannelContext from "../../context/navpannel/navpannelContext"
 
 function Navigation({ handleClick }) {
+  const navpannelContext = useContext(NavpannelContext)
+  const { navpannel, openNavpannel } = navpannelContext
+
+  function handleOpen() {
+    openNavpannel()
+  }
+
   return (
     <nav>
       <div
@@ -49,7 +57,7 @@ function Navigation({ handleClick }) {
       </div>
       <div
         className="nav__menu-button"
-        onClick={handleClick}
+        onClick={handleOpen}
         data-aos="fade"
         data-aos-delay="500"
         data-aos-duration="1200"

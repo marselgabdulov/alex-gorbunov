@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
 import "./NavPannel.scss"
 import Cross from "../../images/icons/cross.svg"
+import NavpannelContext from "../../context/navpannel/navpannelContext"
 
 const links = [
   {
@@ -35,11 +36,18 @@ const links = [
 ]
 
 function NavPannel({ handleClick, visible }) {
+  const navpannelContext = useContext(NavpannelContext)
+  const { navpannel, closeNavpannel } = navpannelContext
+
+  function handleClose() {
+    closeNavpannel()
+  }
+
   return (
     <>
       <div className="nav-pannel">
-        <div className={visible ? "nav-opened" : "nav-closed"}>
-          <button className="nav-pannel__close-button" onClick={handleClick}>
+        <div className={navpannel === true ? "nav-opened" : "nav-closed"}>
+          <button className="nav-pannel__close-button" onClick={handleClose}>
             <div className="button-icon">
               <Cross />
             </div>
@@ -51,7 +59,7 @@ function NavPannel({ handleClick, visible }) {
                 <TransitionLink
                   to={item.to}
                   activeStyle={{ color: "#f77905" }}
-                  onClick={handleClick}
+                  onClick={handleClose}
                   exit={{
                     length: 0.5,
                   }}
