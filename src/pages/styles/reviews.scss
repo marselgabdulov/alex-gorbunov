@@ -26,42 +26,6 @@
   }
 }
 
-.review-card {
-  background-color: white;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
-
-  .card-image {
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .card-info {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-author {
-    a {
-      font-weight: 700;
-    }
-  }
-
-  .card-text {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 // mobile
 @media (max-width: 599px) {
   .reviews-page__scroll {
@@ -69,48 +33,14 @@
   }
 
   .reviews-page__text {
-    width: 95%;
-    margin-left: 2.5%;
+    width: 100%;
     margin-top: 15%;
     margin-bottom: 50%;
     .reviews__title {
-      width: 100%;
-      text-align: center;
-    }
-    p {
-      width: 100%;
-    }
-  }
-
-  .review-card {
-    background-color: transparent;
-    width: 100%;
-    height: auto;
-    margin: 2em 0;
-    flex-direction: column;
-
-    a {
-      color: white;
-    }
-
-    .card-image {
-      display: none;
-    }
-
-    .card-info {
-      color: white;
-      width: 100%;
-      height: 40%;
-    }
-
-    .card-author {
-      margin-top: 1em;
-      height: 1.5em;
-      font-size: 1.5em;
-    }
-
-    .card-text {
-      height: calc(100% - 2em);
+      text-align: left;
+      margin-left: 2.5%;
+      font-size: 2em;
+      margin-top: 2em;
     }
   }
 }
@@ -128,48 +58,10 @@
     margin-bottom: 10%;
     .reviews__title {
       width: 100%;
-      text-align: center;
+      text-align: left;
     }
     p {
       width: 100%;
-    }
-  }
-
-  .review-card {
-    width: 100%;
-    height: 65vh;
-    margin: 2em 0;
-    flex-direction: column;
-    background-color: transparent;
-
-    .card-image {
-      width: 50%;
-      margin-left: 25%;
-      margin-top: 2%;
-      height: 60%;
-      align-content: center;
-      background-position: 40%;
-    }
-
-    .card-info {
-      width: 100%;
-      height: 40%;
-
-      a {
-        color: white;
-      }
-    }
-
-    .card-author {
-      margin-top: 1em;
-      height: 1.5em;
-      font-size: 1.5em;
-    }
-
-    .card-text {
-      height: calc(100% - 2em);
-      font-size: 1em !important;
-      line-height: 1.4em !important;
     }
   }
 }
@@ -181,8 +73,8 @@
   }
 
   .reviews-page__text {
-    width: 70%;
-    margin-left: 15%;
+    width: 75%;
+    margin-left: 11.5%;
     margin-top: 5%;
     margin-bottom: 10%;
     .reviews__title {
@@ -191,43 +83,6 @@
     }
     p {
       width: 85%;
-    }
-  }
-
-  .review-card {
-    width: 100%;
-    height: 65vh;
-    margin: 2em 0;
-    flex-direction: row;
-    background-color: white;
-
-    .card-image {
-      width: 40%;
-      height: 98%;
-      margin: 1%;
-      background-position: 40%;
-    }
-
-    .card-info {
-      width: 57.5%;
-      height: 100%;
-    }
-
-    .card-author {
-      margin-top: 1em;
-      height: 1.2em;
-      font-size: 1.1em;
-
-      a {
-        color: black;
-      }
-    }
-
-    .card-text {
-      height: calc(100% - 2em);
-      font-size: 1em !important;
-      line-height: 1.4em !important;
-      color: black;
     }
   }
 }
@@ -239,8 +94,8 @@
   }
 
   .reviews-page__text {
-    width: 60%;
-    margin-left: 20%;
+    width: 65%;
+    margin-left: 15%;
     margin-top: 22%;
     margin-bottom: 10%;
     .reviews__title {
@@ -248,36 +103,6 @@
     }
     p {
       width: 85%;
-    }
-  }
-
-  .review-card {
-    width: 100%;
-    height: 45vh;
-    margin: 2em 0;
-
-    .card-image {
-      width: 40%;
-      height: 95%;
-      margin: 1%;
-      background-position: 40%;
-    }
-
-    .card-info {
-      width: 55%;
-      height: 100%;
-    }
-
-    .card-author {
-      margin-top: 1em;
-      height: 1.2em;
-      font-size: 1.1em;
-    }
-
-    .card-text {
-      height: calc(100% - 2em);
-      font-size: 1em !important;
-      line-height: 1.4em !important;
     }
   }
 }
@@ -295,38 +120,6 @@
     margin-bottom: 10%;
     .reviews__title {
       width: 90%;
-    }
-    p {
-      width: 85%;
-    }
-  }
-
-  .review-card {
-    width: 100%;
-    height: 40vh;
-    margin: 2em 0;
-
-    .card-image {
-      width: 40%;
-      height: 95%;
-      margin: 1%;
-    }
-
-    .card-info {
-      width: 55%;
-      height: 100%;
-    }
-
-    .card-author {
-      margin-top: 1em;
-      height: 1.2em;
-      font-size: 1.1em;
-    }
-
-    .card-text {
-      height: calc(100% - 2em);
-      font-size: 1em !important;
-      line-height: 1.4em !important;
     }
   }
 }
