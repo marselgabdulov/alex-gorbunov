@@ -14,7 +14,7 @@ function Navigation({ handleClick }) {
         data-aos-once="true"
       >
         <Link to="/" title="вернуться на главную">
-          А.Г.
+          АГ
         </Link>
       </div>
       <div

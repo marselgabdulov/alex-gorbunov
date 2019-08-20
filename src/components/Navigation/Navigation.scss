@@ -31,7 +31,8 @@
 }
 
 .nav__logo {
-  font-family: "Marck Script", cursive;
+  // font-family: "Marck Script", cursive;
+  font-weight: 900;
   a {
     text-decoration: none;
   }
@@ -77,7 +78,7 @@
 @media (max-width: 599px) {
   .nav__logo {
     top: 1.5%;
-    left: 3.5%;
+    left: 2.5%;
     font-size: 2em;
   }
 
@@ -110,7 +111,7 @@
 @media (min-width: 600px) {
   .nav__logo {
     top: 2.5%;
-    left: 3.5%;
+    left: 2.5%;
     font-size: 2em;
   }
 
