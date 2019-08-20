@@ -10,6 +10,11 @@
   z-index: 100000;
   font-weight: 700;
 
+  svg {
+    fill: white;
+    stroke: white;
+  }
+
   a {
     color: white;
   }
@@ -33,14 +38,6 @@
 .nav__logo {
   // font-family: "Marck Script", cursive;
   font-weight: 900;
-  a {
-    text-decoration: none;
-  }
-}
-
-.nav__menu {
-  align-items: flex-end;
-
   a {
     text-decoration: none;
   }

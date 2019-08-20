@@ -9,6 +9,7 @@ function ReviewsPage(props) {
   const reviews = [
     {
       image: props.data.image_1.childImageSharp.fluid.src,
+      id: "74234255",
       link: "https://vk.com/id74234255",
       name: "Марина",
       text:
@@ -16,6 +17,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_2.childImageSharp.fluid.src,
+      id: "490830271",
       link: "https://vk.com/id490830271",
       name: "Елена",
       text:
@@ -23,6 +25,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_3.childImageSharp.fluid.src,
+      id: "milk_moon",
       link: "https://vk.com/milk_moon",
       name: "Мария",
       text:
@@ -30,6 +33,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_4.childImageSharp.fluid.src,
+      id: "vladislove925",
       link: "https://vk.com/vladislove925",
       name: "Владислав",
       text:
@@ -37,6 +41,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_5.childImageSharp.fluid.src,
+      id: "211890416",
       link: "https://vk.com/id211890416",
       name: "Дмитрий",
       text:
@@ -44,6 +49,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_6.childImageSharp.fluid.src,
+      id: "yupolyakova",
       link: "https://vk.com/yupolyakova",
       name: "Юлия",
       text:
@@ -51,6 +57,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_7.childImageSharp.fluid.src,
+      id: "12137639",
       link: "https://vk.com/id12137639",
       name: "Алена",
       text:
@@ -58,6 +65,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_8.childImageSharp.fluid.src,
+      id: "103168947",
       link: "https://vk.com/id103168947",
       name: "Настя",
       text:
@@ -65,6 +73,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_9.childImageSharp.fluid.src,
+      id: "svetlaa",
       link: "https://vk.com/svetlaa",
       name: "Светлана",
       text:
@@ -72,6 +81,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_10.childImageSharp.fluid.src,
+      id: "1706901",
       link: "https://vk.com/id1706901",
       name: "Ксения",
       text:
@@ -79,6 +89,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_11.childImageSharp.fluid.src,
+      id: "4916656",
       link: "https://vk.com/id4916656",
       name: "Дарья",
       text:
@@ -86,6 +97,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_12.childImageSharp.fluid.src,
+      id: "iamkrasnov21",
       link: "https://vk.com/iamkrasnov21",
       name: "Артём",
       text:
@@ -93,6 +105,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_13.childImageSharp.fluid.src,
+      id: "320740657",
       link: "https://vk.com/id320740657",
       name: "Екатерина",
       text:
@@ -100,6 +113,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_14.childImageSharp.fluid.src,
+      id: "4406075",
       link: "https://vk.com/id4406075",
       name: "Маргарита",
       text:
@@ -108,6 +122,7 @@ function ReviewsPage(props) {
 
     {
       image: props.data.image_10.childImageSharp.fluid.src,
+      id: "1706901",
       link: "https://vk.com/id1706901",
       name: "Ксения",
       text:
@@ -115,6 +130,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_15.childImageSharp.fluid.src,
+      id: "levshinaliza",
       link: "https://vk.com/levshinaliza",
       name: "Лиза",
       text:
@@ -122,6 +138,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_16.childImageSharp.fluid.src,
+      id: "62052287",
       link: "https://vk.com/id62052287",
       name: "Наталья",
       text:
@@ -129,6 +146,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_17.childImageSharp.fluid.src,
+      id: "445885929",
       link: "https://vk.com/id445885929",
       name: "Василий",
       text:
@@ -136,6 +154,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_18.childImageSharp.fluid.src,
+      id: "anyuta555",
       link: "https://vk.com/anyuta555",
       name: "Анна",
       text:
@@ -143,6 +162,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_19.childImageSharp.fluid.src,
+      id: "petrova_lizaa",
       link: "https://vk.com/petrova_lizaa",
       name: "Елизавета",
       text:
@@ -150,6 +170,7 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_20.childImageSharp.fluid.src,
+      id: "3680743",
       link: "https://vk.com/id3680743",
       name: "Александр",
       text:
@@ -157,6 +178,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_21.childImageSharp.fluid.src,
+      id: "shmatovalenka",
+
       link: "https://vk.com/shmatovalenka",
       name: "Елена",
       text:
@@ -164,6 +187,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_22.childImageSharp.fluid.src,
+      id: "6849237",
+
       link: "https://vk.com/id6849237",
       name: "Олеся",
       text:
@@ -171,6 +196,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_23.childImageSharp.fluid.src,
+      id: "193806",
+
       link: "https://vk.com/id193806",
       name: "Ксения",
       text:
@@ -178,6 +205,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_24.childImageSharp.fluid.src,
+      id: "2645348",
+
       link: "https://vk.com/id2645348",
       name: "Олеся",
       text:
@@ -185,6 +214,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_25.childImageSharp.fluid.src,
+      id: "121703400",
+
       link: "https://vk.com/id121703400",
       name: "Алина",
       text:
@@ -192,6 +223,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_26.childImageSharp.fluid.src,
+      id: "18120412",
+
       link: "https://vk.com/id18120412",
       name: "Елена",
       text:
@@ -199,6 +232,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_27.childImageSharp.fluid.src,
+      id: "7298282",
+
       link: "https://vk.com/id7298282",
       name: "Анастасия",
       text:
@@ -206,6 +241,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_28.childImageSharp.fluid.src,
+      id: "28539478",
+
       link: "https://vk.com/id28539478",
       name: "Юлия",
       text:
@@ -213,6 +250,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_11.childImageSharp.fluid.src,
+      id: "4916656",
+
       link: "https://vk.com/id4916656",
       name: "Дарья",
       text:
@@ -220,6 +259,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_29.childImageSharp.fluid.src,
+      id: "647548",
+
       link: "https://vk.com/id647548",
       name: "Елена",
       text:
@@ -227,6 +268,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_30.childImageSharp.fluid.src,
+      id: "150438",
+
       link: "https://vk.com/id150438",
       name: "Imira",
       text:
@@ -234,6 +277,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_31.childImageSharp.fluid.src,
+      id: "alexgrantshow",
+
       link: "https://vk.com/alexgrantshow",
       name: "Юлия",
       text:
@@ -241,6 +286,8 @@ function ReviewsPage(props) {
     },
     {
       image: props.data.image_32.childImageSharp.fluid.src,
+      id: "hhhh92",
+
       link: "https://vk.com/hhhh92",
       name: "Юлия",
       text:
@@ -260,9 +307,8 @@ function ReviewsPage(props) {
       >
         <div className="reviews-page__scroll">
           <div className="reviews-page__text">
-            <h2 className="reviews__title">
-              Отзывы <br />
-            </h2>
+            <h2 className="reviews__title">Отзывы</h2>
+            <h3>Все отзывы &laquo;живые&raquo;. Кликайте на имена.</h3>
             {reviews.map((review, index) => (
               <Review
                 link={review.link}

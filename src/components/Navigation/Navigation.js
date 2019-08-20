@@ -6,7 +6,7 @@ import NavpannelContext from "../../context/navpannel/navpannelContext"
 
 function Navigation({ handleClick }) {
   const navpannelContext = useContext(NavpannelContext)
-  const { navpannel, openNavpannel } = navpannelContext
+  const { openNavpannel } = navpannelContext
 
   function handleOpen() {
     openNavpannel()
