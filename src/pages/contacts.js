@@ -49,7 +49,7 @@ function ContactsPage(props) {
           </div>
           <div className="instagram">
             <a
-              href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
+              href="https://www.instagram.com/gorbunovshowmoscow/?igshid=1mqqjkwnngmk"
               target="_blank"
               rel="noopener noreferrer"
               data-aos="fade"

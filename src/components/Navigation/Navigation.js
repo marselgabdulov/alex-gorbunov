@@ -83,7 +83,7 @@ function Navigation({ handleClick }) {
         </a>
         <a
           className="social-link"
-          href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
+          href="https://www.instagram.com/gorbunovshowmoscow/?igshid=1mqqjkwnngmk"
           target="_blank"
           rel="noopener noreferrer"
         >

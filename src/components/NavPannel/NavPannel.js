@@ -102,7 +102,7 @@ function NavPannel({ handleClick, visible }) {
             </div>
             <div className="nav-pannel__social-icon">
               <a
-                href="https://instagram.com/alexgrant_show?igshid=1loy3l4uz5erh"
+                href="https://www.instagram.com/gorbunovshowmoscow/?igshid=1mqqjkwnngmk"
                 title="instagram"
                 target="_blank"
                 rel="noopener noreferrer"
