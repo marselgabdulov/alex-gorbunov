@@ -54,22 +54,21 @@
 }
 
 .index__title {
-  position: fixed;
+  position: relative;
+  top: 50%;
+  left: 50%;
   z-index: 2;
-  text-transform: uppercase;
-  font-weight: 900;
+  text-align: center;
 }
 
 // mobile
 @media (max-width: 599px) {
   .index__bg-image {
-    background-position: 15%;
+    background-position: 20%;
     filter: brightness(0.75);
   }
   .index__title {
-    bottom: 40%;
-    width: 100%;
-    text-align: center;
+    transform: translate(-50%, -20%);
     line-height: 2em;
   }
 
@@ -77,25 +76,19 @@
     bottom: 15%;
     width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
 // tublet-portrait
 @media (min-width: 600px) {
-  .index__bg-image {
-    background-position: 5%;
-    filter: brightness(0.75);
-  }
   .index__title {
-    bottom: 45%;
-    width: 100%;
-    text-align: center;
+    transform: translate(-50%, 40%);
     line-height: 2.75em;
   }
 
   .index__phone {
-    bottom: 15%;
+    bottom: 10%;
     width: 100%;
     text-align: center;
     font-size: 1.2em;
@@ -107,14 +100,9 @@
   .index__bg-image {
     display: none;
   }
-  .intro__background {
-    background-position: 0% 5%;
-  }
 
   .index__title {
-    bottom: 26.5%;
-    left: 2%;
-    width: auto;
+    transform: translate(-50%, 40%);
     line-height: 3.25em;
   }
 
@@ -125,26 +113,16 @@
 
 // desktop/laptop
 @media (min-width: 1200px) {
-  .intro__background {
-    background-position: 0% 5%;
-  }
-
   .index__title {
-    bottom: 25%;
-    left: 2.5%;
+    transform: translate(-50%, 60%);
     line-height: 3.5em;
   }
 }
 
 // desktop x-large
 @media (min-width: 1800px) {
-  .intro__background {
-    background-position: 0% 5%;
-  }
-
   .index__title {
-    bottom: 23%;
-    left: 5%;
-    line-height: 5em;
+    transform: translate(-50%, 30%);
+    line-height: 5.1em;
   }
 }

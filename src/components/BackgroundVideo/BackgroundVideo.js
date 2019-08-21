@@ -46,6 +46,7 @@ class BackgroundVideo extends React.Component {
           data-aos-delay="1000"
           data-aos-duration="1200"
           data-aos-once="true"
+          data-aos-anchor-placement="top-bottom"
         >
           {this.state.isPlaying ? <Pause /> : <Play />}
         </button>
