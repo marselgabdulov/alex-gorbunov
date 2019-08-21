@@ -75,15 +75,15 @@
 // mobile
 @media (max-width: 599px) {
   .nav__logo {
-    top: 1.5%;
+    top: 2%;
     left: 2.5%;
-    font-size: 2em;
+    font-size: 1.9em;
   }
 
   .nav__menu-button {
     top: 0.75%;
-    right: 6%;
-    width: 2em;
+    right: 1.9em;
+    width: 1.5em;
     height: 1.5em;
   }
 
@@ -114,19 +114,18 @@
   }
 
   .nav__menu-button {
-    display: none;
+    top: 2%;
+    right: 4%;
+    width: 2em;
+    height: 2em;
   }
 
   .nav__social {
-    line-height: 1.5em;
-    font-size: 0.75em;
+    display: none;
   }
 
   .nav__menu {
-    top: 2.5%;
-    right: 2.5%;
-    display: flex;
-    line-height: 2em;
+    display: none;
   }
 
   .nav__social {

@@ -43,6 +43,10 @@
       font-size: 2em;
       margin-top: 2em;
     }
+
+    h3 {
+      margin-left: 2.5%;
+    }
   }
 }
 
@@ -59,7 +63,10 @@
     margin-bottom: 10%;
     .reviews__title {
       width: 100%;
-      text-align: left;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
     }
     p {
       width: 100%;
@@ -80,6 +87,9 @@
     margin-bottom: 10%;
     .reviews__title {
       width: 90%;
+      text-align: left;
+    }
+    h3 {
       text-align: left;
     }
     p {
