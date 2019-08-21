@@ -50,7 +50,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl }) {
               },
               {
                 name: `yandex-verification`,
-                content: `0108a35d04b01738`,
+                content: `f81f8cd2f44c05ab`,
               },
               {
                 name: `twitter:card`,
