@@ -14,7 +14,7 @@ module.exports = {
       options: {
         host: "https://alexeygorbunov.com",
         sitemap: "https://alexeygorbunov/sitemap.xml",
-        policy: [{ userAgent: "*", disallow: "" }],
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     `gatsby-plugin-sass`,
