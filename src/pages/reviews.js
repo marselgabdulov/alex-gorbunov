@@ -328,7 +328,7 @@ function ReviewsPage(props) {
 export const reviewsPageImage = graphql`
   fragment reviewsPageImage on File {
     childImageSharp {
-      fluid(maxWidth: 1200) {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
