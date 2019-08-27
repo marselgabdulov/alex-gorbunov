@@ -308,7 +308,18 @@ function ReviewsPage(props) {
         <div className="reviews-page__scroll">
           <div className="reviews-page__text">
             <h2 className="reviews__title">Отзывы</h2>
-            <h3>Все отзывы &laquo;живые&raquo;. Кликайте на имена.</h3>
+            <h3>
+              Все отзывы &laquo;живые&raquo;. Посетите группу{" "}
+              <a
+                href="https://vk.com/alexgrantshow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VK
+              </a>{" "}
+              и убедитесь сами.
+            </h3>
+
             {reviews.map((review, index) => (
               <Review
                 link={review.link}

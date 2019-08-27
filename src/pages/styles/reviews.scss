@@ -4,6 +4,10 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+
+  a {
+    color: white;
+  }
 }
 
 .reviews-page__scroll::-webkit-scrollbar {
@@ -46,6 +50,7 @@
 
     h3 {
       margin-left: 2.5%;
+      line-height: 1.8em;
     }
   }
 }
