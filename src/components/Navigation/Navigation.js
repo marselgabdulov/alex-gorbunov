@@ -107,11 +107,7 @@ function Navigation({ handleClick }) {
         data-aos-anchor-placement="center-bottom"
       >
         Разработан{" "}
-        <a
-          href="https://marselgabdulov.github.io/personal/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://marsdev.ru/" target="_blank" rel="noopener noreferrer">
           MG
         </a>
       </div>
