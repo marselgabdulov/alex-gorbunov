@@ -1,7 +1,7 @@
 import React from "react"
 import "./BackgroundVideo.scss"
-import VideoMP4 from "../../video/video-bg.mp4"
-import VideoWEBM from "../../video/video-bg.webm"
+import VideoMP4 from "../../video/video-bg2.mp4"
+import VideoWEBM from "../../video/video-bg2.webm"
 import Play from "../../images/icons/play.svg"
 import Pause from "../../images/icons/pause.svg"
 
