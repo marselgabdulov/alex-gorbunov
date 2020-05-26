@@ -1,0 +1,56 @@
+.background-video-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: brightness(0.6);
+    }
+}
+
+// mobile
+@media (max-width: 599px) {
+    .background-video-mobile {
+        display: block;
+    }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+    .background-video-mobile {
+        display: block;
+    }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+    .background-video-mobile {
+        display: none;
+    }
+}
+
+// desktop/laptop
+@media (min-width: 1200px) {
+    .background-video-mobile {
+        display: none;
+    }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+    .background-video-mobile {
+        display: none;
+    }
+}

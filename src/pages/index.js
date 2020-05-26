@@ -4,6 +4,7 @@ import "./styles/index.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundVideo from "../components/BackgroundVideo/BackgroundVideo"
+import BackgroundVideoMobile from "../components/BackgroundVideoMobile/BackgroundVideoMobile"
 import AnimatedIntro from "../components/AnimatedIntro/AnimatedIntro"
 
 class IndexPage extends React.Component {
@@ -37,6 +38,7 @@ class IndexPage extends React.Component {
               <AnimatedIntro />
             </div>
             <BackgroundVideo />
+            <BackgroundVideoMobile />
           </section>
         </div>
       </Layout>
